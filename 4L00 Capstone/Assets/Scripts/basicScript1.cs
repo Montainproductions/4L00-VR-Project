@@ -49,6 +49,6 @@ public class basicScript1 : MonoBehaviour
     }
     private void Jump()
     {
-        rb.AddForce(new Vector3(0, 1, 0) * 1f, ForceMode.Impulse);
+        rb.AddForce(new Vector3(0, 1, 0) * 5f, ForceMode.Impulse);
     }
 }
