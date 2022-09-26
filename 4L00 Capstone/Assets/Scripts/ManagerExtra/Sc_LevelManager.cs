@@ -21,7 +21,7 @@ public class Sc_LevelManager : MonoBehaviour{
     }
 
     public void SpawnPlayer(){
-        Instantiate(player, spawner.transform.position, Quaternion.identity);
+        GameObject p = Instantiate(player, spawner.transform.position, Quaternion.identity);
     }
 
     public void GetPlayer(){
