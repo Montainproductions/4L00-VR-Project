@@ -1,6 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class basicScript1 : MonoBehaviour
 {
@@ -8,6 +11,8 @@ public class basicScript1 : MonoBehaviour
     // Set variables
     private Rigidbody rb;
     public GameObject cam;
+    public GameObject GroundCheck;
+    public Boolean isGrounded;
     
     // Called on first frame
     void Start()
@@ -49,12 +54,27 @@ public class basicScript1 : MonoBehaviour
 
     private void Move(Vector2 direction)
     {
-        // Use the Rigidbody addForce to move the Player object
+        // Use the Rigidbody addForce to move the Player object depending on key input
         rb.AddForce(new Vector3(direction.x, 0, direction.y) * 1f, ForceMode.Force);
     }
     private void Jump()
     {
-        // Add upword
-        rb.AddForce(new Vector3(0, 1, 0) * 5f, ForceMode.Impulse);
+        // Add upword force
+        if(isGrounded == true)
+        {
+            rb.AddForce(new Vector3(0, 1, 0) * 5f, ForceMode.Impulse);
+        }
+
+    }
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Ground"))
+        {
+            isGrounded = true;
+        }
+        else
+        {
+            isGrounded = false;
+        }
     }
 }
