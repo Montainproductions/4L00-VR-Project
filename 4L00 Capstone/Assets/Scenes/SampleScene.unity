@@ -130,6 +130,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1128127466390054830, guid: b3d07f89d1b306843a6d47deed7b4ec0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1128127466934840671, guid: b3d07f89d1b306843a6d47deed7b4ec0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1128127468006934346, guid: b3d07f89d1b306843a6d47deed7b4ec0,
         type: 3}
       propertyPath: m_RootOrder
@@ -189,6 +199,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Main Game
+      objectReference: {fileID: 0}
+    - target: {fileID: 2478157837879437697, guid: b3d07f89d1b306843a6d47deed7b4ec0,
+        type: 3}
+      propertyPath: m_TagString
+      value: MainCamera
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3d07f89d1b306843a6d47deed7b4ec0, type: 3}
