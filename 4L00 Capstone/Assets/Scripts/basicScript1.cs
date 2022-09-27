@@ -62,7 +62,7 @@ public class basicScript1 : MonoBehaviour
     private void Move(Vector2 direction)
     {
         // Use the Rigidbody addForce to move the Player object depending on key input
-        rb.AddForce(new Vector3(direction.x, 0, direction.y) * 1f, ForceMode.Force);
+        rb.AddForce(new Vector3(direction.x, 0, direction.y) * 0.5f, ForceMode.Force);
     }
     private void Jump()
     {
