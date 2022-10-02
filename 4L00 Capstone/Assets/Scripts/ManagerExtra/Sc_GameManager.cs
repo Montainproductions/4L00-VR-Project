@@ -7,8 +7,7 @@ public class Sc_GameManager : MonoBehaviour{
 
     public static Sc_GameManager Instance{ get; private set; } //Singleton of the script/gameobject so that it can be referenced
 
-    [HideInInspector]
-    public int currentLevel; //Current Scene/level of the game
+    private int currentLevel; //Current Scene/level of the game
 
     //When the game object is first created. This is so that if another object is later created shortly after it can always find this script
     public void Awake(){

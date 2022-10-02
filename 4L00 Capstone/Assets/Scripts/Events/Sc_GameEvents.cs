@@ -13,7 +13,7 @@ public class Sc_GameEvents : MonoBehaviour{
         UnityEngine.Object.DontDestroyOnLoad(this); //Wont destroy the Object even when so that other code 
     }
 
-    public event Action<int> moveWall;
+    public event Action<int> moveWall; //The event of moving the wall
     public void MoveWall(int id){
         if (moveWall != null){
             moveWall(id);

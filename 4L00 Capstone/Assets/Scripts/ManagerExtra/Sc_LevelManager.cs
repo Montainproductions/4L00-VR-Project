@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Sc_LevelManager : MonoBehaviour{
-    public GameObject spawner;
-    public GameObject player;
+    [SerializeField]
+    private GameObject spawner, player;
 
-    public void Awake(){
+    public void Awake(){ //Whenever the script if first spawned in the game it will create the player.
         SpawnPlayer();
     }
 
@@ -21,7 +21,7 @@ public class Sc_LevelManager : MonoBehaviour{
     }
 
     public void SpawnPlayer(){
-        GameObject p = Instantiate(player, spawner.transform.position, Quaternion.identity);
+        GameObject p = Instantiate(player, spawner.transform.position, Quaternion.identity); //Create the player
     }
 
     public void GetPlayer(){
