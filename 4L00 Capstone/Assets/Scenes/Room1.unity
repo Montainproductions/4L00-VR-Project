@@ -291,7 +291,7 @@ GameObject:
   - component: {fileID: 1018797293}
   - component: {fileID: 1018797292}
   - component: {fileID: 1018797291}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -388,7 +388,7 @@ GameObject:
   - component: {fileID: 1057219510}
   - component: {fileID: 1057219509}
   - component: {fileID: 1057219508}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -539,6 +539,11 @@ PrefabInstance:
     - target: {fileID: 6520592815014245504, guid: 9a3b22c426d575e498daccb59b0c94e1,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6605100507616415543, guid: 9a3b22c426d575e498daccb59b0c94e1,
+        type: 3}
+      propertyPath: sceneNumber
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -777,7 +782,7 @@ GameObject:
   - component: {fileID: 1540302477}
   - component: {fileID: 1540302476}
   - component: {fileID: 1540302475}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -907,7 +912,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawner: {fileID: 1418038317}
-  player: {fileID: 3422951823750327399, guid: 8291d2d18c85ca04da3e8e2df99d96ac, type: 3}
+  player: {fileID: 6549170246755094992, guid: a2f8104b8a456fd49b0dab397204d48f, type: 3}
+  sceneNumber: 2
 --- !u!1001 &7392662798998950812
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Sc_LevelManager : MonoBehaviour{
     [SerializeField]
     private GameObject spawner, player;
+    [SerializeField]
+    private int sceneNumber;
 
     public void Awake(){ //Whenever the script if first spawned in the game it will create the player.
         SpawnPlayer();
@@ -17,7 +20,10 @@ public class Sc_LevelManager : MonoBehaviour{
 
     // Update is called once per frame
     void Update(){
-        
+        if (Input.GetKeyDown("f2"))
+        {
+            SafeRoom();
+        }
     }
 
     public void SpawnPlayer(){
@@ -26,5 +32,10 @@ public class Sc_LevelManager : MonoBehaviour{
 
     public void GetPlayer(){
 
+    }
+    
+    public void SafeRoom()
+    {
+        Sc_GameManager.Instance.GoToLevel(sceneNumber);
     }
 }
