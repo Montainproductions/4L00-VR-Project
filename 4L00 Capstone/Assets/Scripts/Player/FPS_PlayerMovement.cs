@@ -67,7 +67,7 @@ public class FPS_PlayerMovement: MonoBehaviour
         verticalInput = Input.GetAxisRaw("Vertical");
         
         // When to Jump
-        if(Input.GetKey(jumpKey) && readyToJump && isGrounded)
+        if(Input.GetKey(jumpKey) && isGrounded && readyToJump)
         {
             readyToJump = false;
             Jump();
@@ -78,17 +78,17 @@ public class FPS_PlayerMovement: MonoBehaviour
     private void MovePlayer()
     {
         // calculate movement direction
-        // FIX THIS!!!! Forsome reason, moveDirection's y value is being influnced when the camera is pointing up or down
-        moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
-        Debug.Log(moveDirection.normalized);
+        moveDirection = (orientation.forward * verticalInput) + (orientation.right * horizontalInput);
 
         // on ground
         if (isGrounded)
+        {
             rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
-
-        // in air
+        }
         else if (!isGrounded)
+        {
             rb.AddForce(moveDirection.normalized * moveSpeed * 10f * airMultiplier, ForceMode.Force);
+        }
     }
     private void SpeedControl()
     {
@@ -108,6 +108,7 @@ public class FPS_PlayerMovement: MonoBehaviour
 
         rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
     }
+    // Incase we want a double jump
     private void ResetJump()
     {
         readyToJump = true;
