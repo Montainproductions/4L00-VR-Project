@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7824465016801508933}
   - component: {fileID: 7824465016801508938}
   - component: {fileID: 7824465016801508932}
-  - component: {fileID: 7824465016801508937}
+  - component: {fileID: 8468688335809678327}
   m_Layer: 0
   m_Name: Pin
   m_TagString: Untagged
@@ -131,7 +131,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &7824465016801508937
+--- !u!114 &8468688335809678327
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -140,8 +140,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 7824465016801508931}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79f6e4b7f03304f468c8d43e1a43e1ac, type: 3}
+  m_Script: {fileID: 11500000, guid: 8b27eeae79e1c6b46bd26e53f10afd37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   AudioSource: {fileID: 5771120718715640743, guid: 78d7f4256f88cb0469cd729d9545bfcc,
     type: 3}
+  GameObject: {fileID: 7824465016801508931}
+  triggerOnlyOnce: 1
+  destroyTheObject: 0
+  followObject: 1

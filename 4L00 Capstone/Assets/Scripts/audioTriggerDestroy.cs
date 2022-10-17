@@ -5,6 +5,7 @@ public class audioTriggerDestroy : MonoBehaviour
     [SerializeField]
     public AudioSource AudioSource;
     private Vector3 position;
+    public bool triggerOnlyOnce;
 
     // If the Player object enters the collider, spawn an audio source Instance as a child of this object
     void OnTriggerEnter(Collider other)
@@ -16,8 +17,11 @@ public class audioTriggerDestroy : MonoBehaviour
             position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
             // Spawns an Audio Source as a Child of this GameObject
             Instantiate(AudioSource, position, Quaternion.identity, gameObject.transform);
-            // Remove's this script from the pin
-            Destroy(this);
+            if (triggerOnlyOnce == true)
+            {
+                // Remove's this script from the pin
+                Destroy(this);
+            }
         }
     }
 }

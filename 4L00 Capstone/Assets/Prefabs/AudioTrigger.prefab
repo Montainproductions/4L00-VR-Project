@@ -112,3 +112,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AudioSource: {fileID: 5771120718715640743, guid: 907504f820f815647a454cd466319a81,
     type: 3}
+  GameObject: {fileID: 0}
+  playerCollideOnly: 1
+  followObject: 0
+  triggerOnlyOnce: 0
+  destroyTheObject: 1
