@@ -271,6 +271,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 598941233869633313, guid: a2f8104b8a456fd49b0dab397204d48f,
         type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 598941233869633313, guid: a2f8104b8a456fd49b0dab397204d48f,
+        type: 3}
       propertyPath: m_TagString
       value: MainCamera
       objectReference: {fileID: 0}
@@ -443,6 +448,7 @@ GameObject:
   - component: {fileID: 442393009}
   - component: {fileID: 442393008}
   - component: {fileID: 442393012}
+  - component: {fileID: 442393013}
   m_Layer: 0
   m_Name: LightTrigger
   m_TagString: Untagged
@@ -547,6 +553,19 @@ MonoBehaviour:
   intensityChangeTo: 2
   gradualChange: 1
   duration: 5
+--- !u!114 &442393013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 442393006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45efe786a935fce478875c14e9f66dbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PostProcessing: {fileID: 1959672137}
 --- !u!1 &827148919
 GameObject:
   m_ObjectHideFlags: 0
@@ -829,7 +848,7 @@ MonoBehaviour:
   volumeTrigger: {fileID: 1959672132}
   volumeLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   stopNaNPropagation: 1
   finalBlitToCameraTarget: 0
   antialiasingMode: 0
@@ -874,3 +893,20 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
+--- !u!114 &1959672137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1959672131}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sharedProfile: {fileID: 11400000, guid: dfa299164d24acf49b1e5e18c3fa681f, type: 2}
+  isGlobal: 1
+  blendDistance: 0
+  weight: 1
+  priority: 0
