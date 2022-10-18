@@ -36,22 +36,22 @@ MonoBehaviour:
     value: 0
   color:
     overrideState: 1
-    value: {r: 0.2924528, g: 0.2924528, b: 0.2924528, a: 1}
+    value: {r: 0.3207547, g: 0.3207547, b: 0.3207547, a: 1}
   center:
     overrideState: 1
     value: {x: 0.5, y: 0.5}
   intensity:
     overrideState: 1
-    value: 0.556
+    value: 0.478
   smoothness:
     overrideState: 1
-    value: 0.465
+    value: 0.412
   roundness:
     overrideState: 1
     value: 1
   rounded:
-    overrideState: 1
-    value: 0
+    overrideState: 0
+    value: 1
   mask:
     overrideState: 0
     value: {fileID: 0}
@@ -81,7 +81,7 @@ MonoBehaviour:
     defaultState: 1
   intensity:
     overrideState: 1
-    value: 1
+    value: 0.88
   fastMode:
     overrideState: 0
     value: 0
