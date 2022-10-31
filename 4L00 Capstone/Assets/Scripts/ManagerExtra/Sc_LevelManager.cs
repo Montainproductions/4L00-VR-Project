@@ -4,12 +4,17 @@ using Unity.VisualScripting;
 using UnityEngine;
 
 public class Sc_LevelManager : MonoBehaviour{
+    public static Sc_LevelManager Instance { get; private set; } //Singleton of the script/gameobject so that it can be referenced
+
+    public GameObject pauseMenu, mainMenu;
+
     [SerializeField]
     private GameObject spawner, player;
     [SerializeField]
     private int sceneNumber;
 
     public void Awake(){ //Whenever the script if first spawned in the game it will create the player.
+        Instance = this; //Tells the singleton what game object its meant to be listening
         SpawnPlayer();
     }
 
@@ -23,6 +28,12 @@ public class Sc_LevelManager : MonoBehaviour{
         if (Input.GetKeyDown("f2"))
         {
             SafeRoom();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            pauseMenu.SetActive(true);
+            mainMenu.SetActive(false);
         }
     }
 
