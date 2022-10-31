@@ -19,7 +19,7 @@ public class Sc_PauseMenu : MonoBehaviour
 
     public void GoToCopingRoom()
     {
-        Sc_LevelManager.Instance.GoToCopingRoom();
+        //Sc_LevelManager.Instance.GoToCopingRoom();
     }
 
     public void GoToSettings()

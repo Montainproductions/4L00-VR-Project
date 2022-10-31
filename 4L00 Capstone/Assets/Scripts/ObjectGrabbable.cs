@@ -47,8 +47,9 @@ public class ObjectGrabbable : MonoBehaviour
             // Smoothly move the object's position to the Grab Point
             float lerpSpeed = 10f;
             Vector3 newPosition = Vector3.Lerp(transform.position, objectGrabPointTransform.position, Time.deltaTime * lerpSpeed);
+            Quaternion newRotation = Quaternion.Lerp(transform.rotation, objectGrabPointTransform.rotation, Time.deltaTime * lerpSpeed);
             objectRigidbody.MovePosition(newPosition);
-
+            objectRigidbody.MoveRotation(newRotation);
         }
     }
 }
