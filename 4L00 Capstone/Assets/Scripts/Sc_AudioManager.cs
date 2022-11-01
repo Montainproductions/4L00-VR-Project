@@ -16,7 +16,17 @@ public class Sc_AudioManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!audioSource.isPlaying) {
+        if (audioSource != null)
+        {
+            PlayAudio();
+        }
+        
+    }
+
+    private void PlayAudio()
+    {
+        if (!audioSource.isPlaying)
+        {
             int idClip = Random.Range(0, audioClips.Length);
             audioSource.clip = audioClips[idClip];
             audioSource.Play();

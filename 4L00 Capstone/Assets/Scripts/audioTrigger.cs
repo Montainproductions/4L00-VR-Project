@@ -7,12 +7,18 @@ public class audioTrigger : MonoBehaviour
     [SerializeField]
     private GameObject GameObject;
     private Vector3 position;
+    private Sc_AudioManager audioManager;
 
     public bool playerCollideOnly;
     public bool followObject;
     public bool triggerOnlyOnce;
     public bool destroyTheObject;
 
+    private void Start()
+    {
+        //TryGetComponent(out Sc_AudioManager audiomanager);
+        audioManager = GetComponent<Sc_AudioManager>();
+    }
 
     // If the Player object enters the collider, spawn an audio source in accordance to the parameters set
     void OnTriggerEnter(Collider other)
@@ -40,17 +46,25 @@ public class audioTrigger : MonoBehaviour
     {
         // Save at current object position as a variable
         position = new Vector3(GameObject.transform.position.x, GameObject.transform.position.y, GameObject.transform.position.z);
-        
+        AudioSource ao;
         // Check if we want the Audio to follow the object through it's movement
         if (followObject == true)
         {
             // Spawns an Audio Source as a Child of this GameObject
-            Instantiate(AudioSource, position, Quaternion.identity, GameObject.transform);
+            ao = Instantiate(AudioSource, position, Quaternion.identity, GameObject.transform);
+            if(audioManager != null)
+            {
+                audioManager.audioSource = ao;
+            }
         }
         else
         {
             // Spawn Audio Source at GameObjects location
-            Instantiate(AudioSource, position, Quaternion.identity);
+            ao = Instantiate(AudioSource, position, Quaternion.identity);
+            if (audioManager != null)
+            {
+                audioManager.audioSource = ao;
+            }
         }
 
         // Incase you want to destroy the object after spawning the sound source
