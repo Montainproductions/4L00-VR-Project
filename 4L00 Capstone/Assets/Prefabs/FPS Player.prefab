@@ -67,7 +67,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed7e94a9d1e43d74e80d4966103b1c96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 7
+  moveSpeed: 3
   groundDrag: 5
   jumpForce: 5
   jumpCooldown: 0.25
@@ -514,8 +514,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cece53c7006c99c409800add1d8f2643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensX: 400
-  sensY: 400
+  PostProfile: {fileID: 11400000, guid: dfa299164d24acf49b1e5e18c3fa681f, type: 2}
+  sensX: 1000
+  sensY: 1000
   orientation: {fileID: 598941232529509673}
 --- !u!114 &3739938289211466166
 MonoBehaviour:

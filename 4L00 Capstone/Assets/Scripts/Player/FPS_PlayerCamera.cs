@@ -1,9 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.PostProcessing;
 
 public class FPS_PlayerCamera : MonoBehaviour
 {
+    [SerializeField]
+    private PostProcessProfile PostProfile;
+    private Vignette vg;
+    private ChromaticAberration ca;
+
     public float sensX;
     public float sensY;
 
@@ -16,6 +22,10 @@ public class FPS_PlayerCamera : MonoBehaviour
     {
         //Cursor.lockState = CursorLockMode.Locked;
         //Cursor.visible = false;
+        PostProfile.TryGetSettings(out vg);
+        PostProfile.TryGetSettings(out ca);
+        vg.intensity.value = 0f;
+        ca.intensity.value = 0f;
     }
 
     private void Update()
