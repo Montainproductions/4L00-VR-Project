@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class FPS_PlayerMovement: MonoBehaviour
 {
+    public static FPS_PlayerMovement Instance { get; private set; }
+
     [Header("Movement")]
     public float moveSpeed;
 
@@ -31,11 +33,18 @@ public class FPS_PlayerMovement: MonoBehaviour
 
     Rigidbody rb;
 
+    public void Awake()
+    {
+        Instance = this;
+    }
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
         readyToJump = true;
+
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     private void Update()
@@ -54,6 +63,10 @@ public class FPS_PlayerMovement: MonoBehaviour
         else
         {
             rb.drag = 0;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape) && (Cursor.lockState == CursorLockMode.Locked)){
+            Cursor.lockState = CursorLockMode.None;
         }
     }
     private void FixedUpdate()
@@ -112,5 +125,10 @@ public class FPS_PlayerMovement: MonoBehaviour
     private void ResetJump()
     {
         readyToJump = true;
+    }
+
+    public void LockMouse()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
     }
 }
