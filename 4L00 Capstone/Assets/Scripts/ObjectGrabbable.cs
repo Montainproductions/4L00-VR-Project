@@ -17,6 +17,7 @@ public class ObjectGrabbable : MonoBehaviour
     // Grabs Object
     public void Grab(Transform objectGrabPointTransform)
     {
+        Debug.Log("Germany");
         // Set the local grabpoint reference to the grabpoint given 
         this.objectGrabPointTransform = objectGrabPointTransform;
         // Remove Any forces applying to the object to avoid any weird jittering

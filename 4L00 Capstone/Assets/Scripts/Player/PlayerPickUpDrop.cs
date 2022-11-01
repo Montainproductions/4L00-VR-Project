@@ -15,6 +15,7 @@ public class PlayerPickUpDrop : MonoBehaviour
 
     private void Update()
     {
+        //Debug.Log(Physics.Raycast(playerCameraTransform.position, playerCameraTransform.forward, out RaycastHit raycastHit, 3, pickUpLayerMask));
         if (Input.GetKeyDown(KeyCode.E))
         {
             // If not carrying an object, try to grab an object
@@ -24,8 +25,10 @@ public class PlayerPickUpDrop : MonoBehaviour
                 // if the raycast hits an object within the list of applicable layers then check if that object has the scipt "objectGrabbable"
                 if (Physics.Raycast(playerCameraTransform.position, playerCameraTransform.forward, out RaycastHit raycastHit, pickUpDistance, pickUpLayerMask))
                 {
+                    //Debug.Log("Picking up");
                     if (raycastHit.transform.TryGetComponent(out objectGrabbable))
                     {
+                        Debug.Log("Pickup");
                         // Grab the object and set it to the GrabPoint attached to the player
                         objectGrabbable.Grab(objectGrabPointTransform);
                     }

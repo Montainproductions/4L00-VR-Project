@@ -6,20 +6,20 @@ using UnityEngine.UI;
 public class Sc_PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenu, mainGame, settings, controls;
-    public Button buttonReturn, buttonControls, buttonSettings, buttonCopingRoom;
+    public Button buttonCopingRoom, buttonControls, buttonSettings, buttonReturn;
     
     // Start is called before the first frame update
     void Start()
     {
+        buttonCopingRoom.onClick.AddListener(() =>
+        {
+            Sc_LevelManager.Instance.SafeRoom();
+            //Sc_LevelManager.Instance.GoToCopingRoom();
+        });
+
         buttonControls.onClick.AddListener(() =>
         {
             controls.SetActive(true);
-            pauseMenu.SetActive(false);
-        });
-
-        buttonReturn.onClick.AddListener(() =>
-        {
-            mainGame.SetActive(true);
             pauseMenu.SetActive(false);
         });
 
@@ -29,39 +29,11 @@ public class Sc_PauseMenu : MonoBehaviour
             pauseMenu.SetActive(false);
         });
 
-        buttonCopingRoom.onClick.AddListener(() =>
+        buttonReturn.onClick.AddListener(() =>
         {
-            Sc_LevelManager.Instance.SafeRoom();
-            //Sc_LevelManager.Instance.GoToCopingRoom();
+            mainGame.SetActive(true);
+            FPS_PlayerMovement.Instance.LockMouse();
+            pauseMenu.SetActive(false);
         });
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void GoToCopingRoom()
-    {
-        //Sc_LevelManager.Instance.GoToCopingRoom();
-    }
-
-    /*public void GoToControls()
-    {
-        controls.SetActive(true);
-        pauseMenu.SetActive(false);
-    }*/
-
-    /*public void GoToSettings()
-    {
-        settings.SetActive(true);
-        pauseMenu.SetActive(false);
-    }*/
-
-    /*public void GoBack()
-    {
-        mainGame.SetActive(true);
-        pauseMenu.SetActive(false);
-    }*/
 }

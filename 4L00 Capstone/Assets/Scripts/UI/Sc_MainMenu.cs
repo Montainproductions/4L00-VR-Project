@@ -1,36 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem.Controls;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Sc_MainMenu : MonoBehaviour
 {
     public GameObject mainMenu, settings;
+    public Button startGameButton, settingButton, quitButton;
+
     // Start is called before the first frame update
     void Start()
     {
-        
-    }
+        startGameButton.onClick.AddListener(() =>
+        {
+            Sc_GameManager.Instance.GoToLevel(1);
+        });
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+        settingButton.onClick.AddListener(() =>
+        {
+            settings.SetActive(true);
+            mainMenu.SetActive(false);
+        });
 
-    public void StartGame()
-    {
-        SceneManager.LoadScene(1);
-    }
-
-    public void Settings()
-    {
-        settings.SetActive(true);
-        mainMenu.SetActive(false);
-    }
-
-    public void QuitGame()
-    {
-        Application.Quit();
+        quitButton.onClick.AddListener(() =>
+        {
+            Debug.Log("Quiting");
+            Application.Quit();
+        });
     }
 }
