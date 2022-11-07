@@ -12,11 +12,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Atrium.unity
     guid: 4435219d249f30b4eaa8ddb820d4b0f5
   - enabled: 1
-    path: Assets/Scenes/Room1.unity
+    path: Assets/Scenes/Room1(PanicDisorder).unity
     guid: 987a9260e27b9494782c15ec86008207
   - enabled: 1
     path: Assets/Scenes/SafeRoom1.unity
     guid: 23fc873fbf179eb4ca410eef6a4f5de5
+  - enabled: 1
+    path: Assets/Scenes/Room2(Schizophrenia).unity
+    guid: eec453df7af563a43970416717c9b8b0
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab

@@ -11,7 +11,7 @@ public class Sc_LevelManager : MonoBehaviour{
     [SerializeField]
     private GameObject spawner, player;
     [SerializeField]
-    private int sceneNumber;
+    private int SRSceneNumber;
 
     public void Awake(){ //Whenever the script if first spawned in the game it will create the player.
         Instance = this; //Tells the singleton what game object its meant to be listening
@@ -47,6 +47,6 @@ public class Sc_LevelManager : MonoBehaviour{
     
     public void SafeRoom()
     {
-        Sc_GameManager.Instance.GoToLevel(sceneNumber);
+        Sc_GameManager.Instance.GoToLevel(SRSceneNumber);
     }
 }
