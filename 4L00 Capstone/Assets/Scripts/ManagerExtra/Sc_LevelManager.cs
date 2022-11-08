@@ -12,6 +12,8 @@ public class Sc_LevelManager : MonoBehaviour{
     private GameObject spawner, player;
     [SerializeField]
     private int SRSceneNumber;
+    [SerializeField]
+    public Light[] lightsInScene;
 
     public void Awake(){ //Whenever the script if first spawned in the game it will create the player.
         Instance = this; //Tells the singleton what game object its meant to be listening
@@ -48,5 +50,15 @@ public class Sc_LevelManager : MonoBehaviour{
     public void SafeRoom()
     {
         Sc_GameManager.Instance.GoToLevel(SRSceneNumber);
+    }
+
+    public void TurnOnOffLights()
+    {
+        Debug.Log("LightSwitch Working");
+        for (int i = 0; i < lightsInScene.Length; i++)
+        {
+            lightsInScene[i].enabled = !lightsInScene[i].enabled;
+            
+        }
     }
 }

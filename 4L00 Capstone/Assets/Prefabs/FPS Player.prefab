@@ -95,6 +95,9 @@ MonoBehaviour:
   pickUpLayerMask:
     serializedVersion: 2
     m_Bits: 375
+  buttonLayerMask:
+    serializedVersion: 2
+    m_Bits: 631
 --- !u!114 &7969169661357772596
 MonoBehaviour:
   m_ObjectHideFlags: 0
