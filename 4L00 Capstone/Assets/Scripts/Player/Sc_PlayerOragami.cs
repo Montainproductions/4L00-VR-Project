@@ -14,12 +14,12 @@ public class Sc_PlayerOragami : MonoBehaviour{
 
     // Update is called once per frame
     void Update(){
-        if(askToView){
+        /*if(askToView){
             gameObject.transform = inView.transform;
         }
         else
         {
             gameObject.transform = outView.transform;
-        }
+        }*/
     }
 }
