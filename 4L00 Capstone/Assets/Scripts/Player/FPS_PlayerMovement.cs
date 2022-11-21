@@ -7,31 +7,40 @@ public class FPS_PlayerMovement: MonoBehaviour
     public static FPS_PlayerMovement Instance { get; private set; }
 
     [Header("Movement")]
-    public float moveSpeed;
+    [SerializeField]
+    private float moveSpeed;
 
-    public float groundDrag;
+    [SerializeField]
+    private float groundDrag;
 
-    public float jumpForce;
-    public float jumpCooldown;
-    public float airMultiplier;
-    bool readyToJump;
+    [SerializeField]
+    private float jumpForce;
+    [SerializeField]
+    private float jumpCooldown;
+    [SerializeField]
+    private float airMultiplier;
+    private bool readyToJump;
 
     [Header("Keybinds")]
-    public KeyCode jumpKey = KeyCode.Space;
+    [SerializeField]
+    private KeyCode jumpKey = KeyCode.Space;
 
     [Header("Ground Check")]
-    public float playerHeight;
-    public LayerMask Ground;
-    bool isGrounded;
+    [SerializeField]
+    private float playerHeight;
+    [SerializeField]
+    private LayerMask Ground;
+    private bool isGrounded;
 
-    public Transform orientation;
+    [SerializeField]
+    private Transform orientation;
 
-    float horizontalInput;
-    float verticalInput;
+    private float horizontalInput;
+    private float verticalInput;
 
-    Vector3 moveDirection;
+    private Vector3 moveDirection;
 
-    Rigidbody rb;
+    private Rigidbody rb;
 
     public void Awake()
     {
@@ -50,7 +59,7 @@ public class FPS_PlayerMovement: MonoBehaviour
     private void Update()
     {
         // Ground Check
-        isGrounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, Ground);
+        isGrounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 1f + 0.2f, Ground);
 
         MyInput();
         SpeedControl();

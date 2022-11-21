@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9013076646469771033}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: OutPlayerView
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -670,7 +670,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8108504124345698797}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: UI Oragami
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -737,7 +737,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2119423066412516004}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: InPlayerView
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -771,7 +771,7 @@ GameObject:
   - component: {fileID: 6099810358674507646}
   - component: {fileID: 5820983570870808515}
   - component: {fileID: 7093004133354070953}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: Oragami
   m_TagString: Untagged
   m_Icon: {fileID: 0}
