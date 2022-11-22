@@ -59,7 +59,7 @@ public class FPS_PlayerMovement: MonoBehaviour
     private void Update()
     {
         // Ground Check
-        isGrounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 1f + 0.2f, Ground);
+        isGrounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, Ground);
 
         MyInput();
         SpeedControl();
