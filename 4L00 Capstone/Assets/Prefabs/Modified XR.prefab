@@ -232,10 +232,27 @@ PrefabInstance:
       propertyPath: m_Name
       value: LeftHand (Teleport locomotion)
       objectReference: {fileID: 0}
+    - target: {fileID: 202364687, guid: fdd81dc1b9ca6bb46858f0cf31709575, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 1670256624, guid: fdd81dc1b9ca6bb46858f0cf31709575, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 1767192433, guid: fdd81dc1b9ca6bb46858f0cf31709575, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503725, guid: fdd81dc1b9ca6bb46858f0cf31709575,
         type: 3}
       propertyPath: m_Name
       value: XR Origin TeleportMotion
+      objectReference: {fileID: 0}
+    - target: {fileID: 1717954561962503725, guid: fdd81dc1b9ca6bb46858f0cf31709575,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: fdd81dc1b9ca6bb46858f0cf31709575,
         type: 3}
