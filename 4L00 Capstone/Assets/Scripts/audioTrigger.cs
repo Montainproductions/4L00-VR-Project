@@ -1,5 +1,4 @@
 using UnityEngine;
-
 public class audioTrigger : MonoBehaviour
 {
     [SerializeField]
@@ -8,39 +7,32 @@ public class audioTrigger : MonoBehaviour
     private GameObject GameObject;
     private Vector3 position;
     private Sc_AudioManager audioManager;
-
+    [SerializeField]
+    private AudioClip audioClip;
     public bool playerCollideOnly;
     public bool followObject;
     public bool triggerOnlyOnce;
     public bool destroyTheObject;
-
     private void Start()
     {
         //TryGetComponent(out Sc_AudioManager audiomanager);
-        audioManager = GetComponent<Sc_AudioManager>();
+        audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<Sc_AudioManager>();
     }
-
     // If the Player object enters the collider, spawn an audio source in accordance to the parameters set
     void OnTriggerEnter(Collider other)
     {
         // Check whether the sound can only be triggered by the Player
-        if (playerCollideOnly == true)
+        //if (playerCollideOnly == true){
+        // Check to see if the object entering the collider has the 'Player' tag
+        if (other.CompareTag("Player") == true)
         {
-            // Check to see if the object entering the collider has the 'Player' tag
-            if (other.CompareTag("Player") == true)
-            {
-                AudioTrigger();
-            }
-        }
-        else
-        {
-            // Spawn Audio when anything interacts with this collider
             AudioTrigger();
         }
-        
-        
+        //}else{
+        //    // Spawn Audio when anything interacts with this collider
+        //    AudioTrigger();
+        //}
     }
-
     // Spawn the Audio
     private void AudioTrigger()
     {
@@ -52,21 +44,14 @@ public class audioTrigger : MonoBehaviour
         {
             // Spawns an Audio Source as a Child of this GameObject
             ao = Instantiate(AudioSource, position, Quaternion.identity, GameObject.transform);
-            if(audioManager != null)
-            {
-                audioManager.audioSource = ao;
-            }
+            SendAudio(ao);
         }
         else
         {
             // Spawn Audio Source at GameObjects location
             ao = Instantiate(AudioSource, position, Quaternion.identity);
-            if (audioManager != null)
-            {
-                audioManager.audioSource = ao;
-            }
+            SendAudio(ao);
         }
-
         // Incase you want to destroy the object after spawning the sound source
         if (destroyTheObject == true)
         {
@@ -80,5 +65,11 @@ public class audioTrigger : MonoBehaviour
             // Remove's this script from the pin
             Destroy(this);
         }
+    }
+
+    public void SendAudio(AudioSource ao)
+    {
+        Debug.Log(ao.ToString() + audioClip);
+        audioManager.PlayAudio(audioClip);
     }
 }
