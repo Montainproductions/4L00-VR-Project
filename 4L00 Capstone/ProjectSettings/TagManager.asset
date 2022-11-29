@@ -6,8 +6,6 @@ TagManager:
   tags:
   - Ground
   - RoomLight
-  - Audio
-  - AudioManager
   layers:
   - Default
   - TransparentFX

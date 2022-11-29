@@ -5,75 +5,31 @@ using UnityEngine;
 public class Sc_AudioManager : MonoBehaviour
 {
     public AudioClip[] audioClips;
-    public AudioSource[] audioSources;
-    private GameObject[] audioObjs;
-    private bool[] isPlaying;
-    private int timer = 0;
-    public int maxInterval;
-    public int minInterval;
-    private Coroutine audioCoroutine;
+    public AudioSource audioSource;
 
     // Start is called before the first frame update
-    void Start(){
-        audioCoroutine = StartCoroutine(PlayRandomIntervalSound());
+    void Start()
+    {
+        
     }
 
     // Update is called once per frame
-    void Update(){
-        //for(int i = 0; i < audioSources.Length; i++){
-        //    if (audioSources[i].isPlaying) return;
-
-        //    int idClip = Random.Range(0, audioClips.Length);
-        //    if(!isPlaying[idClip]){
-        //        PlayAudio(audioSources[i], audioClips[idClip]);
-        //    }
-        //}
-
-
-    }
-
-    private IEnumerator PlayRandomIntervalSound()
+    void Update()
     {
-        //Set the timer to a number between max and min
-        if(timer == 0)
+        if (audioSource != null)
         {
-
+            PlayAudio();
         }
-        while (timer > 0)
-        {
-            yield return new WaitForSeconds(1);
-            timer--;
-        }
-        AudioClip clip = GetRandomClip();
-        PlayAudio(clip);
-        audioCoroutine = StartCoroutine(PlayRandomIntervalSound());
-        yield return null;
+        
     }
 
-    public void PlayAudio(AudioClip audioclip){
-        AudioSource audioSource = GetNextSource();
-
-        audioSource.clip = audioclip;
-        audioSource.Play();
-    }
-
-    public void PlayNewAudio(){
-        audioObjs = GameObject.FindGameObjectsWithTag("Audio");
-    }
-
-    private AudioSource GetNextSource()
+    private void PlayAudio()
     {
-        foreach(AudioSource s in audioSources)
+        if (!audioSource.isPlaying)
         {
-            if (!s.isPlaying)
-                return s;
+            int idClip = Random.Range(0, audioClips.Length);
+            audioSource.clip = audioClips[idClip];
+            audioSource.Play();
         }
-        audioSources[0].Stop();
-        return audioSources[0];
-    }
-
-    private AudioClip GetRandomClip()
-    {
-        return null;
     }
 }
