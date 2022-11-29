@@ -17,7 +17,7 @@ public class Sc_LevelManager : MonoBehaviour{
 
     public void Awake(){ //Whenever the script if first spawned in the game it will create the player.
         Instance = this; //Tells the singleton what game object its meant to be listening
-        SpawnPlayer();
+       // SpawnPlayer();
     }
 
     // Start is called before the first frame update
