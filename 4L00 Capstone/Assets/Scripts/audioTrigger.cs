@@ -1,6 +1,10 @@
 using UnityEngine;
+using UnityEngine.Audio;
 public class audioTrigger : MonoBehaviour
 {
+    [Header("Spawn Audio Source")]
+    [SerializeField]
+    private bool spawnAudioSource = false;
     [SerializeField]
     public AudioSource AudioSource;
     [SerializeField]
@@ -13,6 +17,15 @@ public class audioTrigger : MonoBehaviour
     public bool followObject;
     public bool triggerOnlyOnce;
     public bool destroyTheObject;
+
+    [Header("Audio Mixer")]
+    [SerializeField]
+    private bool changeAudioMixerVolume;
+    [SerializeField]
+    [Range(-20, 0)] private float newAudioMixerVolume;
+    private AudioMixer audioMixer;
+    private float currentAudioMixerVolume;
+
     private void Start()
     {
         //TryGetComponent(out Sc_AudioManager audiomanager);
@@ -26,7 +39,15 @@ public class audioTrigger : MonoBehaviour
         // Check to see if the object entering the collider has the 'Player' tag
         if (other.CompareTag("Player") == true)
         {
-            AudioTrigger();
+            if (spawnAudioSource)
+            {
+                AudioTrigger();
+            }
+            
+        }
+        if (changeAudioMixerVolume)
+        {
+            ChangeAudioMixer();
         }
         //}else{
         //    // Spawn Audio when anything interacts with this collider
@@ -65,6 +86,13 @@ public class audioTrigger : MonoBehaviour
             // Remove's this script from the pin
             Destroy(this);
         }
+    }
+
+    private void ChangeAudioMixer()
+    {
+        audioMixer.GetFloat("panicRoomVolume", out currentAudioMixerVolume);
+
+        audioMixer.SetFloat("panicRoomVolume", newAudioMixerVolume);
     }
 
     public void SendAudio(AudioSource ao)
