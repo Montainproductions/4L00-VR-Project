@@ -52,6 +52,11 @@ public class Sc_LevelManager : MonoBehaviour{
         Sc_GameManager.Instance.GoToLevel(SRSceneNumber);
     }
 
+    public void GoToSetRoom(int sceneNumber)
+    {
+        Sc_GameManager.Instance.GoToLevel(sceneNumber);
+    }
+
     public void TurnOnOffLights()
     {
         Debug.Log("LightSwitch Working");
