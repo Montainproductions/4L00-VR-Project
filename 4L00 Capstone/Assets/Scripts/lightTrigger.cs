@@ -28,15 +28,15 @@ public class lightTrigger : MonoBehaviour
             if (gradualChange == true)
             {
                 // The fade function requires the array of lights, the intensity we want to change to, and the time it'll take to change the intensity
-                StartCoroutine(fade(Light, intensityChangeTo, duration));
+                StartCoroutine(fade(light, intensityChangeTo, duration)) ;
                 Debug.Log("Lights changing");
             }
             else
             {
                 // For each light in the array, change it's intensity to new value given 
-                for(int i = 0; i < Light.Length; i++)
+                for(int i = 0; i < light.Length; i++)
                 {
-                    Light[i].intensity = intensityChangeTo;
+                    light[i].intensity = intensityChangeTo;
                 }
             }
         }
