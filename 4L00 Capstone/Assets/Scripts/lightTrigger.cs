@@ -12,32 +12,35 @@ public class lightTrigger : MonoBehaviour
     // Change the light's intensity to the given value
     [SerializeField]
     private float intensityChangeTo = 1f;
+
+
     // If we want to make the light's change gradually instead
     [Header("Additonal Options")]
-    public bool gradualChange;
+    [SerializeField]
+    private bool gradualChange;
     [SerializeField]
     private float duration = 2f;
 
     // If the player enter's the collider of the object this script is attached to
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerExit(Collider other)
     {
         // Check for the player tag
-        if (other.CompareTag("Player") == true)
-        {
-            // Check if we want to change the light's gradually
-            if (gradualChange == true)
-            {
-                // The fade function requires the array of lights, the intensity we want to change to, and the time it'll take to change the intensity
-                StartCoroutine(fade(light, intensityChangeTo, duration)) ;
-                Debug.Log("Lights changing");
-            }
-            else
-            {
-                // For each light in the array, change it's intensity to new value given 
-                for(int i = 0; i < light.Length; i++)
-                {
-                    light[i].intensity = intensityChangeTo;
-                }
+        if (other.CompareTag("Player")){
+            StartCoroutine(PlayerLeft());
+        }
+    }
+
+    IEnumerator PlayerLeft(){
+        // Check if we want to change the light's gradually
+        if(gradualChange){
+            // The fade function requires the array of lights, the intensity we want to change to, and the time it'll take to change the intensity
+            StartCoroutine(fade(light, intensityChangeTo, duration));
+            Debug.Log("Lights changing");
+        }else{
+            // For each light in the array, change it's intensity to new value given 
+            for(int i = 0; i < light.Length; i++){
+                light[i].intensity = intensityChangeTo;
+                yield return null;
             }
         }
     }
