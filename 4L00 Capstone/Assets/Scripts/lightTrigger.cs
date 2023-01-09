@@ -8,7 +8,7 @@ public class lightTrigger : MonoBehaviour
     [Header("Lights")]
     // Collect an Array of lights to be changed
     [SerializeField]
-    private Light[] Light;
+    private Light[] light;
     // Change the light's intensity to the given value
     [SerializeField]
     private float intensityChangeTo = 1f;
