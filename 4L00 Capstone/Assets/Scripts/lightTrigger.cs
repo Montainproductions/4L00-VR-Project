@@ -8,7 +8,7 @@ public class lightTrigger : MonoBehaviour
     [Header("Lights")]
     // Collect an Array of lights to be changed
     [SerializeField]
-    private Light[] light;
+    private Light[] lightList;
     // Change the light's intensity to the given value
     [SerializeField]
     private float intensityChangeTo = 1f;
@@ -34,12 +34,12 @@ public class lightTrigger : MonoBehaviour
         // Check if we want to change the light's gradually
         if(gradualChange){
             // The fade function requires the array of lights, the intensity we want to change to, and the time it'll take to change the intensity
-            StartCoroutine(fade(light, intensityChangeTo, duration));
+            StartCoroutine(fade(lightList, intensityChangeTo, duration));
             Debug.Log("Lights changing");
         }else{
             // For each light in the array, change it's intensity to new value given 
-            for(int i = 0; i < light.Length; i++){
-                light[i].intensity = intensityChangeTo;
+            for(int i = 0; i < lightList.Length; i++){
+                lightList[i].intensity = intensityChangeTo;
                 yield return null;
             }
         }

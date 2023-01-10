@@ -621,17 +621,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd43adeb702c728409e5499b4c92cdf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  light:
-  - {fileID: 109347153}
-  - {fileID: 1415234037}
-  - {fileID: 1999498978}
-  - {fileID: 515151084}
-  - {fileID: 687824483}
-  - {fileID: 1689845141}
-  - {fileID: 1014673735}
-  - {fileID: 1994916520}
-  - {fileID: 23706707}
-  - {fileID: 1787551563}
+  lightList: []
   intensityChangeTo: 3.2
   gradualChange: 1
   duration: 25
@@ -1136,6 +1126,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: panicRoomMap
       objectReference: {fileID: 0}
+    - target: {fileID: 4362411301588336719, guid: 96f6970044fdcf34bac5a8cc8e63e786,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 324f77d88c02a484cb4969e02ef0820a, type: 2}
     - target: {fileID: 6878276038103193739, guid: 96f6970044fdcf34bac5a8cc8e63e786,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -2118,6 +2113,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 763831436034318646, guid: 98bcfa85aa616fe4f849da76a67f7bfd,
         type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 763831436034318646, guid: 98bcfa85aa616fe4f849da76a67f7bfd,
+        type: 3}
       propertyPath: triggerOnlyOnce
       value: 1
       objectReference: {fileID: 0}
@@ -2565,7 +2565,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd43adeb702c728409e5499b4c92cdf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  light: []
+  lightList: []
   intensityChangeTo: 2.8
   gradualChange: 1
   duration: 30
@@ -3554,7 +3554,7 @@ PrefabInstance:
     - target: {fileID: 781630663273105846, guid: c24a7635b5761984d81cf6c4aac26e0d,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 139
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 781630663273105846, guid: c24a7635b5761984d81cf6c4aac26e0d,
         type: 3}
@@ -3564,7 +3564,7 @@ PrefabInstance:
     - target: {fileID: 781630663273105846, guid: c24a7635b5761984d81cf6c4aac26e0d,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 147.05
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 781630663273105846, guid: c24a7635b5761984d81cf6c4aac26e0d,
         type: 3}
@@ -3834,7 +3834,7 @@ PrefabInstance:
     - target: {fileID: 7392662798828016012, guid: 5be124b36717138438f8c262600afb22,
         type: 3}
       propertyPath: m_Name
-      value: WallCrush
+      value: a
       objectReference: {fileID: 0}
     - target: {fileID: 7392662798828016013, guid: 5be124b36717138438f8c262600afb22,
         type: 3}
@@ -4166,6 +4166,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1594442020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1594442012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: befdc102d63534c4c91f1dcc34a729e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: 324f77d88c02a484cb4969e02ef0820a, type: 2}
 --- !u!1 &1603184023 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2706563937957318111, guid: 96f6970044fdcf34bac5a8cc8e63e786,
@@ -5603,7 +5616,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd43adeb702c728409e5499b4c92cdf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  light: []
+  lightList: []
   intensityChangeTo: 2.8
   gradualChange: 1
   duration: 30
