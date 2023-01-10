@@ -8,6 +8,7 @@ TagManager:
   - RoomLight
   - Audio
   - AudioManager
+  - CashRegistar
   layers:
   - Default
   - TransparentFX
