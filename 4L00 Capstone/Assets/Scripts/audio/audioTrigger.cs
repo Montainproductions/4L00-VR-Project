@@ -1,30 +1,21 @@
 using UnityEngine;
 using UnityEngine.Audio;
+
 public class audioTrigger : MonoBehaviour
 {
     [Header("Spawn Audio Source")]
     [SerializeField]
     private bool spawnAudioSource = false;
     [SerializeField]
-    public AudioSource AudioSource;
+    public AudioSource audioSource;
     [SerializeField]
-    private GameObject GameObject;
+    private GameObject gameObject;
     private Vector3 position;
     private Sc_AudioManager audioManager;
+    //[SerializeField]
+    //private AudioClip audioClip;
     [SerializeField]
-    private AudioClip audioClip;
-    public bool playerCollideOnly;
-    public bool followObject;
-    public bool triggerOnlyOnce;
-    public bool destroyTheObject;
-
-    [Header("Audio Mixer")]
-    [SerializeField]
-    private bool changeAudioMixerVolume;
-    [SerializeField]
-    [Range(-20, 0)] private float newAudioMixerVolume;
-    private AudioMixer audioMixer;
-    private float currentAudioMixerVolume;
+    private bool playerCollideOnly, followObject, destroyTheObject, triggerOnlyOnce;
 
     private void Start()
     {
@@ -32,72 +23,21 @@ public class audioTrigger : MonoBehaviour
         audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<Sc_AudioManager>();
     }
     // If the Player object enters the collider, spawn an audio source in accordance to the parameters set
-    void OnTriggerEnter(Collider other)
+    void OnTriggerExit(Collider other)
     {
-        // Check whether the sound can only be triggered by the Player
-        //if (playerCollideOnly == true){
-        // Check to see if the object entering the collider has the 'Player' tag
+        /*// Check to see if the object entering the collider has the 'Player' tag
         if (other.CompareTag("Player") == true)
         {
-            if (spawnAudioSource)
+            if (changeAudioMixerVolume)
             {
-                AudioTrigger();
+                ChangeAudioMixer();
             }
-            
-        }
-        if (changeAudioMixerVolume)
-        {
-            ChangeAudioMixer();
-        }
-        //}else{
-        //    // Spawn Audio when anything interacts with this collider
-        //    AudioTrigger();
-        //}
-    }
-    // Spawn the Audio
-    private void AudioTrigger()
-    {
-        // Save at current object position as a variable
-        position = new Vector3(GameObject.transform.position.x, GameObject.transform.position.y, GameObject.transform.position.z);
-        AudioSource ao;
-        // Check if we want the Audio to follow the object through it's movement
-        if (followObject == true)
-        {
-            // Spawns an Audio Source as a Child of this GameObject
-            ao = Instantiate(AudioSource, position, Quaternion.identity, GameObject.transform);
-            SendAudio(ao);
-        }
-        else
-        {
-            // Spawn Audio Source at GameObjects location
-            ao = Instantiate(AudioSource, position, Quaternion.identity);
-            SendAudio(ao);
-        }
-        // Incase you want to destroy the object after spawning the sound source
-        if (destroyTheObject == true)
-        {
-            // Destroy this GameObject
-            Destroy(GameObject);
-        }
-        // Removes Script from the object to prevent the script from being called again
-        // Use only if you want to keep the object around after triggering the Audio
-        if (triggerOnlyOnce == true)
-        {
-            // Remove's this script from the pin
-            Destroy(this);
-        }
-    }
+            else
+            {
+                //Spawn Audio when anything interacts with this collider
+                audioManager.CreateAudioSource(gameObject, audioSource, followObject, destroyTheObject, triggerOnlyOnce);
+            }
 
-    private void ChangeAudioMixer()
-    {
-        audioMixer.GetFloat("panicRoomVolume", out currentAudioMixerVolume);
-
-        audioMixer.SetFloat("panicRoomVolume", newAudioMixerVolume);
-    }
-
-    public void SendAudio(AudioSource ao)
-    {
-        Debug.Log(ao.ToString() + audioClip);
-        audioManager.PlayAudio(audioClip);
+        }*/
     }
 }

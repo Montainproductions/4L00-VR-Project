@@ -13,7 +13,7 @@ public class Sc_PauseMenu : MonoBehaviour
     {
         buttonCopingRoom.onClick.AddListener(() =>
         {
-            Sc_LevelManager.Instance.SafeRoom();
+            Sc_GameManager.Instance.GoToLevel(Sc_GameManager.Instance.SRSceneNumber);
             //Sc_LevelManager.Instance.GoToCopingRoom();
         });
 

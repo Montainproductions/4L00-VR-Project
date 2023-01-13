@@ -4,14 +4,9 @@ using UnityEngine;
 
 public class ButtonInteract : MonoBehaviour
 {
-    [SerializeField]
-    private Sc_LevelManager levelManager;
-    [SerializeField]
-    private bool lightSwitch;
-
     public void LightSwitchToggle()
     {
         Debug.Log("Stage3");
-        levelManager.TurnOnOffLights();
+        Sc_PanicDisorderR1.Instance.TurnOnOffLights();
     }
 }
