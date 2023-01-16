@@ -244,6 +244,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 285389467476424711, guid: fdd81dc1b9ca6bb46858f0cf31709575,
+        type: 3}
+      propertyPath: m_InteractionLayers.m_Bits
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503725, guid: fdd81dc1b9ca6bb46858f0cf31709575,
         type: 3}
       propertyPath: m_Name
@@ -309,10 +314,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2431063285392703637, guid: fdd81dc1b9ca6bb46858f0cf31709575,
+        type: 3}
+      propertyPath: m_InteractionLayers.m_Bits
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2434299456458490401, guid: fdd81dc1b9ca6bb46858f0cf31709575,
+        type: 3}
+      propertyPath: m_InteractionLayers.m_Bits
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4778211696441940833, guid: fdd81dc1b9ca6bb46858f0cf31709575,
         type: 3}
       propertyPath: m_SmoothMotionEnabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8222087811511916493, guid: fdd81dc1b9ca6bb46858f0cf31709575,
+        type: 3}
+      propertyPath: m_InteractionLayers.m_Bits
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdd81dc1b9ca6bb46858f0cf31709575, type: 3}
