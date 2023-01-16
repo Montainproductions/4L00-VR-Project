@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Sc_BaseRoom : MonoBehaviour
 {
-    public static Sc_PanicDisorderR1 Instance { get; private set; } //Singleton of the script/gameobject so that it can be referenced
+    public static Sc_BaseRoom Instance { get; private set; } //Singleton of the script/gameobject so that it can be referenced
 
     public GameObject pauseMenu, mainMenu;
 
