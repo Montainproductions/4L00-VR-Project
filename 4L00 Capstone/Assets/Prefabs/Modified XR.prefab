@@ -314,6 +314,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream
     - target: {fileID: 2431063285392703637, guid: fdd81dc1b9ca6bb46858f0cf31709575,
         type: 3}
       propertyPath: m_InteractionLayers.m_Bits
@@ -323,16 +324,34 @@ PrefabInstance:
         type: 3}
       propertyPath: m_InteractionLayers.m_Bits
       value: 3
+=======
+    - target: {fileID: 3915507714183328159, guid: fdd81dc1b9ca6bb46858f0cf31709575,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 4778211696441940833, guid: fdd81dc1b9ca6bb46858f0cf31709575,
         type: 3}
       propertyPath: m_SmoothMotionEnabled
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream
     - target: {fileID: 8222087811511916493, guid: fdd81dc1b9ca6bb46858f0cf31709575,
         type: 3}
       propertyPath: m_InteractionLayers.m_Bits
       value: 3
+=======
+    - target: {fileID: 8306115153125424117, guid: fdd81dc1b9ca6bb46858f0cf31709575,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9131130939068940730, guid: fdd81dc1b9ca6bb46858f0cf31709575,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdd81dc1b9ca6bb46858f0cf31709575, type: 3}

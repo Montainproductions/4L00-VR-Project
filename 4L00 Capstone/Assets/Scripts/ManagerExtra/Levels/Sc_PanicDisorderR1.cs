@@ -125,14 +125,12 @@ public class Sc_PanicDisorderR1 : MonoBehaviour
             }
         }
 
-        textUI[1].SetActive(true);
-
         Sc_AudioManager.Instance.ChangeAudioMixer();
         yield return new WaitForSeconds(timeDelay);
+        textUI[1].SetActive(true);
         StartCoroutine(Phase3());
         yield return null;
     }
-
 
     IEnumerator Phase3()
     {
