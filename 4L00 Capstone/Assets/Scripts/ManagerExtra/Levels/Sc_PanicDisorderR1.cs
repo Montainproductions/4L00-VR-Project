@@ -66,6 +66,8 @@ public class Sc_PanicDisorderR1 : MonoBehaviour
             pauseMenu.SetActive(true);
             mainMenu.SetActive(false);
         }
+
+
     }
 
     public void StartObjectHighLighting()
@@ -99,7 +101,6 @@ public class Sc_PanicDisorderR1 : MonoBehaviour
     IEnumerator Phase1(float timeDelay)
     {
         Debug.Log("Phase 1 starting");
-        textUI[0].SetActive(true);
         yield return new WaitForSeconds(timeDelay);
         ceiling.transform.position = Vector3.MoveTowards(ceiling.transform.position, finalPos.transform.position, speed * Time.deltaTime); //Slowly moves the wall from where it is to its final destination
         yield return null;
@@ -125,19 +126,18 @@ public class Sc_PanicDisorderR1 : MonoBehaviour
             }
         }
 
-        textUI[1].SetActive(true);
-
         Sc_AudioManager.Instance.ChangeAudioMixer();
         yield return new WaitForSeconds(timeDelay);
-        StartCoroutine(Phase3());
+        StartCoroutine(Phase3(timeDelay));
         yield return null;
     }
 
 
-    IEnumerator Phase3()
+    IEnumerator Phase3(float timeDelay)
     {
         Debug.Log("Phase 3 Starting");
-        textUI[2].SetActive(true);
+        yield return new WaitForSeconds(2);
+        Sc_AudioManager.Instance.PlayAudio[0];
         yield return null;
     }
 
