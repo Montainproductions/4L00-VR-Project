@@ -54,7 +54,6 @@ public class Sc_PanicDisorderR1 : MonoBehaviour
     public void Start()
     {
         panicRoomState = 0;
-
         StartCoroutine(Phase1(20));
     }
 
@@ -101,8 +100,12 @@ public class Sc_PanicDisorderR1 : MonoBehaviour
     IEnumerator Phase1(float timeDelay)
     {
         Debug.Log("Phase 1 starting");
+        textUI[0].SetActive(true);
         yield return new WaitForSeconds(timeDelay);
         ceiling.transform.position = Vector3.MoveTowards(ceiling.transform.position, finalPos.transform.position, speed * Time.deltaTime); //Slowly moves the wall from where it is to its final destination
+        textUI[0].SetActive(false);
+        textUI[1].SetActive(true);
+        Debug.Log("New UI");
         yield return null;
     }
 
@@ -138,6 +141,8 @@ public class Sc_PanicDisorderR1 : MonoBehaviour
         Debug.Log("Phase 3 Starting");
         yield return new WaitForSeconds(2);
         Sc_AudioManager.Instance.PlayAudio(0);
+        textUI[1].SetActive(false);
+        textUI[2].SetActive(true);
         yield return null;
     }
 
