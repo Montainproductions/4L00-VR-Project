@@ -34,6 +34,14 @@ public class Sc_PanicDisorderR1 : MonoBehaviour
     [SerializeField]
     private bool gradualChange;
 
+    [Header("Sound")]
+    [SerializeField]
+    private AudioSource[] soundSources;
+    [SerializeField]
+    private AudioSource[] extraSoundSources;
+
+
+    [Header("Highlighting")]
     [SerializeField]
     private ShaderEditing[] listOfHighlightingObjects;
     private int panicRoomState;
@@ -99,25 +107,25 @@ public class Sc_PanicDisorderR1 : MonoBehaviour
 
     IEnumerator Phase1(float timeDelay)
     {
-        Debug.Log("Phase 1 starting");
+        //Debug.Log("Phase 1 starting");
         textUI[0].SetActive(true);
         yield return new WaitForSeconds(timeDelay);
         ceiling.transform.position = Vector3.MoveTowards(ceiling.transform.position, finalPos.transform.position, speed * Time.deltaTime); //Slowly moves the wall from where it is to its final destination
         textUI[0].SetActive(false);
         textUI[1].SetActive(true);
-        Debug.Log("New UI");
+        //Debug.Log("New UI");
         yield return null;
     }
 
     public IEnumerator Phase2(float timeDelay)
     {
-        Debug.Log("Phase 2 starting");
+        //Debug.Log("Phase 2 starting");
         // Check if we want to change the light's gradually
         if (gradualChange)
         {
             // The fade function requires the array of lights, the intensity we want to change to, and the time it'll take to change the intensity
             StartCoroutine(Fade(lights, intensityChangeTo, duration));
-            Debug.Log("Lights changing");
+            //Debug.Log("Lights changing");
         }
         else
         {
