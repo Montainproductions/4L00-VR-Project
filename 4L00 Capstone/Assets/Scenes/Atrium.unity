@@ -382,6 +382,7 @@ MonoBehaviour:
   phase3AudioCips: []
   phase4AudioCips: []
   audioSources: []
+  extraSources: []
   maxInterval: 0
   minInterval: 0
   changeAudioMixerVolume: 0
@@ -1678,6 +1679,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1302967540}
   - component: {fileID: 1302967539}
+  - component: {fileID: 1302967541}
   m_Layer: 0
   m_Name: Point Light
   m_TagString: Untagged
@@ -1762,6 +1764,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1302967541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1302967538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 1
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
 --- !u!64 &1361169205
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2237,6 +2259,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 5720652948896775172, guid: 9a3b22c426d575e498daccb59b0c94e1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8e6caf777e5db1c4cba72486ef1e1825, type: 2}
     - target: {fileID: 6520592815014245504, guid: 9a3b22c426d575e498daccb59b0c94e1,
         type: 3}
       propertyPath: m_RootOrder
@@ -2307,6 +2334,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 8210159559466891653, guid: 9a3b22c426d575e498daccb59b0c94e1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8e6caf777e5db1c4cba72486ef1e1825, type: 2}
     - target: {fileID: 8807590640257627570, guid: 9a3b22c426d575e498daccb59b0c94e1,
         type: 3}
       propertyPath: m_CastShadows
@@ -2317,6 +2349,11 @@ PrefabInstance:
       propertyPath: m_DynamicOccludee
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8807590640257627570, guid: 9a3b22c426d575e498daccb59b0c94e1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8e6caf777e5db1c4cba72486ef1e1825, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a3b22c426d575e498daccb59b0c94e1, type: 3}
 --- !u!20 &1853999579 stripped
