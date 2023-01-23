@@ -137,7 +137,7 @@ public class Sc_PanicDisorderR1 : MonoBehaviour
     {
         Debug.Log("Phase 3 Starting");
         yield return new WaitForSeconds(2);
-        Sc_AudioManager.Instance.PlayAudio[0];
+        Sc_AudioManager.Instance.PlayAudio(0);
         yield return null;
     }
 
