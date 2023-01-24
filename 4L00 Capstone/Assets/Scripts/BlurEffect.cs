@@ -8,18 +8,38 @@ using UnityEngine.Rendering.Universal;
 public class BlurEffect : MonoBehaviour
 {
 
-    private float focalLenght = 100f;
-    //[SerializeField] private VolumeParameter volumeParameter;
     [SerializeField] private VolumeProfile profile;
 
+    private DepthOfField depthOfField;
 
     private void Start()
     {
-        profile.TryGet<DepthOfField>(out DepthOfField depthOfField);
-        depthOfField.focalLength.Override(100f);
-        depthOfField.SetAllOverridesTo(true);
-        //depthOfField.focalLength.SetValue(volumeParameter);
-        //depthOfField.focalLength.Override(100f);
+        profile.TryGet<DepthOfField>(out DepthOfField depthOfFieldout);
+        depthOfField = depthOfFieldout;
     }
 
+    public void ChangeBlur(float newFocalLength, float duration)
+    {
+        StartCoroutine(ChangeDepthOfFieldFocalLength(newFocalLength, duration));
+    }
+
+    private IEnumerator ChangeDepthOfFieldFocalLength(float newFocalLength, float duration)
+    {
+        // Initialize timer
+        var counter = 0f;
+        var originalFocalLength = depthOfField.focalLength.GetValue<float>();
+
+        // Only pulsate while bool is true
+        while (counter < duration)
+        {
+            // Lerp between the starting power value and the end power value over time
+            var pow = Mathf.Lerp(originalFocalLength, newFocalLength, counter / duration);
+            // Change the DephOfField's flocalLength value now
+            depthOfField.focalLength.Override(pow);
+            // Increase the Counter
+            counter += Time.deltaTime;
+            // Resume operation the until the following frame
+            yield return null;
+        }
+    }
 }
