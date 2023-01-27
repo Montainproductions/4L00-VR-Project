@@ -37,4 +37,9 @@ public class Sc_GameManager : MonoBehaviour{
         Debug.Log(level); //Confirms in debug.log what level it is going to
         SceneManager.LoadScene(level); //Changes the scene/level
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }
