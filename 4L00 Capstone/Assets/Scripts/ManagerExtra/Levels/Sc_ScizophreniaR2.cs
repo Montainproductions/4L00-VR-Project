@@ -61,7 +61,16 @@ public class Sc_ScizophreniaR2 : MonoBehaviour
 
     IEnumerator Phase3()
     {
+        /*audioSources[0].Stop();
+        velocity.x = Mathf.MoveTowards(velocity.x, desiredVelocity.x, maxSpeedChange); //Slowly increase current velocity in the x direction untill max is reached
+        velocity.z = Mathf.MoveTowards(velocity.z, desiredVelocity.z, maxSpeedChange); //Slowly increase current velocity in the z direction untill max is reached
+        Vector3 displacement = velocity * Time.deltaTime; //Distance the player will be moved by
+        //transform.position += displacement;
+
+        movement = transform.right * displacement.x + transform.up * displacement.y + transform.forward * displacement.z; //Distance moved depending on world vectors
+        transform.position += movement; //Move character
         audioSources[1].Play();
+        */
         yield return null;
     }
 
