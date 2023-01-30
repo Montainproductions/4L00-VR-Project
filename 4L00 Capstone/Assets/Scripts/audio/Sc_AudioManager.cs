@@ -7,7 +7,7 @@ public class Sc_AudioManager : MonoBehaviour
 {
     public static Sc_AudioManager Instance { get; private set; } //Singleton of the script/gameobject so that it can be referenced
 
-    public AudioClip[] baseAudioClips, phase1AudioCips, phase2AudioCips, phase3AudioCips, phase4AudioCips;
+    public AudioClip[] baseAudioClips;
     public AudioSource[] audioSources, extraSources;
     private GameObject[] audioObjs;
     private bool[] isPlaying;
@@ -65,18 +65,13 @@ public class Sc_AudioManager : MonoBehaviour
     public void PlayAudio(int audioClipVal)
     {
         AudioSource audioSource = ExtraAudioSource();
-        audioSource.clip = phase3AudioCips[audioClipVal];
+        //audioSource.clip = phase3AudioCips[audioClipVal];
         audioSource.Play();
     }
 
     public void PlayNewAudio()
     {
         audioObjs = GameObject.FindGameObjectsWithTag("Audio");
-    }
-
-    public void GetNewAudio(AudioClip[] audioclips)
-    {
-
     }
 
     private AudioSource GetNextSource()

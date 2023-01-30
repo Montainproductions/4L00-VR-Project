@@ -9,9 +9,6 @@ public class Sc_PanicDisorderR1 : MonoBehaviour
     public GameObject pauseMenu, mainMenu;
 
     [SerializeField]
-    private int SRSceneNumber;
-
-    [SerializeField]
     private GameObject[] textUI;
 
     [SerializeField]
@@ -35,6 +32,8 @@ public class Sc_PanicDisorderR1 : MonoBehaviour
     private bool gradualChange;
 
     [Header("Sound")]
+    [SerializeField]
+    private Sc_AudioManager audioManager;
     [SerializeField]
     private AudioSource[] soundSources;
     [SerializeField]
@@ -107,8 +106,11 @@ public class Sc_PanicDisorderR1 : MonoBehaviour
 
     IEnumerator Phase1(float timeDelay)
     {
+        extraSoundSources[0].PlayOneShot(audioManager.baseAudioClips[0]);
         //Debug.Log("Phase 1 starting");
+        yield return new WaitForSeconds(5);
         textUI[0].SetActive(true);
+        //extraSoundSources[1].PlayOneShot(audioManager.baseAudioClips[1]);
         yield return new WaitForSeconds(timeDelay);
         ceiling.transform.position = Vector3.MoveTowards(ceiling.transform.position, finalPos.transform.position, speed * Time.deltaTime); //Slowly moves the wall from where it is to its final destination
         textUI[0].SetActive(false);
