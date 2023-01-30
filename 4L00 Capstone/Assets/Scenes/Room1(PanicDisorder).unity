@@ -2213,6 +2213,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 15506412272651316, guid: 95d3d2786d6ce9e44b15f09a17e2b2e8,
+        type: 3}
+      propertyPath: m_UseForceGrab
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 15506412272651316, guid: 95d3d2786d6ce9e44b15f09a17e2b2e8,
+        type: 3}
+      propertyPath: m_MaxRaycastDistance
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 15506412272651316, guid: 95d3d2786d6ce9e44b15f09a17e2b2e8,
+        type: 3}
+      propertyPath: m_SelectActionTrigger
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 19025567897718400, guid: 95d3d2786d6ce9e44b15f09a17e2b2e8,
+        type: 3}
+      propertyPath: m_SelectActionTrigger
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 123853591992660260, guid: 95d3d2786d6ce9e44b15f09a17e2b2e8,
+        type: 3}
+      propertyPath: m_LineLength
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 976444821814500414, guid: 95d3d2786d6ce9e44b15f09a17e2b2e8,
         type: 3}
       propertyPath: m_IsActive
@@ -2224,6 +2249,26 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 82668ae1c3b931545a848d6828567a9c,
         type: 3}
+    - target: {fileID: 2485461320720381094, guid: 95d3d2786d6ce9e44b15f09a17e2b2e8,
+        type: 3}
+      propertyPath: m_UseForceGrab
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2485461320720381094, guid: 95d3d2786d6ce9e44b15f09a17e2b2e8,
+        type: 3}
+      propertyPath: m_MaxRaycastDistance
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2485461320720381094, guid: 95d3d2786d6ce9e44b15f09a17e2b2e8,
+        type: 3}
+      propertyPath: m_SelectActionTrigger
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2589907573861943734, guid: 95d3d2786d6ce9e44b15f09a17e2b2e8,
+        type: 3}
+      propertyPath: m_LineLength
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3316772658048962350, guid: 95d3d2786d6ce9e44b15f09a17e2b2e8,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -2328,6 +2373,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6021718005613828972, guid: 95d3d2786d6ce9e44b15f09a17e2b2e8,
+        type: 3}
+      propertyPath: m_SelectActionTrigger
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7313654230448209575, guid: 95d3d2786d6ce9e44b15f09a17e2b2e8,
         type: 3}
