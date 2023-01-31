@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Xml.Schema;
 using UnityEngine;
 
 public class Sc_ScizophreniaR2 : MonoBehaviour
@@ -17,6 +18,8 @@ public class Sc_ScizophreniaR2 : MonoBehaviour
     [Header("Sound")]
     [SerializeField]
     private AudioSource[] audioSources;
+    [SerializeField]
+    private ScizoRoomAudioData[] scizoRoomSudioSources;
 
     public void Awake()
     {
@@ -34,7 +37,7 @@ public class Sc_ScizophreniaR2 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        scizoRoomSudioSources[1].audioToBePlayed = ScizoRoomAudioData.AudioToBePlayed.BossLine1;
     }
 
     // Update is called once per frame
@@ -50,6 +53,38 @@ public class Sc_ScizophreniaR2 : MonoBehaviour
 
     IEnumerator Phase1()
     {
+        float timer = 15f;
+        AudioSource bossLineOne;
+        AudioSource bossLineTwo;
+        AudioSource bossLineThree;
+        AudioSource radio;
+
+        timer -= Time.deltaTime;
+
+        for(int i = 0; i < scizoRoomSudioSources.Length; i++)
+        {
+            if (scizoRoomSudioSources[i].audioToBePlayed == ScizoRoomAudioData.AudioToBePlayed.BossLine1)
+            {
+                bossLineOne = scizoRoomSudioSources[i].audioSource;
+            }
+            else if (scizoRoomSudioSources[i].audioToBePlayed == ScizoRoomAudioData.AudioToBePlayed.BossLine2)
+            {
+                bossLineTwo = scizoRoomSudioSources[i].audioSource;
+            }
+            else if (scizoRoomSudioSources[i].audioToBePlayed == ScizoRoomAudioData.AudioToBePlayed.BossLine3)
+            {
+                bossLineThree = scizoRoomSudioSources[i].audioSource;
+            }
+            else if (scizoRoomSudioSources[i].audioToBePlayed == ScizoRoomAudioData.AudioToBePlayed.Radio)
+            {
+                radio = scizoRoomSudioSources[i].audioSource;
+            }
+        }
+
+        if (timer <= 0)
+        {
+            StartCoroutine(Phase2());
+        }
         audioSources[0].Play();
         yield return null;
     }
@@ -79,4 +114,35 @@ public class Sc_ScizophreniaR2 : MonoBehaviour
         audioSources[2].Play();
         yield return null;
     }
+
+    public void BeginPhaseOne()
+    {
+        StartCoroutine(Phase1());
+    }
+}
+
+[System.Serializable]
+public class ScizoRoomAudioData
+{
+    public AudioSource audioSource;
+    public enum AudioToBePlayed
+    {
+        BossLine1,
+        BossLine2,
+        BossLine3,
+        InnerVoiceLine1,
+        InnerVoiceLine2,
+        InnerVoiceLine3,
+        InnerVoiceLine4,
+        InnerVoiceLine5,
+        InnerVoiceLine6,
+        InnerVoiceLine7,
+        InnerVoiceLine8,
+        InnerVoiceLine9,
+        Radio,
+        FireAlarm,
+        FireSound
+    }
+
+    public AudioToBePlayed audioToBePlayed;
 }
