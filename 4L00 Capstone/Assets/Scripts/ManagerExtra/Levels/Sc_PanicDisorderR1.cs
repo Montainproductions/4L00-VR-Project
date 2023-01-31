@@ -15,6 +15,7 @@ public class Sc_PanicDisorderR1 : MonoBehaviour
     private GameObject ceiling, finalPos;
     [SerializeField]
     private float speed;
+    private bool lowerCeiling;
 
     [Header("Lights")]
     // Collect an Array of lights to be changed
@@ -61,7 +62,8 @@ public class Sc_PanicDisorderR1 : MonoBehaviour
     public void Start()
     {
         panicRoomState = 0;
-        StartCoroutine(Phase1(20));
+        lowerCeiling = false;
+        StartCoroutine(Phase1(5));
     }
 
     // Update is called once per frame
@@ -73,7 +75,10 @@ public class Sc_PanicDisorderR1 : MonoBehaviour
             mainMenu.SetActive(false);
         }
 
-
+        if (lowerCeiling)
+        {
+            ceiling.transform.position = Vector3.MoveTowards(ceiling.transform.position, finalPos.transform.position, speed * Time.deltaTime); //Slowly moves the wall from where it is to its final destination
+        }
     }
 
     public void StartObjectHighLighting()
@@ -112,7 +117,8 @@ public class Sc_PanicDisorderR1 : MonoBehaviour
         textUI[0].SetActive(true);
         //extraSoundSources[1].PlayOneShot(audioManager.baseAudioClips[1]);
         yield return new WaitForSeconds(timeDelay);
-        ceiling.transform.position = Vector3.MoveTowards(ceiling.transform.position, finalPos.transform.position, speed * Time.deltaTime); //Slowly moves the wall from where it is to its final destination
+        Debug.Log("Phase 1 starting");
+        lowerCeiling = true;
         textUI[0].SetActive(false);
         textUI[1].SetActive(true);
         //Debug.Log("New UI");
