@@ -1898,7 +1898,7 @@ PrefabInstance:
     - target: {fileID: 15506412272651316, guid: 95d3d2786d6ce9e44b15f09a17e2b2e8,
         type: 3}
       propertyPath: m_MaxRaycastDistance
-      value: 1
+      value: 0.35
       objectReference: {fileID: 0}
     - target: {fileID: 15506412272651316, guid: 95d3d2786d6ce9e44b15f09a17e2b2e8,
         type: 3}
@@ -1918,7 +1918,7 @@ PrefabInstance:
     - target: {fileID: 123853591992660260, guid: 95d3d2786d6ce9e44b15f09a17e2b2e8,
         type: 3}
       propertyPath: m_LineLength
-      value: 1
+      value: 0.35
       objectReference: {fileID: 0}
     - target: {fileID: 976444821814500414, guid: 95d3d2786d6ce9e44b15f09a17e2b2e8,
         type: 3}
@@ -1939,7 +1939,7 @@ PrefabInstance:
     - target: {fileID: 2485461320720381094, guid: 95d3d2786d6ce9e44b15f09a17e2b2e8,
         type: 3}
       propertyPath: m_UseForceGrab
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2485461320720381094, guid: 95d3d2786d6ce9e44b15f09a17e2b2e8,
         type: 3}
@@ -1949,7 +1949,7 @@ PrefabInstance:
     - target: {fileID: 2485461320720381094, guid: 95d3d2786d6ce9e44b15f09a17e2b2e8,
         type: 3}
       propertyPath: m_MaxRaycastDistance
-      value: 1
+      value: 0.35
       objectReference: {fileID: 0}
     - target: {fileID: 2485461320720381094, guid: 95d3d2786d6ce9e44b15f09a17e2b2e8,
         type: 3}
@@ -1964,7 +1964,7 @@ PrefabInstance:
     - target: {fileID: 2589907573861943734, guid: 95d3d2786d6ce9e44b15f09a17e2b2e8,
         type: 3}
       propertyPath: m_LineLength
-      value: 1
+      value: 0.35
       objectReference: {fileID: 0}
     - target: {fileID: 3316772658048962350, guid: 95d3d2786d6ce9e44b15f09a17e2b2e8,
         type: 3}
