@@ -14,9 +14,6 @@
         },
         {
             "m_Id": "53d40f37b4394cdb91cf66e2e16e5057"
-        },
-        {
-            "m_Id": "04ebc43c6b6f46e788eeec1dc4e008da"
         }
     ],
     "m_Keywords": [],
@@ -225,32 +222,6 @@
             "m_Id": "75c1d79585974f7e9e8373836d74f8ab"
         }
     ]
-}
-
-{
-    "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.Internal.CubemapShaderProperty",
-    "m_ObjectId": "04ebc43c6b6f46e788eeec1dc4e008da",
-    "m_Guid": {
-        "m_GuidSerialized": "84928412-7b35-463f-8442-8f6ea3850646"
-    },
-    "m_Name": "Cubemap",
-    "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "Cubemap",
-    "m_DefaultReferenceName": "_Cubemap",
-    "m_OverrideReferenceName": "",
-    "m_GeneratePropertyBlock": true,
-    "m_UseCustomSlotLabel": false,
-    "m_CustomSlotLabel": "",
-    "m_Precision": 0,
-    "overrideHLSLDeclaration": false,
-    "hlslDeclarationOverride": 0,
-    "m_Hidden": false,
-    "m_Value": {
-        "m_SerializedCubemap": "{\"cubemap\":{\"instanceID\":0}}",
-        "m_Guid": ""
-    },
-    "m_Modifiable": true
 }
 
 {
@@ -932,9 +903,9 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -587.9999389648438,
-            "y": -172.00001525878907,
-            "width": 138.99996948242188,
+            "x": -904.0,
+            "y": -327.0,
+            "width": 139.00006103515626,
             "height": 34.0
         }
     },
@@ -1207,9 +1178,9 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -364.0,
-            "y": -200.99998474121095,
-            "width": 207.99998474121095,
+            "x": -668.0,
+            "y": -354.0,
+            "width": 208.00003051757813,
             "height": 434.99993896484377
         }
     },
@@ -1467,9 +1438,6 @@
         },
         {
             "m_Id": "53d40f37b4394cdb91cf66e2e16e5057"
-        },
-        {
-            "m_Id": "04ebc43c6b6f46e788eeec1dc4e008da"
         }
     ]
 }
