@@ -38,6 +38,8 @@ public class Sc_ScizophreniaR2 : MonoBehaviour
     void Start()
     {
         scizoRoomSudioSources[1].audioToBePlayed = ScizoRoomAudioData.AudioToBePlayed.BossLine1;
+
+        BeginPhaseOne();
     }
 
     // Update is called once per frame
@@ -54,14 +56,13 @@ public class Sc_ScizophreniaR2 : MonoBehaviour
     IEnumerator Phase1()
     {
         float timer = 15f;
-        AudioSource bossLineOne;
-        AudioSource bossLineTwo;
-        AudioSource bossLineThree;
-        AudioSource radio;
+        bool Phase1isPlaying = true;
+        AudioSource bossLineOne = null;
+        AudioSource bossLineTwo = null;
+        AudioSource bossLineThree = null;
+        AudioSource radio = null;
 
-        timer -= Time.deltaTime;
-
-        for(int i = 0; i < scizoRoomSudioSources.Length; i++)
+        for (int i = 0; i < scizoRoomSudioSources.Length; i++)
         {
             if (scizoRoomSudioSources[i].audioToBePlayed == ScizoRoomAudioData.AudioToBePlayed.BossLine1)
             {
@@ -81,11 +82,25 @@ public class Sc_ScizophreniaR2 : MonoBehaviour
             }
         }
 
-        if (timer <= 0)
+        while(Phase1isPlaying)
         {
-            StartCoroutine(Phase2());
+            for (int i = 0; i < scizoRoomSudioSources.Length; i++)
+            {
+                scizoRoomSudioSources[i].audioSource.Play();
+
+                Debug.Log(scizoRoomSudioSources[i].audioSource.name + " is playing");
+
+                while (scizoRoomSudioSources[i].audioSource.isPlaying)
+                {
+                    yield return null;
+                }
+            }
+
+            Phase1isPlaying = false;
         }
-        audioSources[0].Play();
+
+        
+        //audioSources[0].Play();
         yield return null;
     }
 
