@@ -5,6 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class Sc_Trigger : MonoBehaviour
 {
+    private void OnTriggerEnter(Collider other)
+    {
+        if (SceneManager.GetActiveScene().name == "Room1(PanicDisorder)")
+        {
+            if (other.CompareTag("EggCarton"))
+            {
+                Sc_AudioManager.Instance.PlayAudio(2, 2);
+            }
+        }
+    }
     // If the player enter's the collider of the object this script is attached to
     private void OnTriggerExit(Collider other)
     {
@@ -15,10 +25,6 @@ public class Sc_Trigger : MonoBehaviour
             {
                 StartCoroutine(Sc_PanicDisorderR1.Instance.Phase2(30));
             }
-            else if (other.CompareTag("EggCarton"))
-            {
-                Sc_AudioManager.Instance.PlayAudio(2, 2);
-            } 
         }
     }
 }

@@ -111,14 +111,13 @@ public class Sc_PanicDisorderR1 : MonoBehaviour
 
     IEnumerator Phase1(float timeDelay)
     {
+        Debug.Log("Phase 1 starting");
         Sc_AudioManager.Instance.PlayAudio(0, 0);
         Sc_AudioManager.Instance.PlayAudio(1, 1);
-        //Debug.Log("Phase 1 starting");
         yield return new WaitForSeconds(5);
         textUI[0].SetActive(true);
         //extraSoundSources[1].PlayOneShot(audioManager.baseAudioClips[1]);
         yield return new WaitForSeconds(timeDelay);
-        Debug.Log("Phase 1 starting");
         lowerCeiling = true;
         textUI[0].SetActive(false);
         textUI[1].SetActive(true);
@@ -145,7 +144,7 @@ public class Sc_PanicDisorderR1 : MonoBehaviour
                 yield return null;
             }
         }
-
+        Sc_AudioManager.Instance.PlayAudio(3, 3);
         Sc_AudioManager.Instance.ChangeAudioMixer();
         yield return new WaitForSeconds(timeDelay);
         StartCoroutine(Phase3(timeDelay));
@@ -157,7 +156,7 @@ public class Sc_PanicDisorderR1 : MonoBehaviour
     {
         Debug.Log("Phase 3 Starting");
         yield return new WaitForSeconds(2);
-        //Sc_AudioManager.Instance.PlayAudio(0);
+        Sc_AudioManager.Instance.PlayAudio(3, 5);
         textUI[1].SetActive(false);
         textUI[2].SetActive(true);
         yield return null;

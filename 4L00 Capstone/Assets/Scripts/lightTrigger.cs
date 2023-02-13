@@ -14,6 +14,7 @@ public class lightTrigger : MonoBehaviour
         if (other.CompareTag("Player")){
             if (SceneManager.GetActiveScene().name == "Room1(PanicDisorder)")
             {
+                Debug.Log("Starting phase 2");
                 StartCoroutine(Sc_PanicDisorderR1.Instance.Phase2(30));
             }
         }

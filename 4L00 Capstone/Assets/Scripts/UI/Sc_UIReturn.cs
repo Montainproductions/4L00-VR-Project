@@ -41,7 +41,8 @@ public class Sc_UIReturn : MonoBehaviour
 
     public void Update()
     {
-        mainGame.SetActive(mainMenuActive);
+        mainMenu.SetActive(mainMenuActive);
+        mainGame.SetActive(mainGameActive);
         pauseMenu.SetActive(pauseMenuActive);
     }
 

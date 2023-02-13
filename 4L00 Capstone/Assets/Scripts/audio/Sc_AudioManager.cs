@@ -21,7 +21,10 @@ public class Sc_AudioManager : MonoBehaviour
     [SerializeField]
     [Range(-20, 0)]
     private float newAudioMixerVolume;
+    [SerializeField]
     private AudioMixer audioMixer;
+    [SerializeField]
+    private AudioMixerSnapshot mostPanicRoomVolume;
     private float currentAudioMixerVolume;
 
     public void Awake()
@@ -155,7 +158,7 @@ public class Sc_AudioManager : MonoBehaviour
         }
         AudioClip clip = GetRandomClip();
         PlayAudio(clip);
-        StartCoroutine(PlayRandomIntervalSound());
+        //StartCoroutine(PlayRandomIntervalSound());
         yield return null;
     }
 }

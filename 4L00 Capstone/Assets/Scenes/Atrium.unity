@@ -357,7 +357,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 354944960}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 550.5, y: 259.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -377,7 +377,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseAudioClips: []
-  audioSources: []
+  audioSources:
+  - {fileID: 354944961}
   extraSources: []
   maxInterval: 0
   minInterval: 0
@@ -1088,12 +1089,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4574794042866720771, guid: 169cd10f3c7c98b439bdb10819c4c45a, type: 3}
---- !u!1 &737136065 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2417247529235528656, guid: 95d3d2786d6ce9e44b15f09a17e2b2e8,
-    type: 3}
-  m_PrefabInstance: {fileID: 1563853505}
-  m_PrefabAsset: {fileID: 0}
 --- !u!64 &788100304
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1400,7 +1395,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1044640863}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 550.5, y: 259.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2463,39 +2458,6 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 8e6caf777e5db1c4cba72486ef1e1825, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a3b22c426d575e498daccb59b0c94e1, type: 3}
---- !u!114 &1853999584
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 737136065}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_RenderShadows: 1
-  m_RequiresDepthTextureOption: 2
-  m_RequiresOpaqueTextureOption: 2
-  m_CameraType: 0
-  m_Cameras: []
-  m_RendererIndex: -1
-  m_VolumeLayerMask:
-    serializedVersion: 2
-    m_Bits: 1
-  m_VolumeTrigger: {fileID: 0}
-  m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
-  m_Antialiasing: 0
-  m_AntialiasingQuality: 2
-  m_StopNaN: 0
-  m_Dithering: 0
-  m_ClearDepth: 1
-  m_AllowXRRendering: 1
-  m_RequiresDepthTexture: 0
-  m_RequiresColorTexture: 0
-  m_Version: 2
 --- !u!1 &1990081066
 GameObject:
   m_ObjectHideFlags: 0
