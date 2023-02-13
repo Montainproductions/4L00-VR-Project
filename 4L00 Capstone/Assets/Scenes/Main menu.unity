@@ -123,12 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &193041321 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 627748579498565886, guid: 95d3d2786d6ce9e44b15f09a17e2b2e8,
-    type: 3}
-  m_PrefabInstance: {fileID: 1327167674}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &631490448
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -198,12 +192,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a08b5db748f3fd943a7c124fb14e3078, type: 3}
---- !u!1 &851826680 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8559527159049650662, guid: 95d3d2786d6ce9e44b15f09a17e2b2e8,
-    type: 3}
-  m_PrefabInstance: {fileID: 1327167674}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1327167674
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -261,6 +249,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1230002740981440386, guid: 95d3d2786d6ce9e44b15f09a17e2b2e8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1860903391284309363, guid: 95d3d2786d6ce9e44b15f09a17e2b2e8,
         type: 3}
       propertyPath: m_SizeDelta.x
@@ -310,6 +303,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -3.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 3539761040764025083, guid: 95d3d2786d6ce9e44b15f09a17e2b2e8,
+        type: 3}
+      propertyPath: inMainMenu
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3600379259128530188, guid: 95d3d2786d6ce9e44b15f09a17e2b2e8,
         type: 3}
@@ -380,7 +378,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1773731556}
+      objectReference: {fileID: 0}
     - target: {fileID: 3839081664569238472, guid: 95d3d2786d6ce9e44b15f09a17e2b2e8,
         type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -565,7 +563,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1773731556}
+      objectReference: {fileID: 0}
     - target: {fileID: 5586115140434584810, guid: 95d3d2786d6ce9e44b15f09a17e2b2e8,
         type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -670,17 +668,17 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 193041321}
+      objectReference: {fileID: 0}
     - target: {fileID: 6341336659071554724, guid: 95d3d2786d6ce9e44b15f09a17e2b2e8,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1773731556}
+      objectReference: {fileID: 0}
     - target: {fileID: 6341336659071554724, guid: 95d3d2786d6ce9e44b15f09a17e2b2e8,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 851826680}
+      objectReference: {fileID: 0}
     - target: {fileID: 6341336659071554724, guid: 95d3d2786d6ce9e44b15f09a17e2b2e8,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -805,7 +803,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1773731556}
+      objectReference: {fileID: 0}
     - target: {fileID: 7860891051485639192, guid: 95d3d2786d6ce9e44b15f09a17e2b2e8,
         type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -860,6 +858,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RaycastTarget
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8644068671341310031, guid: 95d3d2786d6ce9e44b15f09a17e2b2e8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8770934626040097898, guid: 95d3d2786d6ce9e44b15f09a17e2b2e8,
         type: 3}
@@ -1093,9 +1096,3 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
---- !u!82 &1773731556 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 5322919018166010772, guid: 95d3d2786d6ce9e44b15f09a17e2b2e8,
-    type: 3}
-  m_PrefabInstance: {fileID: 1327167674}
-  m_PrefabAsset: {fileID: 0}

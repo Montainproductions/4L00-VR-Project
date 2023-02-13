@@ -6,14 +6,18 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class ControllerVibration : MonoBehaviour
 {
 
-    [SerializeField] private ActionBasedController leftController;
-    [SerializeField] private ActionBasedController rightController;
+    [SerializeField] private ActionBasedController leftController, rightController;
 
     // amplitude must be between 0-1 for it to work
     public void StartControllerVibrations(float amplitude, float duration)
     {
+        Debug.Log("Controller Vibrations");
         leftController.SendHapticImpulse(amplitude, duration);
         rightController.SendHapticImpulse(amplitude, duration);
     }
-
+    /*public void StopControllerVibrations()
+    {
+        leftController.StopHapticImpulse();
+        rightController.StopHapticImpulse();
+    }*/
 }

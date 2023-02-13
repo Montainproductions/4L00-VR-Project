@@ -14,14 +14,12 @@ public class Sc_UIReturn : MonoBehaviour
     [SerializeField]
     private bool inMainMenu;
 
-    Gamepad gamepad;
     [SerializeField]
     private GameObject mainMenu, mainGame, pauseMenu;
     private bool mainMenuActive, mainGameActive, pauseMenuActive;
 
     public void Awake()
     {
-        gamepad = Gamepad.current;
         JoyStitckR.action.performed += Pause_performed;
     }
 
