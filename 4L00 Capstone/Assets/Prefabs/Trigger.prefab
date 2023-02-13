@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 763831436034318645}
   - component: {fileID: 763831436034318644}
   - component: {fileID: 763831436034318647}
-  - component: {fileID: 763831436034318646}
+  - component: {fileID: 6642493658343745567}
   m_Layer: 0
-  m_Name: AudioTrigger
+  m_Name: Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -98,7 +98,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &763831436034318646
+--- !u!114 &6642493658343745567
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -107,13 +107,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 763831436034318641}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b27eeae79e1c6b46bd26e53f10afd37, type: 3}
+  m_Script: {fileID: 11500000, guid: ea4180fdc2d6f4a4ea0e4c4614ad8608, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioSource: {fileID: 5771120718715640743, guid: 907504f820f815647a454cd466319a81,
-    type: 3}
-  GameObject: {fileID: 763831436034318641}
-  playerCollideOnly: 1
-  followObject: 0
-  triggerOnlyOnce: 0
-  destroyTheObject: 1

@@ -20,7 +20,7 @@ public class audioTrigger : MonoBehaviour
     private void Start()
     {
         //TryGetComponent(out Sc_AudioManager audiomanager);
-        audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<Sc_AudioManager>();
+        //audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<Sc_AudioManager>();
     }
     // If the Player object enters the collider, spawn an audio source in accordance to the parameters set
     void OnTriggerExit(Collider other)

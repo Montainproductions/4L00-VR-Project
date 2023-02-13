@@ -9,6 +9,7 @@ TagManager:
   - Audio
   - AudioManager
   - CashRegistar
+  - EggCarton
   layers:
   - Default
   - TransparentFX

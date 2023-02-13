@@ -62,10 +62,10 @@ public class Sc_AudioManager : MonoBehaviour
         audioSource.Play();
     }
 
-    public void PlayAudio(int audioClipVal)
+    public void PlayAudio(int audioSourceVal, int audioClipVal)
     {
-        AudioSource audioSource = ExtraAudioSource();
-        //audioSource.clip = phase3AudioCips[audioClipVal];
+        AudioSource audioSource = extraSources[audioSourceVal];
+        audioSource.clip = baseAudioClips[audioClipVal];
         audioSource.Play();
     }
 
