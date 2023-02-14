@@ -15,9 +15,4 @@ public class ControllerVibration : MonoBehaviour
         leftController.SendHapticImpulse(amplitude, duration);
         rightController.SendHapticImpulse(amplitude, duration);
     }
-    /*public void StopControllerVibrations()
-    {
-        leftController.StopHapticImpulse();
-        rightController.StopHapticImpulse();
-    }*/
 }

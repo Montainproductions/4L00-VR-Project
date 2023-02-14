@@ -2,30 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
 
 public class Sc_AudioManager : MonoBehaviour
 {
     public static Sc_AudioManager Instance { get; private set; } //Singleton of the script/gameobject so that it can be referenced
 
+
+
     public AudioClip[] baseAudioClips;
     public AudioSource[] audioSources, extraSources;
-    private GameObject[] audioObjs;
-    private bool[] isPlaying;
     private int timer = 0;
-    public int maxInterval;
-    public int minInterval;
 
     [Header("Audio Mixer")]
+    //[SerializeField]
+    //private bool changeAudioMixerVolume;
     [SerializeField]
-    private bool changeAudioMixerVolume;
-    [SerializeField]
-    [Range(-20, 0)]
-    private float newAudioMixerVolume;
+    [Range(-20, 20)]
+    private float newPanicRoomVolume, newAtriumVolume;
     [SerializeField]
     private AudioMixer audioMixer;
-    [SerializeField]
-    private AudioMixerSnapshot mostPanicRoomVolume;
-    private float currentAudioMixerVolume;
 
     public void Awake()
     {
@@ -43,7 +39,13 @@ public class Sc_AudioManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Scene scene = SceneManager.GetActiveScene();
         StartCoroutine(PlayRandomIntervalSound());
+        if (scene.name == "Atrium")
+        {
+            audioMixer.SetFloat("musicVolume", newAtriumVolume);
+            PlayAudio(0,0);
+        }
     }
 
     // Update is called once per frame
@@ -70,11 +72,6 @@ public class Sc_AudioManager : MonoBehaviour
         AudioSource audioSource = extraSources[audioSourceVal];
         audioSource.clip = baseAudioClips[audioClipVal];
         audioSource.Play();
-    }
-
-    public void PlayNewAudio()
-    {
-        audioObjs = GameObject.FindGameObjectsWithTag("Audio");
     }
 
     private AudioSource GetNextSource()
@@ -140,9 +137,9 @@ public class Sc_AudioManager : MonoBehaviour
     public void ChangeAudioMixer()
     {
         Debug.Log("Audio Changed");
-        audioMixer.GetFloat("panicRoomVolume", out currentAudioMixerVolume);
+        //audioMixer.GetFloat("panicRoomVolume", out currentAudioMixerVolume);
 
-        audioMixer.SetFloat("panicRoomVolume", newAudioMixerVolume);
+        audioMixer.SetFloat("panicRoomVolume", newPanicRoomVolume);
     }
 
     private IEnumerator PlayRandomIntervalSound()
