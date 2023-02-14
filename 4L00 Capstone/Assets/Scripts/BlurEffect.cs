@@ -8,7 +8,8 @@ using UnityEngine.Rendering.Universal;
 public class BlurEffect : MonoBehaviour
 {
 
-    [SerializeField] private VolumeProfile profile;
+    [SerializeField]
+    private VolumeProfile profile;
 
     private DepthOfField depthOfField;
 

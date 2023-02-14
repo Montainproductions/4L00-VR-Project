@@ -32,6 +32,10 @@ public class Sc_PanicDisorderR1 : MonoBehaviour
     [SerializeField]
     private bool gradualChange;
 
+    [SerializeField]
+    private BlurEffect effectBlur;
+    [SerializeField]
+    private float newFocalLength, durationFOV;
     /*[Header("Sound")]
     [SerializeField]
     private Sc_AudioManager audioManager;
@@ -157,6 +161,7 @@ public class Sc_PanicDisorderR1 : MonoBehaviour
         Debug.Log("Phase 3 Starting");
         yield return new WaitForSeconds(2);
         Sc_AudioManager.Instance.PlayAudio(3, 5);
+        effectBlur.ChangeBlur(newFocalLength, durationFOV);
         textUI[1].SetActive(false);
         textUI[2].SetActive(true);
         yield return null;

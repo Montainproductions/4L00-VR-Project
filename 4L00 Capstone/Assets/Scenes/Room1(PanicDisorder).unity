@@ -3760,6 +3760,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 4181432865328249775, guid: 95d3d2786d6ce9e44b15f09a17e2b2e8,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4229782449519024745, guid: 95d3d2786d6ce9e44b15f09a17e2b2e8,
         type: 3}
       propertyPath: m_Layer
@@ -6489,6 +6494,7 @@ GameObject:
   - component: {fileID: 1665790182}
   - component: {fileID: 1665790183}
   - component: {fileID: 1665790184}
+  - component: {fileID: 1665790185}
   m_Layer: 0
   m_Name: LM_PanicDisorder
   m_TagString: Untagged
@@ -6539,6 +6545,9 @@ MonoBehaviour:
   intensityChangeTo: 80
   duration: 20
   gradualChange: 1
+  effectBlur: {fileID: 1665790185}
+  newFocalLength: 100
+  durationFOV: 10
   listOfHighlightingObjects:
   - {fileID: 1234712561}
   - {fileID: 529837489}
@@ -6571,12 +6580,9 @@ MonoBehaviour:
   - {fileID: 44855924}
   - {fileID: 1586096813}
   - {fileID: 125204196}
-  maxInterval: 0
-  minInterval: 0
-  newAudioMixerVolume: 15
+  newPanicRoomVolume: 10
+  newAtriumVolume: 0
   audioMixer: {fileID: 24100000, guid: 4e6601c9b19248a49b000932236edb63, type: 2}
-  mostPanicRoomVolume: {fileID: 245000012928175524, guid: 1dd706bb85d8aef4e83a6229dbd62c36,
-    type: 2}
 --- !u!114 &1665790184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6591,6 +6597,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftController: {fileID: 1011467224}
   rightController: {fileID: 1011467223}
+--- !u!114 &1665790185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1665790180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cb9b8721dc668e45b3c8cccdbcefebd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile: {fileID: 11400000, guid: 4a921dcd6de67ad4e8df392396368328, type: 2}
 --- !u!1 &1668495370 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 9d1f605f33cd3ef4bad4c9225135d83d,
