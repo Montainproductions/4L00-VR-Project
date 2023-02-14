@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Xml.Schema;
+using UnityEditor.TextCore.Text;
 using UnityEngine;
 
 public class Sc_ScizophreniaR2 : MonoBehaviour
@@ -19,7 +20,13 @@ public class Sc_ScizophreniaR2 : MonoBehaviour
     [SerializeField]
     private AudioSource[] audioSources;
     [SerializeField]
-    private ScizoRoomAudioData[] scizoRoomSudioSources;
+    private ScizoRoomAudioData[] scizoRoomPhase1SudioSources;
+    [SerializeField]
+    private ScizoRoomAudioData[] scizoRoomPhase2SudioSources;
+    [SerializeField]
+    private ScizoRoomAudioData[] scizoRoomPhase3SudioSources;
+    [SerializeField]
+    private ScizoRoomAudioData[] scizoRoomPhase4SudioSources;
 
     public void Awake()
     {
@@ -37,7 +44,7 @@ public class Sc_ScizophreniaR2 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        scizoRoomSudioSources[1].audioToBePlayed = ScizoRoomAudioData.AudioToBePlayed.BossLine1;
+        scizoRoomPhase1SudioSources[1].audioToBePlayed = ScizoRoomAudioData.AudioToBePlayed.BossLine1;
 
         BeginPhaseOne();
     }
@@ -62,35 +69,35 @@ public class Sc_ScizophreniaR2 : MonoBehaviour
         AudioSource bossLineThree = null;
         AudioSource radio = null;
 
-        for (int i = 0; i < scizoRoomSudioSources.Length; i++)
+        for (int i = 0; i < scizoRoomPhase1SudioSources.Length; i++)
         {
-            if (scizoRoomSudioSources[i].audioToBePlayed == ScizoRoomAudioData.AudioToBePlayed.BossLine1)
+            if (scizoRoomPhase1SudioSources[i].audioToBePlayed == ScizoRoomAudioData.AudioToBePlayed.BossLine1)
             {
-                bossLineOne = scizoRoomSudioSources[i].audioSource;
+                bossLineOne = scizoRoomPhase1SudioSources[i].audioSource;
             }
-            else if (scizoRoomSudioSources[i].audioToBePlayed == ScizoRoomAudioData.AudioToBePlayed.BossLine2)
+            else if (scizoRoomPhase1SudioSources[i].audioToBePlayed == ScizoRoomAudioData.AudioToBePlayed.BossLine2)
             {
-                bossLineTwo = scizoRoomSudioSources[i].audioSource;
+                bossLineTwo = scizoRoomPhase1SudioSources[i].audioSource;
             }
-            else if (scizoRoomSudioSources[i].audioToBePlayed == ScizoRoomAudioData.AudioToBePlayed.BossLine3)
+            else if (scizoRoomPhase1SudioSources[i].audioToBePlayed == ScizoRoomAudioData.AudioToBePlayed.BossLine3)
             {
-                bossLineThree = scizoRoomSudioSources[i].audioSource;
+                bossLineThree = scizoRoomPhase1SudioSources[i].audioSource;
             }
-            else if (scizoRoomSudioSources[i].audioToBePlayed == ScizoRoomAudioData.AudioToBePlayed.Radio)
+            else if (scizoRoomPhase1SudioSources[i].audioToBePlayed == ScizoRoomAudioData.AudioToBePlayed.Radio)
             {
-                radio = scizoRoomSudioSources[i].audioSource;
+                radio = scizoRoomPhase1SudioSources[i].audioSource;
             }
         }
 
         while(Phase1isPlaying)
         {
-            for (int i = 0; i < scizoRoomSudioSources.Length; i++)
+            for (int i = 0; i < scizoRoomPhase1SudioSources.Length; i++)
             {
-                scizoRoomSudioSources[i].audioSource.Play();
+                scizoRoomPhase1SudioSources[i].audioSource.Play();
 
-                Debug.Log(scizoRoomSudioSources[i].audioSource.name + " is playing");
+                Debug.Log(scizoRoomPhase1SudioSources[i].audioSource.name + " is playing");
 
-                while (scizoRoomSudioSources[i].audioSource.isPlaying)
+                while (scizoRoomPhase1SudioSources[i].audioSource.isPlaying)
                 {
                     yield return null;
                 }
@@ -106,6 +113,13 @@ public class Sc_ScizophreniaR2 : MonoBehaviour
 
     IEnumerator Phase2()
     {
+        bool phase2IsPlaying = true;
+
+        while (phase2IsPlaying)
+        {
+            // Do Stuff
+            phase2IsPlaying = false;
+        }
         yield return null;
     }
 

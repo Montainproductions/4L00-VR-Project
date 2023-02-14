@@ -1,0 +1,421 @@
+fileFormatVersion: 2
+guid: 2057ec659e662d543aeb738f7148137e
+ModelImporter:
+  serializedVersion: 21300
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Atrium.002
+    second: {fileID: 2100000, guid: 9c87bc7f8434dbe4b9d9081d23e450e0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Banner
+    second: {fileID: 2100000, guid: a0b6bf5f355bcb54a9d630a86128a964, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FlowerFloor.001
+    second: {fileID: 2100000, guid: f93d5c6921726034cbed820b20200350, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Image_0
+    second: {fileID: 2100000, guid: 13bcd7a1679744441a43fdcbc22cd208, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: 3b60e254e39088b43b969a75102b6c2b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.002
+    second: {fileID: 2100000, guid: 3cbdde686f8ecd8458a38b116b227436, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.003
+    second: {fileID: 2100000, guid: 203f8f83d74987b46af24a70e0f53409, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Middle
+    second: {fileID: 2100000, guid: 140146d227b991140a677f23d5abab72, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Petals
+    second: {fileID: 2100000, guid: 148ace90846614c4c963df1e62ddcbd9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pillars
+    second: {fileID: 2100000, guid: 528f041d5a782b041b5e61266c1f21a3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stem
+    second: {fileID: 2100000, guid: 88d55911a34c50042b8f8a5f8898c4fd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Whiteroom
+    second: {fileID: 2100000, guid: b81b67cd9e88df347b316499cea3e8ff, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WhiteroomFloor
+    second: {fileID: 2100000, guid: 53c007e10370f4849a789e06be3a29f7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: archVine1.001
+    second: {fileID: 2100000, guid: 4d5176371fb76864eb78205ca57e99e5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: archVineLeaf1.001
+    second: {fileID: 2100000, guid: 947792ff34edcc04f89aa1c0afaa04ff, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: archway
+    second: {fileID: 2100000, guid: b5df72e0c4324874bab199b3f1f89f7f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dirt
+    second: {fileID: 2100000, guid: 5abe41b17fcff2b4f85ae443807a87d4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: frameCurtain_Material
+    second: {fileID: 2100000, guid: dfaee2dc4cfac744c98512b046becfc8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: gallery_Table
+    second: {fileID: 2100000, guid: 47d3d40e81715e049af4ece432fc5c1c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: grass
+    second: {fileID: 2100000, guid: 8ed4d1b26a239224c9144fdf3c1b2cb8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: image_1
+    second: {fileID: 2100000, guid: f5af67300b971734689a47fd3fe7d201, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: image_2
+    second: {fileID: 2100000, guid: 564f68d9b56b0424d8a9714b4934c35c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: image_3
+    second: {fileID: 2100000, guid: 64db00ffe6fa1804ab501c6c2638d77e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: picFrame_Material
+    second: {fileID: 2100000, guid: 87f03572da01b8d41a54a8937981c30a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wallsconce
+    second: {fileID: 2100000, guid: 4e0d0be9df5657a41a206f768ee77a43, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: DefaultMaterial_Base_color_1001
+    second: {fileID: 2800000, guid: f2bd1cac53a2d9c4baf03302ac97f433, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: DefaultMaterial_Metallic_1001
+    second: {fileID: 2800000, guid: cf497dde2df787c4498fa7df453a8519, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: DefaultMaterial_Normal_OpenGL_1001
+    second: {fileID: 2800000, guid: 757eca87f0f83644eadb0d3f62e9b0cd, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: DefaultMaterial_Roughness_1001
+    second: {fileID: 2800000, guid: 1c8e010c981ee104bb812ed3fd074f94, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: atrium-Redux1_Atrium.002_BaseColor.1001
+    second: {fileID: 2800000, guid: 8217fecac8085b748bf78ff1c01bff14, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: atrium-Redux1_Atrium.002_Metallic.1001
+    second: {fileID: 2800000, guid: c6726ec0d1286db4d9f660fdfd383f02, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: atrium-Redux1_Atrium.002_Normal.1001
+    second: {fileID: 2800000, guid: 7d482eded3452654c81df423b12ca19f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: atrium-Redux1_Atrium.002_Roughness.1001
+    second: {fileID: 2800000, guid: f33a58384ebed96458211b5164e677ae, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: atrium-Redux1_FlowerFloor.001_BaseColor.1001
+    second: {fileID: 2800000, guid: 241092a00c59b2742809b9b2f7b0ff09, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: atrium-Redux1_FlowerFloor.001_Metallic.1001
+    second: {fileID: 2800000, guid: 0365a51f56f51914aa62702f517d9673, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: atrium-Redux1_FlowerFloor.001_Normal.1001
+    second: {fileID: 2800000, guid: 33fbf20ccf2a7f34daf88db587d501e8, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: atrium-Redux1_FlowerFloor.001_Roughness.1001
+    second: {fileID: 2800000, guid: 2571dd2952af6fa42a0b30de7b64e45b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: atrium-Redux1_Pillars_BaseColor.1001
+    second: {fileID: 2800000, guid: 17925324673577740acb2384244a2cc3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: atrium-Redux1_Pillars_Metallic.1001
+    second: {fileID: 2800000, guid: 6e5fa9d67d3b0c44d974942d5bd14e50, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: atrium-Redux1_Pillars_Normal.1001
+    second: {fileID: 2800000, guid: 20fe7d71e1177814e9ee6e68c1fd59ac, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: atrium-Redux1_Pillars_Roughness.1001
+    second: {fileID: 2800000, guid: 312169327bb91f64b84322417bb34ea8, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: atrium-Redux1_WhiteroomFloor_BaseColor.1001
+    second: {fileID: 2800000, guid: 8ddc365925de8814e8cd3d5d5b81316f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: atrium-Redux1_WhiteroomFloor_Metallic.1001
+    second: {fileID: 2800000, guid: 1c0f1db9aa00a5249aa7307d30ac7deb, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: atrium-Redux1_WhiteroomFloor_Normal.1001
+    second: {fileID: 2800000, guid: 265a28b143761104487518639d1e2d62, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: atrium-Redux1_WhiteroomFloor_Roughness.1001
+    second: {fileID: 2800000, guid: edd45bd26412e0d4faed24ff11aa44fe, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: atrium-Redux1_Whiteroom_BaseColor.1001
+    second: {fileID: 2800000, guid: 0f2b088cf4319d14284af0b34e579188, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: atrium-Redux1_Whiteroom_Metallic.1001
+    second: {fileID: 2800000, guid: 89d6605fcde5b0a45bd8a9bda2c4547d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: atrium-Redux1_Whiteroom_Normal.1001
+    second: {fileID: 2800000, guid: e0ee5820fd0274c4dbca8b281cc54726, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: atrium-Redux1_Whiteroom_Roughness.1001
+    second: {fileID: 2800000, guid: fca384fb37e5bc34984a164d19b62e72, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: atrium-Redux1_archway_BaseColor.1001
+    second: {fileID: 2800000, guid: bb27581b522a5694b9a92aef09596b12, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: atrium-Redux1_archway_Metallic.1001
+    second: {fileID: 2800000, guid: cc219c1673c508449acc79729ee1c392, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: atrium-Redux1_archway_Normal.1001
+    second: {fileID: 2800000, guid: 08fccbb38f1f42a49bfbeae05b456f4a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: atrium-Redux1_archway_Roughness.1001
+    second: {fileID: 2800000, guid: 426904e4f890de142851182f50c3dbae, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: atrium-Redux1_dirt_BaseColor.1001
+    second: {fileID: 2800000, guid: 1184218f598796a42b519df4c4a3157f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: atrium-Redux1_dirt_Metallic.1001
+    second: {fileID: 2800000, guid: 193b20a032fd47741b272bc1760b71f4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: atrium-Redux1_dirt_Normal.1001
+    second: {fileID: 2800000, guid: c0ff32e8c018737478543075df09cec7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: atrium-Redux1_dirt_Roughness.1001
+    second: {fileID: 2800000, guid: 78eeea94808b7584385e249107bc40c2, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: banner_Banner_BaseColor.1001
+    second: {fileID: 2800000, guid: e5a44cac555929b4c87689dcdeb8b791, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: banner_Banner_Metallic.1001
+    second: {fileID: 2800000, guid: 4938977127f827d43a749b48e441660a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: banner_Banner_Normal.1001
+    second: {fileID: 2800000, guid: 7f52ffd77b266804eb8d08bb6912b52e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: banner_Banner_Roughness.1001
+    second: {fileID: 2800000, guid: 452ba7f9f55a9c74094ab7b7976b50bf, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: papercrane_Material_BaseColor.1001
+    second: {fileID: 2800000, guid: b84639431f3d81b4dac3bd5ece2a88e9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: papercrane_Material_Normal.1001
+    second: {fileID: 2800000, guid: 9eddb094d554ee8499ba99185a1402b6, type: 3}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 1
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
