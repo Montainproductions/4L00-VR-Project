@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Xml.Schema;
 using UnityEditor.TextCore.Text;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class Sc_ScizophreniaR2 : MonoBehaviour
 {
@@ -28,6 +29,9 @@ public class Sc_ScizophreniaR2 : MonoBehaviour
     [SerializeField]
     private ScizoRoomAudioData[] scizoRoomPhase4SudioSources;
 
+    [Header("Shadow Objects")]
+    [SerializeField] private Transform shadowsGroupTransform;
+
     public void Awake()
     {
         //Whenever the script if first spawned in the game it will create the player.
@@ -44,9 +48,10 @@ public class Sc_ScizophreniaR2 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        scizoRoomPhase1SudioSources[1].audioToBePlayed = ScizoRoomAudioData.AudioToBePlayed.BossLine1;
+        //scizoRoomPhase1SudioSources[1].audioToBePlayed = ScizoRoomAudioData.AudioToBePlayed.BossLine1;
 
-        BeginPhaseOne();
+        //BeginPhaseOne();
+        StartCoroutine(Phase2());
     }
 
     // Update is called once per frame
@@ -106,21 +111,35 @@ public class Sc_ScizophreniaR2 : MonoBehaviour
             Phase1isPlaying = false;
         }
 
-        
-        //audioSources[0].Play();
-        yield return null;
+        StartCoroutine(Phase2());
     }
 
     IEnumerator Phase2()
     {
         bool phase2IsPlaying = true;
+        float counter = 0f;
+        float duration = 10f;
 
         while (phase2IsPlaying)
         {
-            // Do Stuff
-            phase2IsPlaying = false;
+            Debug.Log("Phase2 is playing");
+            counter += Time.deltaTime;
+
+            float newPositionX = Mathf.Lerp(5f, -5f, counter / duration);
+            shadowsGroupTransform.position = new Vector3(newPositionX, shadowsGroupTransform.position.y, shadowsGroupTransform.position.z);
+
+            float newScaleY = Mathf.Lerp(1f, 10f, counter / duration);
+            shadowsGroupTransform.localScale = new Vector3(shadowsGroupTransform.localScale.x, newScaleY, shadowsGroupTransform.localScale.z);
+
+            if(counter >= duration)
+            {
+                Debug.Log("Phase2 has ended");
+                phase2IsPlaying = false;
+            }
+            yield return null;
         }
-        yield return null;
+
+        StartCoroutine(Phase3());
     }
 
     IEnumerator Phase3()
