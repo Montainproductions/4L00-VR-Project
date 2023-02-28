@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using System.Xml.Schema;
 using UnityEditor.TextCore.Text;
 using UnityEngine;
@@ -11,7 +12,7 @@ public class Sc_ScizophreniaR2 : MonoBehaviour
 
     [Header("Falling Object")]
     [SerializeField]
-    private GameObject mug;
+    private Rigidbody mug;
     [SerializeField]
     private GameObject[] mugLocations;
     [SerializeField]
@@ -32,6 +33,9 @@ public class Sc_ScizophreniaR2 : MonoBehaviour
     [Header("Shadow Objects")]
     [SerializeField] private Transform shadowsGroupTransform;
 
+    private Vector3 originalMugLocation;
+    private bool mugHasNotHitFloor = true;
+
     public void Awake()
     {
         //Whenever the script if first spawned in the game it will create the player.
@@ -51,7 +55,8 @@ public class Sc_ScizophreniaR2 : MonoBehaviour
         //scizoRoomPhase1SudioSources[1].audioToBePlayed = ScizoRoomAudioData.AudioToBePlayed.BossLine1;
 
         //BeginPhaseOne();
-        StartCoroutine(Phase2());
+        originalMugLocation = mug.gameObject.transform.position;
+        StartCoroutine(Phase3());
     }
 
     // Update is called once per frame
@@ -67,7 +72,7 @@ public class Sc_ScizophreniaR2 : MonoBehaviour
 
     IEnumerator Phase1()
     {
-        float timer = 15f;
+        Debug.Log("Phase1 has started");
         bool Phase1isPlaying = true;
         AudioSource bossLineOne = null;
         AudioSource bossLineTwo = null;
@@ -111,18 +116,19 @@ public class Sc_ScizophreniaR2 : MonoBehaviour
             Phase1isPlaying = false;
         }
 
+        Debug.Log("Phase1 has ended");
         StartCoroutine(Phase2());
     }
 
     IEnumerator Phase2()
     {
+        Debug.Log("Phase2 has started");
         bool phase2IsPlaying = true;
         float counter = 0f;
         float duration = 10f;
 
         while (phase2IsPlaying)
         {
-            Debug.Log("Phase2 is playing");
             counter += Time.deltaTime;
 
             float newPositionX = Mathf.Lerp(5f, -5f, counter / duration);
@@ -154,18 +160,56 @@ public class Sc_ScizophreniaR2 : MonoBehaviour
         transform.position += movement; //Move character
         audioSources[1].Play();
         */
-        yield return null;
+
+        Debug.Log("Phase3 has started");
+        float timer = 0f;
+        float duration = 15f;
+        bool phase3IsPlaying = true;
+
+        while (phase3IsPlaying)
+        {
+            timer += Time.deltaTime;
+
+            while (mugHasNotHitFloor)
+            {
+                Vector3 dir = (mug.gameObject.transform.position - mugLocations[1].transform.position).normalized;
+                float power = 0.26f;
+                mug.AddForce(-dir * power, ForceMode.Force);
+                yield return null;
+            }
+            
+            if(timer >= 10f)
+            {
+                mug.gameObject.transform.position = originalMugLocation;
+                mug.gameObject.transform.rotation = Quaternion.identity;
+            }
+            if (timer >= duration)
+            {
+                Debug.Log("Phase3 has ended");
+                phase3IsPlaying = false;
+                StartCoroutine(Phase4());
+            }
+            yield return null;
+        }
     }
 
     IEnumerator Phase4()
     {
+        Debug.Log("Phase4 has started");
         audioSources[2].Play();
         yield return null;
+        Debug.Log("Phase4 has ended");
     }
 
     public void BeginPhaseOne()
     {
         StartCoroutine(Phase1());
+    }
+
+    public void MugHitFool()
+    {
+        Debug.Log("Mug has hit the floor");
+        mugHasNotHitFloor = false;
     }
 }
 
