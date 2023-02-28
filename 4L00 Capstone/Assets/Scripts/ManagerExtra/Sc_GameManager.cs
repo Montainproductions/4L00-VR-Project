@@ -7,28 +7,36 @@ public class Sc_GameManager : MonoBehaviour{
 
     public static Sc_GameManager Instance{ get; private set; } //Singleton of the script/gameobject so that it can be referenced
 
-    public int SRSceneNumber;
+    [HideInInspector]
+    public int currentLevel; //Current Scene/level of the game
 
-    private int currentLevel; //Current Scene/level of the game
+
 
     //When the game object is first created. This is so that if another object is later created shortly after it can always find this script
     public void Awake(){
         Instance = this; //Tells the singleton what game object its meant to be listening
 
         UnityEngine.Object.DontDestroyOnLoad(this); //Dont Destroy so that it can continuasly run this info
+        //Why is it 6?
+        currentLevel = SceneManager.sceneCountInBuildSettings; //Sets the current level 0 and must be placed where the game starts
     }
 
     // Start is called before the first frame update
     void Start(){
-        currentLevel = 0; //Sets the current level 0 and must be placed where the game starts
+        Debug.Log(currentLevel);
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown("f2"))
+        /*if (Input.GetKeyDown("f2"))
         {
-            GoToLevel(SRSceneNumber);
-        }
+            GoToLevel(copinRoomNumber);
+        }*/
+    }
+
+    public void CopingRoom()
+    {
+        GoToLevel(4);
     }
 
     //Changes Scene/level to the one given usually by the door
