@@ -33,6 +33,8 @@ public class Sc_ScizophreniaR2 : MonoBehaviour
     [Header("Shadow Objects")]
     [SerializeField] private Transform shadowsGroupTransform;
 
+    [SerializeField] private GameObject firePartciles;
+
     private Vector3 originalMugLocation;
     private bool mugHasNotHitFloor = true;
 
@@ -56,7 +58,7 @@ public class Sc_ScizophreniaR2 : MonoBehaviour
 
         //BeginPhaseOne();
         originalMugLocation = mug.gameObject.transform.position;
-        StartCoroutine(Phase3());
+        StartCoroutine(Phase1());
     }
 
     // Update is called once per frame
@@ -103,9 +105,15 @@ public class Sc_ScizophreniaR2 : MonoBehaviour
         {
             for (int i = 0; i < scizoRoomPhase1SudioSources.Length; i++)
             {
+                scizoRoomPhase1SudioSources[i].audioSource.clip = scizoRoomPhase1SudioSources[i].audioClip;
                 scizoRoomPhase1SudioSources[i].audioSource.Play();
 
                 Debug.Log(scizoRoomPhase1SudioSources[i].audioSource.name + " is playing");
+
+                if (scizoRoomPhase1SudioSources[i].audioToBePlayed == ScizoRoomAudioData.AudioToBePlayed.Radio)
+                {
+                    continue;
+                }
 
                 while (scizoRoomPhase1SudioSources[i].audioSource.isPlaying)
                 {
@@ -131,10 +139,10 @@ public class Sc_ScizophreniaR2 : MonoBehaviour
         {
             counter += Time.deltaTime;
 
-            float newPositionX = Mathf.Lerp(5f, -5f, counter / duration);
-            shadowsGroupTransform.position = new Vector3(newPositionX, shadowsGroupTransform.position.y, shadowsGroupTransform.position.z);
+            float newPositionZ = Mathf.Lerp(5f, -5f, counter / duration);
+            shadowsGroupTransform.position = new Vector3(shadowsGroupTransform.position.x, shadowsGroupTransform.position.y, newPositionZ);
 
-            float newScaleY = Mathf.Lerp(1f, 10f, counter / duration);
+            float newScaleY = Mathf.Lerp(1f, 5f, counter / duration);
             shadowsGroupTransform.localScale = new Vector3(shadowsGroupTransform.localScale.x, newScaleY, shadowsGroupTransform.localScale.z);
 
             if(counter >= duration)
@@ -163,40 +171,91 @@ public class Sc_ScizophreniaR2 : MonoBehaviour
 
         Debug.Log("Phase3 has started");
         float timer = 0f;
-        float duration = 15f;
+        //float duration = 15f;
         bool phase3IsPlaying = true;
+        scizoRoomPhase1SudioSources[2].audioSource.Stop();
 
         while (phase3IsPlaying)
         {
-            timer += Time.deltaTime;
+            
 
             while (mugHasNotHitFloor)
             {
                 Vector3 dir = (mug.gameObject.transform.position - mugLocations[1].transform.position).normalized;
-                float power = 0.26f;
+                float power = 0.5f;
                 mug.AddForce(-dir * power, ForceMode.Force);
                 yield return null;
             }
             
-            if(timer >= 10f)
+            
+            /*          if (timer >= duration)
+                        {
+                            Debug.Log("Phase3 has ended");
+                            phase3IsPlaying = false;
+                            StartCoroutine(Phase4());
+                        }*/
+            if(mugHasNotHitFloor == false)
             {
                 mug.gameObject.transform.position = originalMugLocation;
                 mug.gameObject.transform.rotation = Quaternion.identity;
-            }
-            if (timer >= duration)
-            {
-                Debug.Log("Phase3 has ended");
+                for (int i = 0; i < scizoRoomPhase3SudioSources.Length; i++)
+                {
+                    mug.gameObject.transform.position = originalMugLocation;
+                    mug.gameObject.transform.rotation = Quaternion.identity;
+                    timer += Time.deltaTime;
+                    if (timer >= 1f)
+                    {
+                        mug.gameObject.transform.position = originalMugLocation;
+                        mug.gameObject.transform.rotation = Quaternion.identity;
+                    }
+
+                    scizoRoomPhase3SudioSources[i].audioSource.clip = scizoRoomPhase3SudioSources[i].audioClip;
+                    scizoRoomPhase3SudioSources[i].audioSource.Play();
+
+                    Debug.Log(scizoRoomPhase3SudioSources[i].audioSource.name + " is playing");
+
+                    while (scizoRoomPhase3SudioSources[i].audioSource.isPlaying)
+                    {
+                        yield return null;
+                    }
+                    yield return null;
+                }
                 phase3IsPlaying = false;
-                StartCoroutine(Phase4());
             }
-            yield return null;
+            
         }
+        StartCoroutine(Phase4());
     }
 
     IEnumerator Phase4()
     {
         Debug.Log("Phase4 has started");
-        audioSources[2].Play();
+        bool phase4IsPlaying = true;
+
+        firePartciles.SetActive(true);
+
+        while (phase4IsPlaying)
+        {
+            for (int i = 0; i < scizoRoomPhase3SudioSources.Length; i++)
+            {
+                scizoRoomPhase4SudioSources[i].audioSource.clip = scizoRoomPhase4SudioSources[i].audioClip;
+                scizoRoomPhase4SudioSources[i].audioSource.Play();
+
+                Debug.Log(scizoRoomPhase4SudioSources[i].audioSource.name + " is playing");
+
+                if (scizoRoomPhase4SudioSources[i].audioToBePlayed == ScizoRoomAudioData.AudioToBePlayed.FireAlarm)
+                {
+                    continue;
+                }
+
+                while (scizoRoomPhase4SudioSources[i].audioSource.isPlaying)
+                {
+                    yield return null;
+                }
+                yield return null;
+            }
+            phase4IsPlaying = false;
+        }
         yield return null;
         Debug.Log("Phase4 has ended");
     }
@@ -217,6 +276,7 @@ public class Sc_ScizophreniaR2 : MonoBehaviour
 public class ScizoRoomAudioData
 {
     public AudioSource audioSource;
+    public AudioClip audioClip;
     public enum AudioToBePlayed
     {
         BossLine1,
