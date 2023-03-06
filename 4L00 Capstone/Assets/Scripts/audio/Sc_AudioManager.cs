@@ -130,6 +130,7 @@ public class Sc_AudioManager : MonoBehaviour
         if (triggerOnlyOnce == true)
         {
             // Remove's this script from the pin
+            
             Destroy(this);
         }
     }
