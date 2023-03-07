@@ -58,7 +58,7 @@ public class Sc_ScizophreniaR2 : MonoBehaviour
 
         //BeginPhaseOne();
         originalMugLocation = mug.gameObject.transform.position;
-        StartCoroutine(Phase1());
+        StartCoroutine(Phase3());
     }
 
     // Update is called once per frame
@@ -171,7 +171,7 @@ public class Sc_ScizophreniaR2 : MonoBehaviour
 
         Debug.Log("Phase3 has started");
         float timer = 0f;
-        //float duration = 15f;
+        float duration = 10f;
         bool phase3IsPlaying = true;
         scizoRoomPhase1SudioSources[2].audioSource.Stop();
 
@@ -181,32 +181,42 @@ public class Sc_ScizophreniaR2 : MonoBehaviour
 
             while (mugHasNotHitFloor)
             {
-                Vector3 dir = (mug.gameObject.transform.position - mugLocations[1].transform.position).normalized;
+
+                /*Vector3 dir = (mug.gameObject.transform.position - mugLocations[1].transform.position).normalized;
                 float power = 0.5f;
-                mug.AddForce(-dir * power, ForceMode.Force);
+                mug.AddForce(-dir * power, ForceMode.Force);*/
+
+                /*float positionZ = Mathf.Lerp(mug.gameObject.transform.position.z, mugLocations[0].transform.position.z, timer / duration);
+                timer += Time.deltaTime;
+                mug.gameObject.transform.position = new Vector3(mug.gameObject.transform.position.x, mug.gameObject.transform.position.y, positionZ);*/
+
+                mug.gameObject.transform.position = Vector3.MoveTowards(mug.gameObject.transform.position, mugLocations[0].transform.position, 0.1f * Time.deltaTime);
+
                 yield return null;
             }
-            
-            
-            /*          if (timer >= duration)
-                        {
-                            Debug.Log("Phase3 has ended");
-                            phase3IsPlaying = false;
-                            StartCoroutine(Phase4());
-                        }*/
-            if(mugHasNotHitFloor == false)
+
+            /*if (timer >= duration)
             {
+                Debug.Log("Phase3 has ended");
+                phase3IsPlaying = false;
+                StartCoroutine(Phase4());
+            }*/
+
+            if (mugHasNotHitFloor == false)
+            {
+                /*mug.velocity = new Vector3(0,0,0);
                 mug.gameObject.transform.position = originalMugLocation;
-                mug.gameObject.transform.rotation = Quaternion.identity;
+                mug.gameObject.transform.rotation = Quaternion.identity;*/
                 for (int i = 0; i < scizoRoomPhase3SudioSources.Length; i++)
                 {
-                    mug.gameObject.transform.position = originalMugLocation;
-                    mug.gameObject.transform.rotation = Quaternion.identity;
-                    timer += Time.deltaTime;
-                    if (timer >= 1f)
+
+                    Debug.Log(timer);
+                    if (timer > 1f)
                     {
-                        mug.gameObject.transform.position = originalMugLocation;
+                        mug.velocity = new Vector3(0, 0, 0);
                         mug.gameObject.transform.rotation = Quaternion.identity;
+                        mug.gameObject.transform.position = originalMugLocation;
+                        mug.velocity = new Vector3(0, 0, 0);
                     }
 
                     scizoRoomPhase3SudioSources[i].audioSource.clip = scizoRoomPhase3SudioSources[i].audioClip;
@@ -216,6 +226,7 @@ public class Sc_ScizophreniaR2 : MonoBehaviour
 
                     while (scizoRoomPhase3SudioSources[i].audioSource.isPlaying)
                     {
+                        timer += Time.deltaTime;
                         yield return null;
                     }
                     yield return null;
