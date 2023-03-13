@@ -11,6 +11,11 @@ public class Sc_Atrium : MonoBehaviour
     void Start()
     {
         StartCoroutine(DisactivatingStatments());
+        if (!Sc_GameManager.Instance.playIntroOnce)
+        {
+            Sc_AudioManager.Instance.PlayAudio(2,1);
+            Sc_GameManager.Instance.playIntroOnce = true;
+        }
     }
 
     // Update is called once per frame
