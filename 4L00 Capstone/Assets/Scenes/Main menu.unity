@@ -459,6 +459,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 2444352591972865406, guid: 95d3d2786d6ce9e44b15f09a17e2b2e8,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 2100000, guid: 59088a6e1c7599d41b2a5e3d00ececac, type: 2}
     - target: {fileID: 2731681501950485293, guid: 95d3d2786d6ce9e44b15f09a17e2b2e8,
         type: 3}
       propertyPath: m_Layer
@@ -507,6 +512,11 @@ PrefabInstance:
     - target: {fileID: 3314900084550018680, guid: 95d3d2786d6ce9e44b15f09a17e2b2e8,
         type: 3}
       propertyPath: m_CameraType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3314900084550018680, guid: 95d3d2786d6ce9e44b15f09a17e2b2e8,
+        type: 3}
+      propertyPath: m_RendererIndex
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3334131684063776000, guid: 95d3d2786d6ce9e44b15f09a17e2b2e8,
@@ -922,6 +932,11 @@ PrefabInstance:
     - target: {fileID: 6140124324339474718, guid: 95d3d2786d6ce9e44b15f09a17e2b2e8,
         type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6192106119036815834, guid: 95d3d2786d6ce9e44b15f09a17e2b2e8,
+        type: 3}
+      propertyPath: m_RendererIndex
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6280171702852745680, guid: 95d3d2786d6ce9e44b15f09a17e2b2e8,

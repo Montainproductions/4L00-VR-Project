@@ -133,15 +133,22 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
             // Get the forward source for the left hand input
             switch (m_LeftHandMovementDirection)
             {
+                
                 case MovementDirection.HeadRelative:
+                    Debug.Log("Left hand position: " + m_LeftMovementPose);
+                    Debug.Log("Head world position: " + m_HeadTransform.GetWorldPose());
                     if (m_HeadTransform != null)
                         m_LeftMovementPose = m_HeadTransform.GetWorldPose();
+                        Debug.Log("Left hand position: " + m_LeftMovementPose);
 
                     break;
 
                 case MovementDirection.HandRelative:
+                    Debug.Log("Left hand position: " + m_LeftMovementPose);
+                    Debug.Log("Left controller position: " + m_LeftControllerTransform.GetWorldPose());
                     if (m_LeftControllerTransform != null)
                         m_LeftMovementPose = m_LeftControllerTransform.GetWorldPose();
+                        Debug.Log("Left hand position: " + m_LeftMovementPose);
 
                     break;
 
