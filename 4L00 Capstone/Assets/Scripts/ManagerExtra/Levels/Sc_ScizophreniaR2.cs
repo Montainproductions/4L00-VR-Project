@@ -58,7 +58,7 @@ public class Sc_ScizophreniaR2 : MonoBehaviour
 
         //BeginPhaseOne();
         originalMugLocation = mug.gameObject.transform.position;
-        StartCoroutine(Phase3());
+        StartCoroutine(Phase1());
     }
 
     // Update is called once per frame
@@ -173,7 +173,6 @@ public class Sc_ScizophreniaR2 : MonoBehaviour
         float timer = 0f;
         float duration = 10f;
         bool phase3IsPlaying = true;
-        scizoRoomPhase1SudioSources[2].audioSource.Stop();
 
         while (phase3IsPlaying)
         {
@@ -207,6 +206,7 @@ public class Sc_ScizophreniaR2 : MonoBehaviour
                 /*mug.velocity = new Vector3(0,0,0);
                 mug.gameObject.transform.position = originalMugLocation;
                 mug.gameObject.transform.rotation = Quaternion.identity;*/
+                scizoRoomPhase1SudioSources[2].audioSource.Stop();
                 for (int i = 0; i < scizoRoomPhase3SudioSources.Length; i++)
                 {
 
