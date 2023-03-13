@@ -45,6 +45,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d1c17261678f984d9231c8b10dcc8d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentLevel: 0
+  playIntroOnce: 0
+  playIntroOnceCoping: 0
 --- !u!114 &6605901985945123892
 MonoBehaviour:
   m_ObjectHideFlags: 0
