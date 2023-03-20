@@ -18,8 +18,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Room2(Schizophrenia).unity
     guid: eec453df7af563a43970416717c9b8b0
   - enabled: 1
-    path: Assets/Scenes/SafeRoom1.unity
-    guid: 23fc873fbf179eb4ca410eef6a4f5de5
+    path: Assets/Scenes/CopingRoom.unity
+    guid: e9a025ee49ded5844aae897cda8cd055
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
