@@ -6,13 +6,18 @@ public class Sc_PanicDisorderR1 : MonoBehaviour
 {
     public static Sc_PanicDisorderR1 Instance { get; private set; } //Singleton of the script/gameobject so that it can be referenced
 
+    //The pause menu and maingame UI objects
     public GameObject pauseMenu, mainMenu;
 
+    //The text UIs that appear through out the stages
     [SerializeField]
     private GameObject[] textUI;
 
+    [Header("Ceiling")]
+    //Objects for the ceiling and thee final position
     [SerializeField]
     private GameObject ceiling, finalPos;
+    //The speed that the ceiling will go down at
     [SerializeField]
     private float speed;
     private bool lowerCeiling;
@@ -24,6 +29,7 @@ public class Sc_PanicDisorderR1 : MonoBehaviour
     // Change the light's intensity to the given value
     [SerializeField]
     private float intensityChangeTo = 1f;
+    //For how long the lights will change
     [SerializeField]
     private float duration = 2f;
 
@@ -36,16 +42,10 @@ public class Sc_PanicDisorderR1 : MonoBehaviour
     private BlurEffect effectBlur;
     [SerializeField]
     private float newFocalLength, durationFOV;
-    /*[Header("Sound")]
-    [SerializeField]
-    private Sc_AudioManager audioManager;
-    [SerializeField]
-    private AudioSource[] soundSources;
-    [SerializeField]
-    private AudioSource[] extraSoundSources;*/
 
 
     [Header("Highlighting")]
+    //The shading that the objects will have
     [SerializeField]
     private ShaderEditing[] listOfHighlightingObjects;
     private int panicRoomState;
@@ -65,31 +65,39 @@ public class Sc_PanicDisorderR1 : MonoBehaviour
 
     public void Start()
     {
+
         panicRoomState = 0;
         lowerCeiling = false;
+        //Sets all of the texts to inactive
+        StartCoroutine(DeactivateUI());
+        //Starts the first phase of the room
         StartCoroutine(Phase1(5));
     }
 
     // Update is called once per frame
     void Update()
     {
+        //
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             pauseMenu.SetActive(true);
             mainMenu.SetActive(false);
         }
 
+        //Lowers the ceiling
         if (lowerCeiling)
         {
             ceiling.transform.position = Vector3.MoveTowards(ceiling.transform.position, finalPos.transform.position, speed * Time.deltaTime); //Slowly moves the wall from where it is to its final destination
         }
     }
 
+    //Starts highLighting object
     public void StartObjectHighLighting()
     {
         listOfHighlightingObjects[panicRoomState].StartHighlighting();
     }
 
+    //Stops highLighting object
     public void StopObjectHighLighting()
     {
         foreach (var highlightingObject in listOfHighlightingObjects)
@@ -103,36 +111,52 @@ public class Sc_PanicDisorderR1 : MonoBehaviour
         panicRoomState = stateNumber;
     }
 
+    //Changes lights on/off
     public void TurnOnOffLights()
     {
         Debug.Log("LightSwitch Working");
         for (int i = 0; i < lights.Length; i++)
         {
             lights[i].enabled = !lights[i].enabled;
-
         }
     }
 
-    IEnumerator Phase1(float timeDelay)
+    //Sets all UI to inactive
+    IEnumerator DeactivateUI()
     {
-        Debug.Log("Phase 1 starting");
-        Sc_AudioManager.Instance.PlayAudio(0, 0);
-        Sc_AudioManager.Instance.PlayAudio(1, 1);
-        yield return new WaitForSeconds(5);
-        textUI[0].SetActive(true);
-        //extraSoundSources[1].PlayOneShot(audioManager.baseAudioClips[1]);
-        yield return new WaitForSeconds(timeDelay);
-        lowerCeiling = true;
-        textUI[0].SetActive(false);
-        textUI[1].SetActive(true);
-        //Debug.Log("New UI");
+        for(int i = 0; i < textUI.Length; i++)
+        {
+            textUI[i].SetActive(false);
+        }
         yield return null;
     }
 
+    //Phase 1 of panic room
+    IEnumerator Phase1(float timeDelay)
+    {
+        Debug.Log("Phase 1 starting");
+        //Plays the first two audios using the first two sources that are in the correct position 
+        Sc_AudioManager.Instance.PlayAudio(0, 0);
+        Sc_AudioManager.Instance.PlayAudio(1, 1);
+        //Wait for a time delay of 5 seconds
+        yield return new WaitForSeconds(5);
+        //Activates the first UI text
+        textUI[0].SetActive(true);
+        //Waits for the time given from the parameter
+        yield return new WaitForSeconds(timeDelay);
+        //Starts lowering the ceiling
+        lowerCeiling = true;
+        //Deactivates the first UI text and activates the second UI text
+        textUI[0].SetActive(false);
+        textUI[1].SetActive(true);
+        //Finishes the coroutine
+        yield return null;
+    }
+
+    //Phase 2 of the panic room
     public IEnumerator Phase2(float timeDelay)
     {
-        //Debug.Log("Phase 2 starting");
-        // Check if we want to change the light's gradually
+        //Check if we want to change the light's gradually
         if (gradualChange)
         {
             // The fade function requires the array of lights, the intensity we want to change to, and the time it'll take to change the intensity
@@ -148,10 +172,15 @@ public class Sc_PanicDisorderR1 : MonoBehaviour
                 yield return null;
             }
         }
+        //Plays the third audio clip using the third audio source
         Sc_AudioManager.Instance.PlayAudio(3, 3);
+        //Increases the audio of the audio mixer
         Sc_AudioManager.Instance.ChangeAudioMixer();
+        //Wait for the time delay given in the parameter to finish
         yield return new WaitForSeconds(timeDelay);
+        //Starts the third corutine.
         StartCoroutine(Phase3(timeDelay));
+        //Finishes the corutine
         yield return null;
     }
 
@@ -159,7 +188,9 @@ public class Sc_PanicDisorderR1 : MonoBehaviour
     IEnumerator Phase3(float timeDelay)
     {
         Debug.Log("Phase 3 Starting");
+        //Wait for 2 seconds for the timer to finish
         yield return new WaitForSeconds(2);
+        //Plays the fith audio clip using the third audio source
         Sc_AudioManager.Instance.PlayAudio(3, 5);
         effectBlur.ChangeBlur(newFocalLength, durationFOV);
         textUI[1].SetActive(false);

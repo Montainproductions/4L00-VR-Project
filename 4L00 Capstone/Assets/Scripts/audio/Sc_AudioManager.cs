@@ -14,9 +14,8 @@ public class Sc_AudioManager : MonoBehaviour
     public AudioSource[] audioSources, extraSources;
     private int timer = 0;
 
+    //Audio mixer
     [Header("Audio Mixer")]
-    //[SerializeField]
-    //private bool changeAudioMixerVolume;
     [SerializeField]
     [Range(-20, 20)]
     private float newPanicRoomVolume, newAtriumVolume;
@@ -40,7 +39,6 @@ public class Sc_AudioManager : MonoBehaviour
     void Start()
     {
         Scene scene = SceneManager.GetActiveScene();
-        StartCoroutine(PlayRandomIntervalSound());
         if (scene.name == "Atrium")
         {
             audioMixer.SetFloat("musicVolume", newAtriumVolume);
@@ -60,6 +58,7 @@ public class Sc_AudioManager : MonoBehaviour
         //}
     }
 
+    //Plays the given audio clip
     public void PlayAudio(AudioClip audioclip)
     {
         AudioSource audioSource = GetNextSource();
@@ -67,6 +66,7 @@ public class Sc_AudioManager : MonoBehaviour
         audioSource.Play();
     }
 
+    //Play the audio clip from specific array in position given and uses the audio source from the audio source array.
     public void PlayAudio(int audioSourceVal, int audioClipVal)
     {
         AudioSource audioSource = extraSources[audioSourceVal];
@@ -74,6 +74,7 @@ public class Sc_AudioManager : MonoBehaviour
         audioSource.Play();
     }
 
+    //Returns the next audio source that isnt playing a sound from the array of sources
     private AudioSource GetNextSource()
     {
         foreach (AudioSource s in audioSources)
@@ -85,6 +86,7 @@ public class Sc_AudioManager : MonoBehaviour
         return audioSources[0];
     }
 
+    //Grabs a audio source that isnt playing audio from the extra audio sources array
     private AudioSource ExtraAudioSource()
     {
         foreach (AudioSource s in extraSources)
@@ -96,11 +98,16 @@ public class Sc_AudioManager : MonoBehaviour
         return extraSources[0];
     }
 
-    private AudioClip GetRandomClip()
+    //Changes the volume of the audio mixer
+    public void ChangeAudioMixer()
     {
-        return null;
+        Debug.Log("Audio Changed");
+        //audioMixer.GetFloat("panicRoomVolume", out currentAudioMixerVolume);
+
+        audioMixer.SetFloat("panicRoomVolume", newPanicRoomVolume);
     }
 
+    //Creates a new audio source and plays an audio clip.
     public void CreateAudioSource(GameObject obj, AudioSource audioSource, bool followObject, bool destroyTheObject, bool triggerOnlyOnce)
     {
         // Save at current object position as a variable
@@ -133,30 +140,5 @@ public class Sc_AudioManager : MonoBehaviour
             
             Destroy(this);
         }
-    }
-
-    public void ChangeAudioMixer()
-    {
-        Debug.Log("Audio Changed");
-        //audioMixer.GetFloat("panicRoomVolume", out currentAudioMixerVolume);
-
-        audioMixer.SetFloat("panicRoomVolume", newPanicRoomVolume);
-    }
-
-    private IEnumerator PlayRandomIntervalSound()
-    {
-        //Set the timer to a number between max and min
-        if (timer == 0)
-        {
-        }
-        while (timer > 0)
-        {
-            yield return new WaitForSeconds(1);
-            timer--;
-        }
-        AudioClip clip = GetRandomClip();
-        PlayAudio(clip);
-        //StartCoroutine(PlayRandomIntervalSound());
-        yield return null;
     }
 }

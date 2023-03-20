@@ -234,9 +234,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 0.2627451, g: 0.3529412, b: 0.42352945, a: 0}
-    m_HighlightedColor: {r: 0.19081523, g: 0.42247477, b: 0.6037736, a: 0.29803923}
-    m_PressedColor: {r: 0.19215688, g: 0.42352945, b: 0.6039216, a: 0.59607846}
-    m_SelectedColor: {r: 0.19215688, g: 0.42352945, b: 0.6039216, a: 0.89411765}
+    m_HighlightedColor: {r: 0.19081523, g: 0.42247477, b: 0.6037736, a: 0}
+    m_PressedColor: {r: 0.19215688, g: 0.42352945, b: 0.6039216, a: 0}
+    m_SelectedColor: {r: 0.19215688, g: 0.42352945, b: 0.6039216, a: 0}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -268,18 +268,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1098885918603911183}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 5632030951289701221}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: PlayOneShot
@@ -288,6 +276,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 8300000, guid: f454930b04fc250499041f61ada9e39f,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1098885918603911183}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -392,9 +392,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 0.2627451, g: 0.3529412, b: 0.42352945, a: 0}
-    m_HighlightedColor: {r: 0.19081523, g: 0.42247477, b: 0.6037736, a: 0.29803923}
-    m_PressedColor: {r: 0.19215688, g: 0.42352945, b: 0.6039216, a: 0.59607846}
-    m_SelectedColor: {r: 0.19215688, g: 0.42352945, b: 0.6039216, a: 0.89411765}
+    m_HighlightedColor: {r: 0.19081523, g: 0.42247477, b: 0.6037736, a: 0}
+    m_PressedColor: {r: 0.19215688, g: 0.42352945, b: 0.6039216, a: 0}
+    m_SelectedColor: {r: 0.19215688, g: 0.42352945, b: 0.6039216, a: 0}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -414,19 +414,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5510092759571433274, guid: a08b5db748f3fd943a7c124fb14e3078,
-          type: 3}
-        m_TargetAssemblyTypeName: Sc_GameManager, Assembly-CSharp
-        m_MethodName: QuitGame
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 5632030951289701221}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: PlayOneShot
@@ -435,6 +422,19 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 8300000, guid: f454930b04fc250499041f61ada9e39f,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 5510092759571433274, guid: a08b5db748f3fd943a7c124fb14e3078,
+          type: 3}
+        m_TargetAssemblyTypeName: Sc_GameManager, Assembly-CSharp
+        m_MethodName: QuitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -539,9 +539,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 0.2627451, g: 0.3529412, b: 0.42352945, a: 0}
-    m_HighlightedColor: {r: 0.19081523, g: 0.42247477, b: 0.6037736, a: 0.29803923}
-    m_PressedColor: {r: 0.19215688, g: 0.42352945, b: 0.6039216, a: 0.59607846}
-    m_SelectedColor: {r: 0.19215688, g: 0.42352945, b: 0.6039216, a: 0.89411765}
+    m_HighlightedColor: {r: 0.19081523, g: 0.42247477, b: 0.6037736, a: 0}
+    m_PressedColor: {r: 0.19215688, g: 0.42352945, b: 0.6039216, a: 0}
+    m_SelectedColor: {r: 0.19215688, g: 0.42352945, b: 0.6039216, a: 0}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -561,13 +561,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 5510092759571433274, guid: a08b5db748f3fd943a7c124fb14e3078,
+          type: 3}
+        m_TargetAssemblyTypeName: Sc_GameManager, Assembly-CSharp
+        m_MethodName: CopingRoom
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -723,9 +724,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 0.2627451, g: 0.3529412, b: 0.42352945, a: 0}
-    m_HighlightedColor: {r: 0.19081523, g: 0.42247477, b: 0.6037736, a: 0.29803923}
-    m_PressedColor: {r: 0.19215688, g: 0.42352945, b: 0.6039216, a: 0.59607846}
-    m_SelectedColor: {r: 0.19215688, g: 0.42352945, b: 0.6039216, a: 0.89411765}
+    m_HighlightedColor: {r: 0.19081523, g: 0.42247477, b: 0.6037736, a: 0}
+    m_PressedColor: {r: 0.19215688, g: 0.42352945, b: 0.6039216, a: 0}
+    m_SelectedColor: {r: 0.19215688, g: 0.42352945, b: 0.6039216, a: 0}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -757,18 +758,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 4837928979263670729}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 5632030951289701221}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: PlayOneShot
@@ -777,6 +766,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 8300000, guid: f454930b04fc250499041f61ada9e39f,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4837928979263670729}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1033,9 +1034,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 0.2627451, g: 0.3529412, b: 0.42352945, a: 0}
-    m_HighlightedColor: {r: 0.19081523, g: 0.42247477, b: 0.6037736, a: 0.29803923}
-    m_PressedColor: {r: 0.19215688, g: 0.42352945, b: 0.6039216, a: 0.59607846}
-    m_SelectedColor: {r: 0.19215688, g: 0.42352945, b: 0.6039216, a: 0.89411765}
+    m_HighlightedColor: {r: 0.19081523, g: 0.42247477, b: 0.6037736, a: 0}
+    m_PressedColor: {r: 0.19215688, g: 0.42352945, b: 0.6039216, a: 0}
+    m_SelectedColor: {r: 0.19215688, g: 0.42352945, b: 0.6039216, a: 0}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -1192,9 +1193,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 0.6981132, g: 0.08957061, b: 0.042808846, a: 0}
-    m_HighlightedColor: {r: 0.6320754, g: 0.12566884, b: 0.08646317, a: 0.43137255}
-    m_PressedColor: {r: 0.5849056, g: 0.12145505, b: 0.08552865, a: 0.7647059}
-    m_SelectedColor: {r: 0.5188679, g: 0.09816941, b: 0.06608224, a: 0.9019608}
+    m_HighlightedColor: {r: 0.6320754, g: 0.12566884, b: 0.08646317, a: 0}
+    m_PressedColor: {r: 0.5849056, g: 0.12145505, b: 0.08552865, a: 0}
+    m_SelectedColor: {r: 0.5188679, g: 0.09816941, b: 0.06608224, a: 0}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -1213,7 +1214,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7571326487457907001}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5443007351650984039}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4308757355387211275
 GameObject:
   m_ObjectHideFlags: 0
@@ -1525,9 +1538,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 0.16598354, g: 0.7735849, b: 0, a: 0}
-    m_HighlightedColor: {r: 0.16032022, g: 0.6132076, b: 0.03760237, a: 0.43137255}
-    m_PressedColor: {r: 0.1706288, g: 0.509434, b: 0.07929869, a: 0.7647059}
-    m_SelectedColor: {r: 0.17254902, g: 0.50980395, b: 0.078431375, a: 0.9019608}
+    m_HighlightedColor: {r: 0.16032022, g: 0.6132076, b: 0.03760237, a: 0}
+    m_PressedColor: {r: 0.1706288, g: 0.509434, b: 0.07929869, a: 0}
+    m_SelectedColor: {r: 0.17254902, g: 0.50980395, b: 0.078431375, a: 0}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -1547,14 +1560,15 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 5510092759571433274, guid: a08b5db748f3fd943a7c124fb14e3078,
+          type: 3}
+        m_TargetAssemblyTypeName: Sc_GameManager, Assembly-CSharp
+        m_MethodName: GoToLevel
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1697,9 +1711,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 0.2627451, g: 0.3529412, b: 0.42352945, a: 0}
-    m_HighlightedColor: {r: 0.19081523, g: 0.42247477, b: 0.6037736, a: 0.29803923}
-    m_PressedColor: {r: 0.19215688, g: 0.42352945, b: 0.6039216, a: 0.59607846}
-    m_SelectedColor: {r: 0.19215688, g: 0.42352945, b: 0.6039216, a: 0.89411765}
+    m_HighlightedColor: {r: 0.19081523, g: 0.42247477, b: 0.6037736, a: 0}
+    m_PressedColor: {r: 0.19215688, g: 0.42352945, b: 0.6039216, a: 0}
+    m_SelectedColor: {r: 0.19215688, g: 0.42352945, b: 0.6039216, a: 0}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -1844,9 +1858,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 0.2627451, g: 0.3529412, b: 0.42352945, a: 0}
-    m_HighlightedColor: {r: 0.19081523, g: 0.42247477, b: 0.6037736, a: 0.29803923}
-    m_PressedColor: {r: 0.19215688, g: 0.42352945, b: 0.6039216, a: 0.59607846}
-    m_SelectedColor: {r: 0.19215688, g: 0.42352945, b: 0.6039216, a: 0.89411765}
+    m_HighlightedColor: {r: 0.19081523, g: 0.42247477, b: 0.6037736, a: 0}
+    m_PressedColor: {r: 0.19215688, g: 0.42352945, b: 0.6039216, a: 0}
+    m_SelectedColor: {r: 0.19215688, g: 0.42352945, b: 0.6039216, a: 0}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -1866,19 +1880,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5510092759571433274, guid: a08b5db748f3fd943a7c124fb14e3078,
-          type: 3}
-        m_TargetAssemblyTypeName: Sc_GameManager, Assembly-CSharp
-        m_MethodName: GoToLevel
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 5632030951289701221}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: PlayOneShot
@@ -1888,6 +1889,19 @@ MonoBehaviour:
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 5510092759571433274, guid: a08b5db748f3fd943a7c124fb14e3078,
+          type: 3}
+        m_TargetAssemblyTypeName: Sc_GameManager, Assembly-CSharp
+        m_MethodName: GoToLevel
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2352,9 +2366,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 0.2627451, g: 0.3529412, b: 0.42352945, a: 0}
-    m_HighlightedColor: {r: 0.19081523, g: 0.42247477, b: 0.6037736, a: 0.29803923}
-    m_PressedColor: {r: 0.19215688, g: 0.42352945, b: 0.6039216, a: 0.59607846}
-    m_SelectedColor: {r: 0.19215688, g: 0.42352945, b: 0.6039216, a: 0.89411765}
+    m_HighlightedColor: {r: 0.19081523, g: 0.42247477, b: 0.6037736, a: 0}
+    m_PressedColor: {r: 0.19215688, g: 0.42352945, b: 0.6039216, a: 0}
+    m_SelectedColor: {r: 0.19215688, g: 0.42352945, b: 0.6039216, a: 0}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -2386,18 +2400,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 8160448255048712471}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 5632030951289701221}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: PlayOneShot
@@ -2406,6 +2408,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 8300000, guid: f454930b04fc250499041f61ada9e39f,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8160448255048712471}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2510,9 +2524,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 0.2627451, g: 0.3529412, b: 0.42352945, a: 0}
-    m_HighlightedColor: {r: 0.19081523, g: 0.42247477, b: 0.6037736, a: 0.29803923}
-    m_PressedColor: {r: 0.19215688, g: 0.42352945, b: 0.6039216, a: 0.59607846}
-    m_SelectedColor: {r: 0.19215688, g: 0.42352945, b: 0.6039216, a: 0.89411765}
+    m_HighlightedColor: {r: 0.19081523, g: 0.42247477, b: 0.6037736, a: 0}
+    m_PressedColor: {r: 0.19215688, g: 0.42352945, b: 0.6039216, a: 0}
+    m_SelectedColor: {r: 0.19215688, g: 0.42352945, b: 0.6039216, a: 0}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -2532,18 +2546,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8325689556577344451}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 6714860091102847430}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -2568,6 +2570,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 8325689556577344451}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &8160448255048712471
 GameObject:
@@ -2667,7 +2681,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 0f9c6a1296c62cb4882eb97a4a4bad34, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
