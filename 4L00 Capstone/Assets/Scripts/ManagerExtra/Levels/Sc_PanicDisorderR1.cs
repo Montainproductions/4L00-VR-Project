@@ -71,7 +71,7 @@ public class Sc_PanicDisorderR1 : MonoBehaviour
         //Sets all of the texts to inactive
         StartCoroutine(DeactivateUI());
         //Starts the first phase of the room
-        StartCoroutine(Phase1(5));
+        StartCoroutine(Phase1(20));
     }
 
     // Update is called once per frame
@@ -87,6 +87,7 @@ public class Sc_PanicDisorderR1 : MonoBehaviour
         //Lowers the ceiling
         if (lowerCeiling)
         {
+            Debug.Log("Wall falling");
             ceiling.transform.position = Vector3.MoveTowards(ceiling.transform.position, finalPos.transform.position, speed * Time.deltaTime); //Slowly moves the wall from where it is to its final destination
         }
     }
@@ -138,8 +139,8 @@ public class Sc_PanicDisorderR1 : MonoBehaviour
         //Plays the first two audios using the first two sources that are in the correct position 
         Sc_AudioManager.Instance.PlayAudio(0, 0);
         Sc_AudioManager.Instance.PlayAudio(1, 1);
-        //Wait for a time delay of 5 seconds
-        yield return new WaitForSeconds(5);
+        //Wait for a time delay of 10 seconds
+        yield return new WaitForSeconds(10);
         //Activates the first UI text
         textUI[0].SetActive(true);
         //Waits for the time given from the parameter
@@ -189,8 +190,8 @@ public class Sc_PanicDisorderR1 : MonoBehaviour
     {
         Debug.Log("Phase 3 Starting");
         //Wait for 2 seconds for the timer to finish
-        yield return new WaitForSeconds(2);
-        //Plays the fith audio clip using the third audio source
+        yield return new WaitForSeconds(timeDelay);
+        //Plays the figth audio clip using the third audio source
         Sc_AudioManager.Instance.PlayAudio(3, 5);
         effectBlur.ChangeBlur(newFocalLength, durationFOV);
         textUI[1].SetActive(false);

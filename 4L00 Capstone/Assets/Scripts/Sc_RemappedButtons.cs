@@ -39,9 +39,17 @@ public class Sc_RemappedButtons : MonoBehaviour
 
     private void CalmingRoom_Preformed(InputAction.CallbackContext context)
     {
-        if (!context.performed || gameManager.currentLevel == 4) return;
-        Debug.Log(SceneManager.GetActiveScene().name);
-        gameManager.CopingRoom();
+        if (context.performed)
+        {
+            if (gameManager.currentLevel != 4)
+            {
+                Debug.Log(SceneManager.GetActiveScene().name);
+                gameManager.CopingRoom();
+            }else if (gameManager.currentLevel == 4)
+            {
+                gameManager.GoToLevel(1);
+            }
+        }
     }
 
     private void UIActivation_Performed(InputAction.CallbackContext context)

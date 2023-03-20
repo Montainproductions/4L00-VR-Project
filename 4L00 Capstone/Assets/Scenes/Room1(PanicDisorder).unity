@@ -3003,7 +3003,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1905896999}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &595704734
 BoxCollider:
@@ -3042,7 +3042,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 596984373}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.87, y: 1.3644384, z: -2.32}
+  m_LocalPosition: {x: -2.87, y: 1.2, z: -2.32}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5000,12 +5000,6 @@ CapsuleCollider:
   m_Height: 1.11
   m_Direction: 1
   m_Center: {x: 0, y: 0.69, z: 0}
---- !u!1 &793322941
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1179331530028487065, guid: 95d3d2786d6ce9e44b15f09a17e2b2e8,
-    type: 3}
-  m_PrefabInstance: {fileID: 781354199}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &781354203 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1179331530964826811, guid: 95d3d2786d6ce9e44b15f09a17e2b2e8,
@@ -5027,6 +5021,12 @@ GameObject:
 --- !u!1 &781354206 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1179331530746284472, guid: 95d3d2786d6ce9e44b15f09a17e2b2e8,
+    type: 3}
+  m_PrefabInstance: {fileID: 781354199}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &793322941 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1179331530028487065, guid: 95d3d2786d6ce9e44b15f09a17e2b2e8,
     type: 3}
   m_PrefabInstance: {fileID: 781354199}
   m_PrefabAsset: {fileID: 0}
@@ -6890,7 +6890,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1905896999}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1258676355
 BoxCollider:
@@ -6935,7 +6935,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1905896999}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1273962143
 BoxCollider:
@@ -9202,12 +9202,12 @@ MonoBehaviour:
   pauseMenu: {fileID: 781354206}
   mainMenu: {fileID: 781354205}
   textUI:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 781354204}
+  - {fileID: 781354203}
+  - {fileID: 793322941}
   ceiling: {fileID: 757681155}
   finalPos: {fileID: 596984373}
-  speed: 0.3
+  speed: 0.6
   lights:
   - {fileID: 580788625}
   - {fileID: 1705704603}
@@ -10344,7 +10344,6 @@ Transform:
   - {fileID: 2072755952}
   - {fileID: 22838955}
   - {fileID: 327809071}
-  - {fileID: 793322942}
   - {fileID: 595704733}
   - {fileID: 1273962142}
   - {fileID: 1258676354}
