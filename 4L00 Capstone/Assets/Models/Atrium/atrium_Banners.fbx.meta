@@ -3,7 +3,32 @@ guid: 4dd071a5c240067489ff492cfbeea49e
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Banner
+    second: {fileID: 2100000, guid: c531f6aa8f7b52448a61948671840cee, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: banner_Banner_BaseColor.1001
+    second: {fileID: 2800000, guid: ed7ca934181e07d4ab8fc880b563fd95, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: banner_Banner_Metallic.1001
+    second: {fileID: 2800000, guid: eca2f334f533b6e4d9651ee9f80adc62, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: banner_Banner_Normal.1001
+    second: {fileID: 2800000, guid: 3421783156b98c0489e3c361bdfd22f2, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: banner_Banner_Roughness.1001
+    second: {fileID: 2800000, guid: 24c34b060bb05ed45b7de377ce21f94b, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0

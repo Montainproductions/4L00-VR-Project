@@ -3,7 +3,17 @@ guid: 30e456d9c08f4a147a38499d888f852e
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Atrium.002
+    second: {fileID: 2100000, guid: 1fb57a76b43e449429aebc5177c41746, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FlowerFloor.001
+    second: {fileID: 2100000, guid: 906f417e4e3c5404bb1ed290504113bd, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

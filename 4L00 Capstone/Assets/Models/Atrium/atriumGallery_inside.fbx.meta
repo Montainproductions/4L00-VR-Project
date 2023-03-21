@@ -3,7 +3,17 @@ guid: a5e704cb896a5304dbfe011d7d51581d
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Whiteroom
+    second: {fileID: 2100000, guid: 9367e64f3eb215e488cb10eb6bb32979, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WhiteroomFloor
+    second: {fileID: 2100000, guid: 2feecc89e7593584086db148bf06b1ce, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

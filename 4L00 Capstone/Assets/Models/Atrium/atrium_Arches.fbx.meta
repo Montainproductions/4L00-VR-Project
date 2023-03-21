@@ -3,7 +3,32 @@ guid: f08bd188e64c55a48948a0e78622f3bd
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: archway
+    second: {fileID: 2100000, guid: fa5117fc31e72ab45b7812c302768122, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: atrium-Redux1_archway_BaseColor.1001
+    second: {fileID: 2800000, guid: faa63bb2a13936a468dc621683b76128, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: atrium-Redux1_archway_Metallic.1001
+    second: {fileID: 2800000, guid: e2c8d47174f7b674498356b209fb5ea7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: atrium-Redux1_archway_Normal.1001
+    second: {fileID: 2800000, guid: 86e78f3a64572454b926b2124c42d4c7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: atrium-Redux1_archway_Roughness.1001
+    second: {fileID: 2800000, guid: db5edb57a672bdb42a8627cead55be6e, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
