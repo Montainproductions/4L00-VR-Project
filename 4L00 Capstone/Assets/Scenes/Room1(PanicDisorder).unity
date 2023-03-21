@@ -619,6 +619,36 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6703668721064582248, guid: 4e6601c9b19248a49b000932236edb63,
         type: 2}
+    - target: {fileID: 5771120718715640743, guid: 907504f820f815647a454cd466319a81,
+        type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[0].time
+      value: 0.09692982
+      objectReference: {fileID: 0}
+    - target: {fileID: 5771120718715640743, guid: 907504f820f815647a454cd466319a81,
+        type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[0].value
+      value: 0.3685627
+      objectReference: {fileID: 0}
+    - target: {fileID: 5771120718715640743, guid: 907504f820f815647a454cd466319a81,
+        type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].value
+      value: 0.1166687
+      objectReference: {fileID: 0}
+    - target: {fileID: 5771120718715640743, guid: 907504f820f815647a454cd466319a81,
+        type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].inSlope
+      value: -0.26524398
+      objectReference: {fileID: 0}
+    - target: {fileID: 5771120718715640743, guid: 907504f820f815647a454cd466319a81,
+        type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].inWeight
+      value: 0.19135226
+      objectReference: {fileID: 0}
+    - target: {fileID: 5771120718715640743, guid: 907504f820f815647a454cd466319a81,
+        type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].outSlope
+      value: -0.26524398
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 907504f820f815647a454cd466319a81, type: 3}
 --- !u!4 &44855923 stripped
@@ -1610,6 +1640,31 @@ PrefabInstance:
         type: 3}
       propertyPath: rolloffCustomCurve.m_Curve.Array.data[0].time
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5771120718715640743, guid: 907504f820f815647a454cd466319a81,
+        type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5771120718715640743, guid: 907504f820f815647a454cd466319a81,
+        type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].value
+      value: 0.21666336
+      objectReference: {fileID: 0}
+    - target: {fileID: 5771120718715640743, guid: 907504f820f815647a454cd466319a81,
+        type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].inSlope
+      value: -0.19427751
+      objectReference: {fileID: 0}
+    - target: {fileID: 5771120718715640743, guid: 907504f820f815647a454cd466319a81,
+        type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].inWeight
+      value: 0.1523024
+      objectReference: {fileID: 0}
+    - target: {fileID: 5771120718715640743, guid: 907504f820f815647a454cd466319a81,
+        type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].outSlope
+      value: -0.19427751
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 907504f820f815647a454cd466319a81, type: 3}
@@ -2756,17 +2811,17 @@ AudioSource:
       inWeight: 0
       outWeight: 0.30401704
     - serializedVersion: 3
-      time: 0.46426776
-      value: 0.5368059
-      inSlope: 0.056789547
-      outSlope: 0.056789547
+      time: 0.45576862
+      value: 0.7243059
+      inSlope: -0.17480496
+      outSlope: -0.17480496
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
+      inWeight: 0.33499557
       outWeight: 0.2967185
     - serializedVersion: 3
-      time: 1
-      value: 0.375
+      time: 0.99432373
+      value: 0.5166626
       inSlope: -0.38369545
       outSlope: -0.38369545
       tangentMode: 0
@@ -8130,7 +8185,7 @@ AudioSource:
       outWeight: 0.26466998
     - serializedVersion: 3
       time: 1
-      value: 0.34165955
+      value: 0.5874939
       inSlope: 0.09007325
       outSlope: 0.09007325
       tangentMode: 0
@@ -10839,17 +10894,17 @@ AudioSource:
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 0.46426776
-      value: 0.5368059
-      inSlope: -0.11445448
-      outSlope: -0.11445448
+      time: 0.45860675
+      value: 0.649309
+      inSlope: -0.4093726
+      outSlope: -0.4093726
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
-      outWeight: 0.3284455
+      outWeight: 0.2425534
     - serializedVersion: 3
-      time: 1
-      value: 0.43333435
+      time: 0.99716187
+      value: 0.4375
       inSlope: -0.0490216
       outSlope: -0.0490216
       tangentMode: 0
