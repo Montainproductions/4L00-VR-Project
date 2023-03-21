@@ -143,6 +143,8 @@ public class Sc_PanicDisorderR1 : MonoBehaviour
         yield return new WaitForSeconds(10);
         //Activates the first UI text
         textUI[0].SetActive(true);
+        yield return new WaitForSeconds(2);
+        Sc_AudioManager.Instance.PlayAudio(5, 10);
         //Waits for the time given from the parameter
         yield return new WaitForSeconds(timeDelay);
         //Starts lowering the ceiling
@@ -150,6 +152,12 @@ public class Sc_PanicDisorderR1 : MonoBehaviour
         //Deactivates the first UI text and activates the second UI text
         textUI[0].SetActive(false);
         textUI[1].SetActive(true);
+        //Waits to play VA - Two Seconds
+        yield return new WaitForSeconds(2);
+        Sc_AudioManager.Instance.PlayAudio(6, 7);
+        //Waits to play VA - Two Seconds
+        yield return new WaitForSeconds(2);
+        Sc_AudioManager.Instance.PlayAudio(7, 6);
         //Finishes the coroutine
         yield return null;
     }
@@ -193,9 +201,16 @@ public class Sc_PanicDisorderR1 : MonoBehaviour
         yield return new WaitForSeconds(timeDelay);
         //Plays the figth audio clip using the third audio source
         Sc_AudioManager.Instance.PlayAudio(3, 5);
+        Sc_AudioManager.Instance.PlayAudio(4, 13);
         effectBlur.ChangeBlur(newFocalLength, durationFOV);
         textUI[1].SetActive(false);
         textUI[2].SetActive(true);
+        //Waits to play VA - Five Seconds
+        yield return new WaitForSeconds(5);
+        Sc_AudioManager.Instance.PlayAudio(5, 14);
+        //Waits to play VA - Three Seconds
+        yield return new WaitForSeconds(3);
+        Sc_AudioManager.Instance.PlayAudio(6, 15);
         yield return null;
     }
 
