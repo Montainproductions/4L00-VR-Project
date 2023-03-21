@@ -61,6 +61,12 @@ public class Sc_ScizophreniaR2 : MonoBehaviour
         StartCoroutine(Phase1());
     }
 
+    // Called by opening the email on the computer
+    public void BeginPhaseOne()
+    {
+        StartCoroutine(Phase1());
+    }
+
     // Phase 1 is audio sources playing
     IEnumerator Phase1()
     {
@@ -259,12 +265,6 @@ public class Sc_ScizophreniaR2 : MonoBehaviour
         yield return null;
         Debug.Log("Phase4 has ended");
         // End of Schizo Room
-    }
-
-    // Called by opening the email on the computer
-    public void BeginPhaseOne()
-    {
-        StartCoroutine(Phase1());
     }
 
     // Called when the mug's collider hits the ground
