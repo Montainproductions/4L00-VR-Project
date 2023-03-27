@@ -20,7 +20,7 @@ public class Sc_RemappedButtons : MonoBehaviour
     public void Awake()
     {
         playerInputActions = new XRIDefaultInputActions();
-        playerInputActions.XRILeftHandInteraction.Enable();
+        playerInputActions.XRILeftHandInteraction.Enable();      
         playerInputActions.XRILeftHandInteraction.YX.performed += CalmingRoom_Preformed;
         playerInputActions.XRIRightHandInteraction.Enable();
         playerInputActions.XRIRightHandInteraction.UIActivation.performed += UIActivation_Performed;
