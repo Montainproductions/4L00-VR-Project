@@ -77,7 +77,7 @@ public class Sc_RemappedButtons : MonoBehaviour
 
         if (!paused)
         {
-            GameObject menu = Instantiate(vrCanvas, UISpawnLocation.position, Quaternion.identity);
+            GameObject menu = Instantiate(vrCanvas, UISpawnLocation.position, UISpawnLocation.rotation);
             menuObject = menu;
             Canvas menuCanvas = menu.GetComponent<Canvas>();
             menuCanvas.worldCamera = eventCamera;
