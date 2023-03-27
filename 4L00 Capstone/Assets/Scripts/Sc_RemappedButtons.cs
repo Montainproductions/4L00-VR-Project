@@ -17,6 +17,17 @@ public class Sc_RemappedButtons : MonoBehaviour
     [SerializeField]
     private GameObject mainGameUI, pauseMenuUI;
 
+    [Header("UI")]
+    [SerializeField]
+    private Camera eventCamera;
+    [SerializeField]
+    private Transform UISpawnLocation;
+    [SerializeField]
+    private GameObject vrCanvas;
+
+    private bool paused = false;
+    private GameObject menuObject;
+
     public void Awake()
     {
         playerInputActions = new XRIDefaultInputActions();
@@ -55,13 +66,31 @@ public class Sc_RemappedButtons : MonoBehaviour
     private void UIActivation_Performed(InputAction.CallbackContext context)
     {
         if (!context.performed) return;
-        
-        int level = gameManager.currentLevel;
+
+        /*int level = gameManager.currentLevel;
         //Debug.Log(level);
         if (level != 6)
         {
             Debug.Log("Pausing UI");
             uiManager.ToPauseMenuGame();
+        }*/
+
+        if (!paused)
+        {
+            GameObject menu = Instantiate(vrCanvas, UISpawnLocation.position, Quaternion.identity);
+            menuObject = menu;
+            Canvas menuCanvas = menu.GetComponent<Canvas>();
+            menuCanvas.worldCamera = eventCamera;
+            Sc_UIManager uiManager = menu.GetComponent<Sc_UIManager>();
+            uiManager.ToPauseMenuGame();
+            paused = true;
         }
+        else
+        {
+            Destroy(menuObject);
+            paused = false;
+        }
+
+        
     }
 }
