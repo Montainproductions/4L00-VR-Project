@@ -19,11 +19,10 @@ public class Sc_CopingRoom : MonoBehaviour
 
         if (!Sc_GameManager.Instance.playIntroOnceCoping)
         {
-            Sc_AudioManager.Instance.PlayAudio(0, 0);
+            Sc_AudioManager.Instance.PlayAudio(1, 1);
             Sc_GameManager.Instance.playIntroOnceCoping = true;
         }
     }
-
 
     IEnumerator TimerBeforePlayer()
     {
@@ -32,7 +31,7 @@ public class Sc_CopingRoom : MonoBehaviour
         videoPlayer.isLooping = true;
         if (!Sc_GameManager.Instance.playIntroOnceBreathing)
         {
-            Sc_AudioManager.Instance.PlayAudio(1, 1);
+            Sc_AudioManager.Instance.PlayAudio(1, 2);
             Sc_GameManager.Instance.playIntroOnceBreathing = true;
         }
         yield return null;
