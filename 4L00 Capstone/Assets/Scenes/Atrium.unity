@@ -3580,7 +3580,7 @@ PrefabInstance:
     - target: {fileID: 781630663273105846, guid: c24a7635b5761984d81cf6c4aac26e0d,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 132
+      value: 129
       objectReference: {fileID: 0}
     - target: {fileID: 781630663273105846, guid: c24a7635b5761984d81cf6c4aac26e0d,
         type: 3}
@@ -3715,7 +3715,7 @@ PrefabInstance:
     - target: {fileID: 5483714724633069137, guid: c24a7635b5761984d81cf6c4aac26e0d,
         type: 3}
       propertyPath: m_Text
-      value: 'Go to Panic Disorder
+      value: 'Go to Schizophrenia
 
 '
       objectReference: {fileID: 0}
