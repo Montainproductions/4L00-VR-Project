@@ -640,8 +640,8 @@ AudioSource:
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 1
-      value: 0.8291664
+      time: 0.99716187
+      value: 0.81666946
       inSlope: 0.08022107
       outSlope: 0.08022107
       tangentMode: 0
@@ -727,7 +727,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 814fbce5b706da843b7025aaa8315a18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timerBefVideo: 10
+  timerBefVideo: 9
   videoPlayer: {fileID: 1017873053}
 --- !u!4 &951085887
 Transform:
@@ -1327,8 +1327,8 @@ AudioSource:
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 0.018772647
-      value: 0.58938414
+      time: 0.015940234
+      value: 0.56439024
       inSlope: -0.11995182
       outSlope: -0.11995182
       tangentMode: 0

@@ -34,6 +34,7 @@ public class Sc_CopingRoom : MonoBehaviour
             Sc_AudioManager.Instance.PlayAudio(1, 2);
             Sc_GameManager.Instance.playIntroOnceBreathing = true;
         }
+        timerBefVideo = 0;
         yield return null;
     }
 }
