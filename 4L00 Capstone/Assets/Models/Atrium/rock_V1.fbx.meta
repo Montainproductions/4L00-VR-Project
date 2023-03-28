@@ -13,22 +13,22 @@ ModelImporter:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: rock_V1_Base_color_1001
-    second: {fileID: 2800000, guid: 3f599e1692930ad41b8ef31f5f9a56fb, type: 3}
+    second: {fileID: 2800000, guid: f78eb148504fee046acd25c984de14e0, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: rock_V1_Metallic_1001
-    second: {fileID: 2800000, guid: 25c9996f22350fa4b94bb82cfb46db8b, type: 3}
+    second: {fileID: 2800000, guid: 83f4af4cd4b006741b1f35ff2139b1b1, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: rock_V1_Normal_OpenGL_1001
-    second: {fileID: 2800000, guid: 23ac7aa7d0898b14c94a194f3a4780d3, type: 3}
+    second: {fileID: 2800000, guid: 4db500945ff280d4191a969424aa4a84, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: rock_V1_Roughness_1001
-    second: {fileID: 2800000, guid: dd72ef003452cee4398067af9543f616, type: 3}
+    second: {fileID: 2800000, guid: 02dae0e71232e3e458d99b2a7c5abda0, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
