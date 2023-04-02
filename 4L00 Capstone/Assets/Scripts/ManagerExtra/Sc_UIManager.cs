@@ -8,8 +8,9 @@ public class Sc_UIManager : MonoBehaviour{
     private bool inMainMenu;
 
     [SerializeField]
-    private GameObject mainMenu, mainGame, pauseMenu;
-    private bool mainMenuActive, mainGameActive, pauseMenuActive;
+    private GameObject mainMenu, mainGame, pauseMenuCoping, pauseMenuAtrium;
+    [SerializeField]
+    private bool mainMenuActive, mainGameActive, pauseMenuActiveCoping, pauseMenuActiveAtrium;
 
     public void Awake()
     {
@@ -17,17 +18,19 @@ public class Sc_UIManager : MonoBehaviour{
 
     public void Start()
     {
+        if (pauseMenuActiveAtrium || pauseMenuActiveCoping) return;
         if (inMainMenu)
         {
             mainMenuActive = true;
             mainGameActive = false;
-            pauseMenuActive = false;
+            pauseMenuActiveCoping = false;
         }
         else
         {
             mainMenuActive = false;
             mainGameActive = true;
-            pauseMenuActive = false;
+            pauseMenuActiveCoping = false;
+            pauseMenuActiveAtrium = false;
         }
     }
 
@@ -35,14 +38,26 @@ public class Sc_UIManager : MonoBehaviour{
     {
         mainMenu.SetActive(mainMenuActive);
         mainGame.SetActive(mainGameActive);
-        pauseMenu.SetActive(pauseMenuActive);
+        pauseMenuCoping.SetActive(pauseMenuActiveCoping);
+        pauseMenuAtrium.SetActive(pauseMenuActiveAtrium);
     }
 
-    public void ToPauseMenuGame()
+    public void PauseMenuCoping()
     {
-        Debug.Log("Pausing UI");
+        /*Debug.Log("Pausing UI");
         mainGameActive = !mainGameActive;
-        pauseMenuActive = !pauseMenuActive;
+        pauseMenuActiveCoping = !pauseMenuActiveCoping;*/
+        mainMenuActive = false;
+        mainGameActive = false;
+        pauseMenuActiveCoping = true;
+        pauseMenuActiveAtrium = false;
+    }
+    public void PauseMenuAtrium()
+    {
+        mainMenuActive = false;
+        mainGameActive = false;
+        pauseMenuActiveCoping = false;
+        pauseMenuActiveAtrium = true;
     }
 
 }

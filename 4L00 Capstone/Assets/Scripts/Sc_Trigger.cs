@@ -8,12 +8,13 @@ public class Sc_Trigger : MonoBehaviour
     IEnumerator DingCashier()
     {
         yield return new WaitForSeconds(0.5f);
-        Sc_AudioManager.Instance.PlayAudio(2, 2);
+        Sc_AudioManager.Instance.PlayAudio(7, 2);
         yield return null;
     }
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("Something has entered this trigger");
         if (SceneManager.GetActiveScene().name == "Room1(PanicDisorder)" && other.CompareTag("EggCarton"))
         {
             StartCoroutine(DingCashier());

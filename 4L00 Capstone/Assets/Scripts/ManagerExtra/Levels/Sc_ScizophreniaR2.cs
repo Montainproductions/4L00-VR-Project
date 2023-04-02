@@ -34,6 +34,7 @@ public class Sc_ScizophreniaR2 : MonoBehaviour
     [SerializeField] private Transform shadowsGroupTransform;
 
     [SerializeField] private GameObject firePartciles;
+    [SerializeField] private GameObject exitUI;
 
     private Vector3 originalMugLocation;
     private bool mugHasNotHitFloor = true;
@@ -58,7 +59,7 @@ public class Sc_ScizophreniaR2 : MonoBehaviour
 
         //BeginPhaseOne();
         originalMugLocation = mug.gameObject.transform.position;
-        StartCoroutine(Phase1());
+        //StartCoroutine(Phase1());
     }
 
     // Called by opening the email on the computer
@@ -121,12 +122,13 @@ public class Sc_ScizophreniaR2 : MonoBehaviour
             counter += Time.deltaTime;
 
             // Move the group of shadows along the z axis over time
-            float newPositionZ = Mathf.Lerp(5f, -5f, counter / duration);
-            shadowsGroupTransform.position = new Vector3(shadowsGroupTransform.position.x, shadowsGroupTransform.position.y, newPositionZ);
+            float newPositionZ = Mathf.Lerp(10.6f, -11f, counter / duration);
+            float newPositionY = Mathf.Lerp(0.05f, 3.53f, counter / 1f);
+            shadowsGroupTransform.position = new Vector3(shadowsGroupTransform.position.x, newPositionY, newPositionZ);
 
             // Increase the y scale of the shadows over time
-            float newScaleY = Mathf.Lerp(1f, 5f, counter / duration);
-            shadowsGroupTransform.localScale = new Vector3(shadowsGroupTransform.localScale.x, newScaleY, shadowsGroupTransform.localScale.z);
+            /*float newScaleY = Mathf.Lerp(1f, 5f, counter / duration);
+            shadowsGroupTransform.localScale = new Vector3(shadowsGroupTransform.localScale.x, newScaleY, shadowsGroupTransform.localScale.z);*/
 
             // Once the timer has reached the desired duration stop Phase 2
             if(counter >= duration)
@@ -176,7 +178,7 @@ public class Sc_ScizophreniaR2 : MonoBehaviour
                 mug.gameObject.transform.position = new Vector3(mug.gameObject.transform.position.x, mug.gameObject.transform.position.y, positionZ);*/
 
                 // Move the mug towards the given end location over time
-                mug.gameObject.transform.position = Vector3.MoveTowards(mug.gameObject.transform.position, mugLocations[0].transform.position, 0.1f * Time.deltaTime);
+                mug.gameObject.transform.position = Vector3.MoveTowards(mug.gameObject.transform.position, mugLocations[0].transform.position, 0.2f * Time.deltaTime);
 
                 yield return null;
             }
@@ -262,6 +264,7 @@ public class Sc_ScizophreniaR2 : MonoBehaviour
             }
             phase4IsPlaying = false;
         }
+        exitUI.SetActive(true);
         yield return null;
         Debug.Log("Phase4 has ended");
         // End of Schizo Room

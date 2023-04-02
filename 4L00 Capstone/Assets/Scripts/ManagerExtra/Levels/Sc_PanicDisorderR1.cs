@@ -87,7 +87,7 @@ public class Sc_PanicDisorderR1 : MonoBehaviour
         //Lowers the ceiling
         if (lowerCeiling)
         {
-            Debug.Log("Wall falling");
+            //Debug.Log("Wall falling");
             ceiling.transform.position = Vector3.MoveTowards(ceiling.transform.position, finalPos.transform.position, speed * Time.deltaTime); //Slowly moves the wall from where it is to its final destination
         }
     }
@@ -157,7 +157,7 @@ public class Sc_PanicDisorderR1 : MonoBehaviour
         Sc_AudioManager.Instance.PlayAudio(6, 7);
         //Waits to play VA - Two Seconds
         yield return new WaitForSeconds(2);
-        Sc_AudioManager.Instance.PlayAudio(7, 6);
+        Sc_AudioManager.Instance.PlayAudio(4, 6);
         //Finishes the coroutine
         yield return null;
     }
@@ -165,15 +165,18 @@ public class Sc_PanicDisorderR1 : MonoBehaviour
     //Phase 2 of the panic room
     public IEnumerator Phase2(float timeDelay)
     {
+        Debug.Log("Phase2 Activated");
         //Check if we want to change the light's gradually
         if (gradualChange)
         {
+            Debug.Log("Lights have started changing");
             // The fade function requires the array of lights, the intensity we want to change to, and the time it'll take to change the intensity
             StartCoroutine(Fade(lights, intensityChangeTo, duration));
             //Debug.Log("Lights changing");
         }
         else
         {
+            Debug.Log("Lights have changed");
             // For each light in the array, change it's intensity to new value given 
             for (int i = 0; i < lights.Length; i++)
             {

@@ -13,7 +13,7 @@ public class Sc_Atrium : MonoBehaviour
         StartCoroutine(DisactivatingStatments());
         if (!Sc_GameManager.Instance.playIntroOnce)
         {
-            Sc_AudioManager.Instance.PlayAudio(2,1);
+            Sc_AudioManager.Instance.PlayAudio(1,1);
             Sc_GameManager.Instance.playIntroOnce = true;
         }
     }

@@ -12,6 +12,9 @@ public class Sc_RemappedButtons : MonoBehaviour
     private Sc_GameManager gameManager;
 
     [SerializeField]
+    private GameObject xrOriginObject, mainCamera;
+
+    [SerializeField]
     private Sc_UIManager uiManager;
 
     [SerializeField]
@@ -24,6 +27,10 @@ public class Sc_RemappedButtons : MonoBehaviour
     private Transform UISpawnLocation;
     [SerializeField]
     private GameObject vrCanvas;
+    [SerializeField]
+    private bool canPause = true;
+    [SerializeField]
+    private bool pauseMenuCopingRoom;
 
     private bool paused = false;
     private GameObject menuObject;
@@ -75,22 +82,44 @@ public class Sc_RemappedButtons : MonoBehaviour
             uiManager.ToPauseMenuGame();
         }*/
 
+        if (!canPause) return;
+
         if (!paused)
         {
-            GameObject menu = Instantiate(vrCanvas, UISpawnLocation.position, UISpawnLocation.rotation);
+            Vector3 canvasSpawnPosition = new Vector3(UISpawnLocation.position.x, xrOriginObject.transform.position.y + 1, UISpawnLocation.position.z);
+            GameObject menu = Instantiate(vrCanvas, canvasSpawnPosition, mainCamera.transform.rotation);
+            menu.transform.rotation = Quaternion.Euler(0f, menu.transform.localEulerAngles.y, 0f);
+            
+
             menuObject = menu;
             Canvas menuCanvas = menu.GetComponent<Canvas>();
             menuCanvas.worldCamera = eventCamera;
+            Debug.Log("Grab UI Manager");
             Sc_UIManager uiManager = menu.GetComponent<Sc_UIManager>();
-            uiManager.ToPauseMenuGame();
+            Debug.Log(uiManager);
+            if (pauseMenuCopingRoom)
+            {
+                Debug.Log("Coping Pause");
+                uiManager.PauseMenuCoping();
+            }
+            else
+            {
+                Debug.Log("Atrium Pause");
+                uiManager.PauseMenuAtrium();
+            }
+            
             paused = true;
         }
         else
         {
-            Destroy(menuObject);
-            paused = false;
+            DestroyMenu();
         }
+    }
 
-        
+    public void DestroyMenu()
+    {
+        Destroy(menuObject);
+        menuObject= null;
+        paused = false;
     }
 }
