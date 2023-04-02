@@ -33,7 +33,7 @@ public class Sc_RemappedButtons : MonoBehaviour
     private bool pauseMenuCopingRoom;
 
     private bool paused = false;
-    private GameObject menuObject;
+    private GameObject menuObject = null;
 
     public void Awake()
     {

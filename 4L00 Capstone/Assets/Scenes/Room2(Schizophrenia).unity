@@ -1984,6 +1984,7 @@ MonoBehaviour:
     audioToBePlayed: 8
   shadowsGroupTransform: {fileID: 1608331680}
   firePartciles: {fileID: 1744603240}
+  exitUI: {fileID: 1851698976}
 --- !u!1001 &583390039
 PrefabInstance:
   m_ObjectHideFlags: 0
