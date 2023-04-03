@@ -59,7 +59,7 @@ public class Sc_ScizophreniaR2 : MonoBehaviour
 
         //BeginPhaseOne();
         originalMugLocation = mug.gameObject.transform.position;
-        //StartCoroutine(Phase1());
+        StartCoroutine(Phase3());
     }
 
     // Called by opening the email on the computer
@@ -204,10 +204,10 @@ public class Sc_ScizophreniaR2 : MonoBehaviour
                     // After 1 second move the mug back to its original position
                     if (timer > 1f)
                     {
-                        mug.velocity = new Vector3(0, 0, 0);
+                        //mug.velocity = new Vector3(0, 0, 0);
                         mug.gameObject.transform.rotation = Quaternion.identity;
                         mug.gameObject.transform.position = originalMugLocation;
-                        mug.velocity = new Vector3(0, 0, 0);
+                        //mug.velocity = new Vector3(0, 0, 0);
                     }
 
                     // Play Audio clips like in Phase 1
