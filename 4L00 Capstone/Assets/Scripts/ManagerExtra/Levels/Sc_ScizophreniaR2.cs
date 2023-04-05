@@ -59,7 +59,6 @@ public class Sc_ScizophreniaR2 : MonoBehaviour
 
         //BeginPhaseOne();
         originalMugLocation = mug.gameObject.transform.position;
-        StartCoroutine(Phase3());
     }
 
     // Called by opening the email on the computer
@@ -205,7 +204,7 @@ public class Sc_ScizophreniaR2 : MonoBehaviour
                     if (timer > 1f)
                     {
                         //mug.velocity = new Vector3(0, 0, 0);
-                        mug.gameObject.transform.rotation = Quaternion.identity;
+                        mug.gameObject.transform.rotation = Quaternion.Euler(-90,0,-90);
                         mug.gameObject.transform.position = originalMugLocation;
                         //mug.velocity = new Vector3(0, 0, 0);
                     }
