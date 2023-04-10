@@ -8,7 +8,7 @@ public class Sc_AudioManager : MonoBehaviour
 {
     public static Sc_AudioManager Instance { get; private set; } //Singleton of the script/gameobject so that it can be referenced
 
-
+    private float currentVolumeLevel;
 
     public AudioClip[] baseAudioClips;
     public AudioSource[] audioSources, extraSources;
@@ -107,23 +107,19 @@ public class Sc_AudioManager : MonoBehaviour
         //audioMixer.SetFloat("panicRoomVolume", newPanicRoomVolume);
         float targetVolume = newPanicRoomVolume + 10;
         float volumeChangeDuration = 2f;
-        IncreasePanicRoomVolume(targetVolume, volumeChangeDuration);
+        IncreasePanicRoomVolume(newPanicRoomVolume, volumeChangeDuration);
     }
 
-    private IEnumerator IncreasePanicRoomVolume(float newVolumeLevel, float duration)
+    private void IncreasePanicRoomVolume(float newVolumeLevel, float duration)
     {
-        float counter = 0;
-        float currentVolumeLevel = newPanicRoomVolume;
+        audioMixer.GetFloat("panicRoomVolume", out currentVolumeLevel);
+        float newCurrentPanicRoomVolume = currentVolumeLevel;
 
-        while (newPanicRoomVolume != newVolumeLevel)
-        {
-            counter += Time.deltaTime;
-
-            newPanicRoomVolume = Mathf.Lerp(currentVolumeLevel, newVolumeLevel, duration/counter);
-
-            audioMixer.SetFloat("panicRoomVolume", newPanicRoomVolume);
+        while (newCurrentPanicRoomVolume < newPanicRoomVolume) {
+            newCurrentPanicRoomVolume = Mathf.Lerp(currentVolumeLevel, newVolumeLevel, duration * Time.deltaTime);
+            audioMixer.SetFloat("panicRoomVolume", newCurrentPanicRoomVolume);
+            Debug.Log(newCurrentPanicRoomVolume);
         }
-        yield return null;
     }
 
     //Creates a new audio source and plays an audio clip.
