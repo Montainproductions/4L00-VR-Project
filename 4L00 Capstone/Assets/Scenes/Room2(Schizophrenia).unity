@@ -2102,6 +2102,9 @@ MonoBehaviour:
   - audioSource: {fileID: 1259717396}
     audioClip: {fileID: 8300000, guid: c283d234ed149174881a991e3c70ee59, type: 3}
     audioToBePlayed: 5
+  - audioSource: {fileID: 1259717396}
+    audioClip: {fileID: 8300000, guid: c283d234ed149174881a991e3c70ee59, type: 3}
+    audioToBePlayed: 5
   scizoRoomPhase4SudioSources:
   - audioSource: {fileID: 419110126}
     audioClip: {fileID: 8300000, guid: 9cca61ade6aa5ff4ab55e2b23a084474, type: 3}
@@ -4858,7 +4861,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 9f627c87963fc2b4b9ad05ba109bbb03, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 4c5dc173c2f4e234b8e3c2306fa0ed84, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
