@@ -35281,9 +35281,9 @@ MonoBehaviour:
   - {fileID: 1948550956}
   - {fileID: 1473990333}
   - {fileID: 1269479905}
-  newPanicRoomVolume: 10
-  newAtriumVolume: 0
   audioMixer: {fileID: 24100000, guid: 4e6601c9b19248a49b000932236edb63, type: 2}
+  targetPanicRoomVolume: 0
+  newAtriumVolume: -15
 --- !u!114 &1665790184
 MonoBehaviour:
   m_ObjectHideFlags: 0

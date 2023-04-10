@@ -38,8 +38,8 @@ public class Sc_AudioManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Scene scene = SceneManager.GetActiveScene();
         setNewPanicRoomAudio = false;
+        Scene scene = SceneManager.GetActiveScene();
         if (scene.name == "Atrium")
         {
             audioMixer.SetFloat("musicVolume", newAtriumVolume);
@@ -60,7 +60,7 @@ public class Sc_AudioManager : MonoBehaviour
 
         if (setNewPanicRoomAudio && currentVolumeLevel < targetPanicRoomVolume)
         {
-            currentVolumeLevel = Mathf.Lerp(currentVolumeLevel, targetPanicRoomVolume, Time.deltaTime);
+            currentVolumeLevel = Mathf.Lerp(currentVolumeLevel, targetPanicRoomVolume, 2*Time.deltaTime);
             audioMixer.SetFloat("panicRoomVolume", currentVolumeLevel);
             Debug.Log(currentVolumeLevel);
         }else if(currentVolumeLevel > targetPanicRoomVolume)
