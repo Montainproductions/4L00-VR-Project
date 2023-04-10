@@ -9,9 +9,6 @@ public class Sc_RemappedButtons : MonoBehaviour
     private XRIDefaultInputActions playerInputActions;
 
     [SerializeField]
-    private Sc_GameManager gameManager;
-
-    [SerializeField]
     private GameObject xrOriginObject, mainCamera;
 
     [SerializeField]
@@ -59,13 +56,13 @@ public class Sc_RemappedButtons : MonoBehaviour
     {
         if (context.performed)
         {
-            if (gameManager.currentLevel != 4)
+            if (Sc_GameManager.Instance.currentLevel != 4)
             {
                 Debug.Log(SceneManager.GetActiveScene().name);
-                gameManager.CopingRoom();
-            }else if (gameManager.currentLevel == 4)
+                Sc_GameManager.Instance.CopingRoom();
+            }else if (Sc_GameManager.Instance.currentLevel == 4)
             {
-                gameManager.GoToLevel(1);
+                Sc_GameManager.Instance.GoToLevel(1);
             }
         }
     }
