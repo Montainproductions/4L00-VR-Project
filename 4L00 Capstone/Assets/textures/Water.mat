@@ -21,7 +21,8 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Water
-  m_Shader: {fileID: -6465566751694194690, guid: 195b2db958bdbfb4f950345f60e59895, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 195b2db958bdbfb4f950345f60e59895,
+    type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 2
@@ -55,12 +56,12 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Displacement: 0.24
+    - _Displacement: 0.2
     - _NormalStrength: 0.74
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Smoothness: 0.33
-    - _Strength: 0.539
+    - _Strength: 0.99
     - _depth: 0
     m_Colors:
     - _DeepWaterColor: {r: 0, g: 0.5182471, b: 1, a: 0.8941177}
