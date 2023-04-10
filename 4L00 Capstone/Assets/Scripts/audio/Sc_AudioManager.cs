@@ -19,6 +19,8 @@ public class Sc_AudioManager : MonoBehaviour
     [SerializeField]
     [Range(-20, 20)]
     private float targetPanicRoomVolume, newAtriumVolume;
+    [SerializeField]
+    private float changeRate;
     private float currentVolumeLevel;
     private bool setNewPanicRoomAudio;
 
@@ -59,7 +61,7 @@ public class Sc_AudioManager : MonoBehaviour
 
         if (setNewPanicRoomAudio && currentVolumeLevel < targetPanicRoomVolume)
         {
-            currentVolumeLevel = Mathf.Lerp(currentVolumeLevel, targetPanicRoomVolume, Time.deltaTime);
+            currentVolumeLevel = Mathf.Lerp(currentVolumeLevel, targetPanicRoomVolume, Time.deltaTime / changeRate);
             audioMixer.SetFloat("panicRoomVolume", currentVolumeLevel);
             Debug.Log(currentVolumeLevel);
         }else if(currentVolumeLevel > targetPanicRoomVolume)
