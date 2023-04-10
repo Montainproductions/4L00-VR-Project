@@ -42,7 +42,6 @@ public class Sc_AudioManager : MonoBehaviour
         Scene scene = SceneManager.GetActiveScene();
         if (scene.name == "Atrium")
         {
-            audioMixer.SetFloat("musicVolume", newAtriumVolume);
             PlayAudio(0,0);
         }
     }
@@ -60,7 +59,7 @@ public class Sc_AudioManager : MonoBehaviour
 
         if (setNewPanicRoomAudio && currentVolumeLevel < targetPanicRoomVolume)
         {
-            currentVolumeLevel = Mathf.Lerp(currentVolumeLevel, targetPanicRoomVolume, 2*Time.deltaTime);
+            currentVolumeLevel = Mathf.Lerp(currentVolumeLevel, targetPanicRoomVolume, Time.deltaTime);
             audioMixer.SetFloat("panicRoomVolume", currentVolumeLevel);
             Debug.Log(currentVolumeLevel);
         }else if(currentVolumeLevel > targetPanicRoomVolume)
