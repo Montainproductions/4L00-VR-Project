@@ -113,22 +113,10 @@ public class Sc_AudioManager : MonoBehaviour
     public void ChangeAudioMixer()
     {
         Debug.Log("Audio Changed");
-        //audioMixer.GetFloat("panicRoomVolume", out currentAudioMixerVolume);
-        //audioMixer.SetFloat("panicRoomVolume", newPanicRoomVolume);
-
-        //float targetVolume = targetPanicRoomVolume + 10;
-        //float volumeChangeDuration = 2f;
-        //IncreasePanicRoomVolume(targetPanicRoomVolume, volumeChangeDuration);
 
         audioMixer.GetFloat("panicRoomVolume", out currentVolumeLevel);
         setNewPanicRoomAudio = true;
     }
-
-    /*private void IncreasePanicRoomVolume(float targetVolumeLevel, float duration)
-    {
-        audioMixer.GetFloat("panicRoomVolume", out currentVolumeLevel);
-        setNewPanicRoomAudio = true;
-    }*/
 
     //Creates a new audio source and plays an audio clip.
     public void CreateAudioSource(GameObject obj, AudioSource audioSource, bool followObject, bool destroyTheObject, bool triggerOnlyOnce)
