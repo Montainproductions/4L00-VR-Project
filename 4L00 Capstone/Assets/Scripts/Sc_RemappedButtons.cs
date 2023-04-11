@@ -97,12 +97,12 @@ public class Sc_RemappedButtons : MonoBehaviour
             if (pauseMenuCopingRoom)
             {
                 Debug.Log("Coping Pause");
-                uiManager.PauseMenuCoping();
+                StartCoroutine(uiManager.PauseMenuCoping());
             }
             else
             {
                 Debug.Log("Atrium Pause");
-                uiManager.PauseMenuAtrium();
+                StartCoroutine(uiManager.PauseMenuAtrium());
             }
 
             Time.timeScale = 0;
