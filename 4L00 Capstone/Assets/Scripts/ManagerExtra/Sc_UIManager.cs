@@ -38,19 +38,25 @@ public class Sc_UIManager : MonoBehaviour{
         pauseMenuAtrium.SetActive(pauseMenuActiveAtrium);
     }
 
-    public void PauseMenuCoping()
+    public IEnumerator PauseMenuCoping()
     {
         /*Debug.Log("Pausing UI");
         mainGameActive = !mainGameActive;
         pauseMenuActiveCoping = !pauseMenuActiveCoping;*/
+        yield return new WaitForSeconds(0.1f);
         mainGameActive = !mainGameActive;
         pauseMenuActiveCoping = !pauseMenuActiveCoping;
         pauseMenuActiveAtrium = false;
+        yield return null;
     }
-    public void PauseMenuAtrium()
+    public IEnumerator PauseMenuAtrium()
     {
+        yield return new WaitForSeconds(0.1f);
         mainGameActive = !mainGameActive;
         pauseMenuActiveCoping = false;
         pauseMenuActiveAtrium = !pauseMenuActiveAtrium;
+        Debug.Log(mainGameActive);
+        Debug.Log(pauseMenuActiveAtrium);
+        yield return null;
     }
 }
