@@ -119,6 +119,11 @@ public class Sc_AudioManager : MonoBehaviour
         setNewPanicRoomAudio = true;
     }
 
+    public void UpdateLowPass()
+    {
+        audioMixer.SetFloat("Cutoff freq", 250);
+    }
+
     //Creates a new audio source and plays an audio clip.
     public void CreateAudioSource(GameObject obj, AudioSource audioSource, bool followObject, bool destroyTheObject, bool triggerOnlyOnce)
     {
