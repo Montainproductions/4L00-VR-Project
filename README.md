@@ -31,5 +31,12 @@ H.O.M.E (The Hall of Mental-Health Experiences) is a VR museum experience which 
  - Matthew MacNeil
 ### Sound
  - LEAD: William Lyons
- - Eugene
+ - Eugene Payne
  - Dongjian (Joey) Wu
+ ### Marketing
+ - LEAD: Patrick Arenas
+ - Maddy Kwan
+ - Evan Mason
+ - Coco Xu
+ - Eugene Payne
+ - Kamran Saini

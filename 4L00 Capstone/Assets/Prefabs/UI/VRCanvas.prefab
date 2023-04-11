@@ -3072,11 +3072,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inMainMenu: 0
-  mainMenu: {fileID: 0}
   mainGame: {fileID: 6714860091102847430}
   pauseMenuCoping: {fileID: 8325689556577344451}
   pauseMenuAtrium: {fileID: 6159818999005584699}
-  mainMenuActive: 0
   mainGameActive: 0
   pauseMenuActiveCoping: 0
   pauseMenuActiveAtrium: 0
