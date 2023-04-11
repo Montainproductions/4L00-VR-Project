@@ -8,9 +8,9 @@ public class Sc_UIManager : MonoBehaviour{
     private bool inMainMenu;
 
     [SerializeField]
-    private GameObject mainMenu, mainGame, pauseMenuCoping, pauseMenuAtrium;
+    private GameObject mainGame, pauseMenuCoping, pauseMenuAtrium;
     [SerializeField]
-    private bool mainMenuActive, mainGameActive, pauseMenuActiveCoping, pauseMenuActiveAtrium;
+    private bool  mainGameActive, pauseMenuActiveCoping, pauseMenuActiveAtrium;
 
     public void Awake()
     {
@@ -18,25 +18,21 @@ public class Sc_UIManager : MonoBehaviour{
 
     public void Start()
     {
-        if (pauseMenuActiveAtrium || pauseMenuActiveCoping) return;
+        //if (pauseMenuActiveAtrium || pauseMenuActiveCoping) return;
         if (inMainMenu)
         {
-            mainMenuActive = true;
             mainGameActive = false;
-            pauseMenuActiveCoping = false;
         }
         else
         {
-            mainMenuActive = false;
             mainGameActive = true;
-            pauseMenuActiveCoping = false;
-            pauseMenuActiveAtrium = false;
         }
+        pauseMenuActiveCoping = false;
+        pauseMenuActiveAtrium = false;
     }
 
     public void Update()
     {
-        mainMenu.SetActive(mainMenuActive);
         mainGame.SetActive(mainGameActive);
         pauseMenuCoping.SetActive(pauseMenuActiveCoping);
         pauseMenuAtrium.SetActive(pauseMenuActiveAtrium);
@@ -47,17 +43,14 @@ public class Sc_UIManager : MonoBehaviour{
         /*Debug.Log("Pausing UI");
         mainGameActive = !mainGameActive;
         pauseMenuActiveCoping = !pauseMenuActiveCoping;*/
-        mainMenuActive = false;
-        mainGameActive = false;
-        pauseMenuActiveCoping = true;
+        mainGameActive = !mainGameActive;
+        pauseMenuActiveCoping = !pauseMenuActiveCoping;
         pauseMenuActiveAtrium = false;
     }
     public void PauseMenuAtrium()
     {
-        mainMenuActive = false;
-        mainGameActive = false;
+        mainGameActive = !mainGameActive;
         pauseMenuActiveCoping = false;
-        pauseMenuActiveAtrium = true;
+        pauseMenuActiveAtrium = !pauseMenuActiveAtrium;
     }
-
 }
