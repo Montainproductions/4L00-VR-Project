@@ -9032,6 +9032,11 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2030628278, guid: 2180db728c6c3f94b8da1f8f2cd10d73, type: 3}
+      propertyPath: vrCanvas
+      value: 
+      objectReference: {fileID: 2193874850238163808, guid: 4cec7c5fde6f3454bb06357e9d18e33c,
+        type: 3}
+    - target: {fileID: 2030628278, guid: 2180db728c6c3f94b8da1f8f2cd10d73, type: 3}
       propertyPath: pauseMenuCopingRoom
       value: 1
       objectReference: {fileID: 0}
