@@ -83,7 +83,9 @@ public class Sc_RemappedButtons : MonoBehaviour
 
         if (!paused)
         {
-            Vector3 canvasSpawnPosition = new Vector3(UISpawnLocation.position.x, xrOriginObject.transform.position.y + 1, UISpawnLocation.position.z + 5);
+            Vector3 cameraPosition = mainCamera.transform.position;
+            Vector3 cameraDirection = mainCamera.transform.forward;
+            Vector3 canvasSpawnPosition = cameraPosition + cameraDirection * 5;
             GameObject menu = Instantiate(vrCanvas, canvasSpawnPosition, mainCamera.transform.rotation);
             menu.transform.rotation = Quaternion.Euler(0f, menu.transform.localEulerAngles.y, 0f);
             
