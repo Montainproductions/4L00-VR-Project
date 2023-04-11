@@ -49,7 +49,7 @@ public class Sc_RemappedButtons : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log(gameManager.currentLevel);
+         
     }
 
     private void CalmingRoom_Preformed(InputAction.CallbackContext context)
@@ -83,7 +83,7 @@ public class Sc_RemappedButtons : MonoBehaviour
 
         if (!paused)
         {
-            Vector3 canvasSpawnPosition = new Vector3(UISpawnLocation.position.x, xrOriginObject.transform.position.y + 1, UISpawnLocation.position.z);
+            Vector3 canvasSpawnPosition = new Vector3(UISpawnLocation.position.x, xrOriginObject.transform.position.y + 1, UISpawnLocation.position.z + 5);
             GameObject menu = Instantiate(vrCanvas, canvasSpawnPosition, mainCamera.transform.rotation);
             menu.transform.rotation = Quaternion.Euler(0f, menu.transform.localEulerAngles.y, 0f);
             
@@ -104,11 +104,15 @@ public class Sc_RemappedButtons : MonoBehaviour
                 Debug.Log("Atrium Pause");
                 uiManager.PauseMenuAtrium();
             }
-            
+
+            Time.timeScale = 0;
+            AudioListener.pause = true;
             paused = true;
         }
         else
         {
+            Time.timeScale = 1;
+            AudioListener.pause = false;
             DestroyMenu();
         }
     }
