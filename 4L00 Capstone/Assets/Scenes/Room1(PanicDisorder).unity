@@ -8954,7 +8954,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 72cf315212e1f744581031d700ce7205, type: 3}
+      objectReference: {fileID: 8300000, guid: 36dacf3308b2acd47b9bed88f0f62edc, type: 3}
     - target: {fileID: 5771120718715640743, guid: 907504f820f815647a454cd466319a81,
         type: 3}
       propertyPath: rolloffMode
@@ -9038,6 +9038,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 907504f820f815647a454cd466319a81, type: 3}
+--- !u!82 &330527918 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 5771120718715640743, guid: 907504f820f815647a454cd466319a81,
+    type: 3}
+  m_PrefabInstance: {fileID: 330527917}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &332008447 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4676454650826315691, guid: 69991805242936a4a97f1068c0fb1311,
@@ -22044,7 +22050,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 72cf315212e1f744581031d700ce7205, type: 3}
+      objectReference: {fileID: 8300000, guid: 36dacf3308b2acd47b9bed88f0f62edc, type: 3}
     - target: {fileID: 5771120718715640743, guid: 907504f820f815647a454cd466319a81,
         type: 3}
       propertyPath: rolloffMode
@@ -22128,6 +22134,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 907504f820f815647a454cd466319a81, type: 3}
+--- !u!82 &979332978 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 5771120718715640743, guid: 907504f820f815647a454cd466319a81,
+    type: 3}
+  m_PrefabInstance: {fileID: 979332977}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &982491257 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2040254050740271484, guid: 96f6970044fdcf34bac5a8cc8e63e786,
@@ -27331,12 +27343,6 @@ PrefabInstance:
 --- !u!4 &1269479904 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5771120718715640742, guid: 907504f820f815647a454cd466319a81,
-    type: 3}
-  m_PrefabInstance: {fileID: 1269479903}
-  m_PrefabAsset: {fileID: 0}
---- !u!82 &1269479905 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 5771120718715640743, guid: 907504f820f815647a454cd466319a81,
     type: 3}
   m_PrefabInstance: {fileID: 1269479903}
   m_PrefabAsset: {fileID: 0}
@@ -35687,6 +35693,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 752fef348426b9f418ec6333f83e06ed, type: 3}
   - {fileID: 8300000, guid: 25973d209cfd29f4f9894daa89257fb3, type: 3}
   - {fileID: 8300000, guid: c4a2188e25942e7428d72fbf3377fdb7, type: 3}
+  - {fileID: 8300000, guid: 36dacf3308b2acd47b9bed88f0f62edc, type: 3}
   audioSources:
   - {fileID: 1879254973}
   - {fileID: 1133377551}
@@ -35700,7 +35707,10 @@ MonoBehaviour:
   - {fileID: 495072870}
   - {fileID: 1948550956}
   - {fileID: 1473990333}
-  - {fileID: 1269479905}
+  - {fileID: 1720390152}
+  - {fileID: 979332978}
+  - {fileID: 1725685234}
+  - {fileID: 330527918}
   audioMixer: {fileID: 24100000, guid: 4e6601c9b19248a49b000932236edb63, type: 2}
   targetPanicRoomVolume: 5
   newAtriumVolume: -15
@@ -37805,7 +37815,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 72cf315212e1f744581031d700ce7205, type: 3}
+      objectReference: {fileID: 8300000, guid: 36dacf3308b2acd47b9bed88f0f62edc, type: 3}
     - target: {fileID: 5771120718715640743, guid: 907504f820f815647a454cd466319a81,
         type: 3}
       propertyPath: rolloffMode
@@ -38022,7 +38032,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 72cf315212e1f744581031d700ce7205, type: 3}
+      objectReference: {fileID: 8300000, guid: 36dacf3308b2acd47b9bed88f0f62edc, type: 3}
     - target: {fileID: 5771120718715640743, guid: 907504f820f815647a454cd466319a81,
         type: 3}
       propertyPath: rolloffMode
@@ -38106,6 +38116,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 907504f820f815647a454cd466319a81, type: 3}
+--- !u!82 &1725685234 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 5771120718715640743, guid: 907504f820f815647a454cd466319a81,
+    type: 3}
+  m_PrefabInstance: {fileID: 1725685233}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1730750857 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -5720993881371334076, guid: 96f6970044fdcf34bac5a8cc8e63e786,
