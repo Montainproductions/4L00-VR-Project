@@ -64,6 +64,6 @@ Material:
     - _Strength: 0.99
     - _depth: 0
     m_Colors:
-    - _DeepWaterColor: {r: 0, g: 0.5182471, b: 1, a: 0.8941177}
+    - _DeepWaterColor: {r: 0, g: 0.5182471, b: 1, a: 1}
     - _ShalldowWaterColor: {r: 0, g: 0.6131386, b: 0.990566, a: 0.9019608}
   m_BuildTextureStacks: []
