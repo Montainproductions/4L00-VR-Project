@@ -71,6 +71,12 @@ public class Sc_ScizophreniaR2 : MonoBehaviour
     IEnumerator Phase1()
     {
         Debug.Log("Phase1 has started");
+
+        // Make Coworker Typing Begin
+        scizoRoomPhase1SudioSources[4].audioSource.Play();
+        scizoRoomPhase1SudioSources[5].audioSource.Play();
+        scizoRoomPhase1SudioSources[6].audioSource.Play();
+
         bool Phase1isPlaying = true;
 
         while(Phase1isPlaying)
