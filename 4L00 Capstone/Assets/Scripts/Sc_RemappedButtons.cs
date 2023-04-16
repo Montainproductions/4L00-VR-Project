@@ -25,7 +25,7 @@ public class Sc_RemappedButtons : MonoBehaviour
     [SerializeField]
     private GameObject vrCanvas;
     [SerializeField]
-    private bool canPause = true;
+    private bool canPause = false;
     [SerializeField]
     private bool pauseMenuCopingRoom;
 
@@ -44,6 +44,7 @@ public class Sc_RemappedButtons : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
     }
 
     // Update is called once per frame
@@ -69,17 +70,7 @@ public class Sc_RemappedButtons : MonoBehaviour
 
     private void UIActivation_Performed(InputAction.CallbackContext context)
     {
-        if (!context.performed) return;
-
-        /*int level = gameManager.currentLevel;
-        //Debug.Log(level);
-        if (level != 6)
-        {
-            Debug.Log("Pausing UI");
-            uiManager.ToPauseMenuGame();
-        }*/
-
-        if (!canPause) return;
+        if (!context.performed || !canPause) return;
 
         if (!paused)
         {

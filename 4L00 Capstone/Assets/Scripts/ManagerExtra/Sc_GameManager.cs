@@ -17,7 +17,10 @@ public class Sc_GameManager : MonoBehaviour{
 
     //When the game object is first created. This is so that if another object is later created shortly after it can always find this script
     public void Awake(){
-        Instance = this; //Tells the singleton what game object its meant to be listening
+        if (Instance == null)
+        {
+            Instance = this; //Tells the singleton what game object its meant to be listening
+        }
 
         UnityEngine.Object.DontDestroyOnLoad(this); //Dont Destroy so that it can continuasly run this info
         //Why is it 6?
@@ -44,6 +47,11 @@ public class Sc_GameManager : MonoBehaviour{
     public void CopingRoom()
     {
         GoToLevel(4);
+    }
+
+    public void StartGame()
+    {
+        GoToLevel(1);
     }
 
     //Changes Scene/level to the one given usually by the door

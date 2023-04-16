@@ -628,8 +628,8 @@ MonoBehaviour:
       - m_Target: {fileID: 5510092759571433274, guid: a08b5db748f3fd943a7c124fb14e3078,
           type: 3}
         m_TargetAssemblyTypeName: Sc_GameManager, Assembly-CSharp
-        m_MethodName: GoToLevel
-        m_Mode: 3
+        m_MethodName: StartGame
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -755,6 +755,11 @@ PrefabInstance:
     - target: {fileID: 5417245128879405603, guid: a08b5db748f3fd943a7c124fb14e3078,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5510092759571433274, guid: a08b5db748f3fd943a7c124fb14e3078,
+        type: 3}
+      propertyPath: created
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5510092759571433274, guid: a08b5db748f3fd943a7c124fb14e3078,
