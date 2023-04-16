@@ -40026,6 +40026,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1269479903}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &1269479905 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 5771120718715640743, guid: 907504f820f815647a454cd466319a81,
+    type: 3}
+  m_PrefabInstance: {fileID: 1269479903}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1273962141
 GameObject:
   m_ObjectHideFlags: 0
@@ -45466,7 +45472,7 @@ PrefabInstance:
     - target: {fileID: 781630663273105846, guid: c24a7635b5761984d81cf6c4aac26e0d,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 83
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 781630663273105846, guid: c24a7635b5761984d81cf6c4aac26e0d,
         type: 3}
@@ -45476,7 +45482,7 @@ PrefabInstance:
     - target: {fileID: 781630663273105846, guid: c24a7635b5761984d81cf6c4aac26e0d,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 147.05
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 781630663273105846, guid: c24a7635b5761984d81cf6c4aac26e0d,
         type: 3}
@@ -52856,6 +52862,7 @@ MonoBehaviour:
   - {fileID: 979332978}
   - {fileID: 1725685234}
   - {fileID: 330527918}
+  - {fileID: 1269479905}
   audioMixer: {fileID: 24100000, guid: 4e6601c9b19248a49b000932236edb63, type: 2}
   targetPanicRoomVolume: 5
   newAtriumVolume: -15
@@ -57922,7 +57929,7 @@ PrefabInstance:
     - target: {fileID: 781630663273105846, guid: c24a7635b5761984d81cf6c4aac26e0d,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 83
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 781630663273105846, guid: c24a7635b5761984d81cf6c4aac26e0d,
         type: 3}
@@ -57932,7 +57939,7 @@ PrefabInstance:
     - target: {fileID: 781630663273105846, guid: c24a7635b5761984d81cf6c4aac26e0d,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 147.05
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 781630663273105846, guid: c24a7635b5761984d81cf6c4aac26e0d,
         type: 3}

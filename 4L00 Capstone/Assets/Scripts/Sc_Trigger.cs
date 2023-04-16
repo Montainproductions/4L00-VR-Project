@@ -8,7 +8,7 @@ public class Sc_Trigger : MonoBehaviour
     IEnumerator DingCashier()
     {
         yield return new WaitForSeconds(0.5f);
-        Sc_AudioManager.Instance.PlayAudio(7, 2);
+        Sc_AudioManager.Instance.PlayAudio(11, 2);
         yield return null;
     }
 
