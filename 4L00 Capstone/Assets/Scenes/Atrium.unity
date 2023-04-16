@@ -5944,6 +5944,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: paintFrame_PanicDisorder
       objectReference: {fileID: 0}
+    - target: {fileID: 8251252109586913004, guid: 321efb8c91f330143afe66d37016b2b5,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 404.39615
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 321efb8c91f330143afe66d37016b2b5, type: 3}
 --- !u!4 &805508035 stripped
@@ -14794,6 +14799,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: paintFrame_Schizophrenia
+      objectReference: {fileID: 0}
+    - target: {fileID: 8251252109586913004, guid: 321efb8c91f330143afe66d37016b2b5,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 433.9324
+      objectReference: {fileID: 0}
+    - target: {fileID: 8251252109586913004, guid: 321efb8c91f330143afe66d37016b2b5,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.51797
+      objectReference: {fileID: 0}
+    - target: {fileID: 8251252109586913004, guid: 321efb8c91f330143afe66d37016b2b5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.054091
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 321efb8c91f330143afe66d37016b2b5, type: 3}
