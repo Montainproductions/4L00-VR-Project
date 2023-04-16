@@ -128,8 +128,8 @@ public class Sc_ScizophreniaR2 : MonoBehaviour
             counter += Time.deltaTime;
 
             // Move the group of shadows along the z axis over time
-            float newPositionZ = Mathf.Lerp(10.6f, -11f, counter / duration);
-            float newPositionY = Mathf.Lerp(0.05f, 3.53f, counter / 1f);
+            float newPositionZ = Mathf.Lerp(-19, -40f, counter / duration);
+            float newPositionY = Mathf.Lerp(0.05f, 2.1f, counter / 1f);
             shadowsGroupTransform.position = new Vector3(shadowsGroupTransform.position.x, newPositionY, newPositionZ);
 
             // Increase the y scale of the shadows over time
