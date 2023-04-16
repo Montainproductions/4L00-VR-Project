@@ -73,7 +73,7 @@ public class Sc_RemappedButtons : MonoBehaviour
     {
             Vector3 cameraPosition = mainCamera.transform.position;
             Vector3 cameraDirection = mainCamera.transform.forward;
-            Vector3 canvasSpawnPosition = cameraPosition + cameraDirection * 7;
+            Vector3 canvasSpawnPosition = cameraPosition * 0.7f + cameraDirection * 5;
             GameObject menu = Instantiate(vrCanvas, canvasSpawnPosition, mainCamera.transform.rotation);
             menu.transform.rotation = Quaternion.Euler(0f, menu.transform.localEulerAngles.y, 0f);
 
