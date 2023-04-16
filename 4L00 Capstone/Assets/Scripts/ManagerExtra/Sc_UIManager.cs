@@ -5,58 +5,41 @@ using UnityEngine.InputSystem;
 
 public class Sc_UIManager : MonoBehaviour{
     [SerializeField]
-    private bool inMainMenu;
-
-    [SerializeField]
-    private GameObject mainGame, pauseMenuCoping, pauseMenuAtrium;
-    [SerializeField]
-    private bool  mainGameActive, pauseMenuActiveCoping, pauseMenuActiveAtrium;
+    private GameObject pauseMenuCoping, pauseMenuAtrium;
+    private bool pauseMenuActiveCoping, pauseMenuActiveAtrium;
+    
+    private GameObject player;
+    private Sc_RemappedButtons remappedButton;
 
     public void Awake()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
+        remappedButton = player.GetComponent<Sc_RemappedButtons>();
     }
 
     public void Start()
     {
-        //if (pauseMenuActiveAtrium || pauseMenuActiveCoping) return;
-        if (inMainMenu)
-        {
-            mainGameActive = false;
-        }
-        else
-        {
-            mainGameActive = true;
-        }
         pauseMenuActiveCoping = false;
         pauseMenuActiveAtrium = false;
     }
 
-    public void Update()
+    public void PauseMenuDeactivate()
     {
-        mainGame.SetActive(mainGameActive);
-        pauseMenuCoping.SetActive(pauseMenuActiveCoping);
-        pauseMenuAtrium.SetActive(pauseMenuActiveAtrium);
+        remappedButton.UIStopSpawning();
     }
 
     public IEnumerator PauseMenuCoping()
     {
-        /*Debug.Log("Pausing UI");
-        mainGameActive = !mainGameActive;
-        pauseMenuActiveCoping = !pauseMenuActiveCoping;*/
-        yield return new WaitForSeconds(0.1f);
-        mainGameActive = !mainGameActive;
         pauseMenuActiveCoping = !pauseMenuActiveCoping;
+        pauseMenuCoping.SetActive(pauseMenuActiveCoping);
         pauseMenuActiveAtrium = false;
         yield return null;
     }
     public IEnumerator PauseMenuAtrium()
     {
-        yield return new WaitForSeconds(0.1f);
-        mainGameActive = !mainGameActive;
         pauseMenuActiveCoping = false;
         pauseMenuActiveAtrium = !pauseMenuActiveAtrium;
-        Debug.Log(mainGameActive);
-        Debug.Log(pauseMenuActiveAtrium);
+        pauseMenuAtrium.SetActive(pauseMenuActiveAtrium);
         yield return null;
     }
 }

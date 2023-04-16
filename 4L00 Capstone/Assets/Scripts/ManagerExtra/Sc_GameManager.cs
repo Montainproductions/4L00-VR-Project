@@ -21,6 +21,10 @@ public class Sc_GameManager : MonoBehaviour{
         {
             Instance = this; //Tells the singleton what game object its meant to be listening
         }
+        else
+        {
+            Destroy(gameObject);
+        }
 
         UnityEngine.Object.DontDestroyOnLoad(this); //Dont Destroy so that it can continuasly run this info
         //Why is it 6?
@@ -31,18 +35,6 @@ public class Sc_GameManager : MonoBehaviour{
         playIntroOnceBreathing = false;
     }
 
-    // Start is called before the first frame update
-    void Start(){
-        Debug.Log(currentLevel);
-    }
-
-    private void Update()
-    {
-        /*if (Input.GetKeyDown("f2"))
-        {
-            GoToLevel(copinRoomNumber);
-        }*/
-    }
 
     public void CopingRoom()
     {
