@@ -42,97 +42,97 @@ ModelImporter:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Notepad_Base_color_1001
-    second: {fileID: 2800000, guid: b86b8a73a00ef0b47877111eb96b3ef8, type: 3}
+    second: {fileID: 2800000, guid: d61b03961fa9d64488b5237577516ee8, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Notepad_Metallic_1001
-    second: {fileID: 2800000, guid: da36aa810a82bd745bc0ca1cd805535f, type: 3}
+    second: {fileID: 2800000, guid: f1ba2356d3d02b04197f551b16165188, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Notepad_Roughness_1001
-    second: {fileID: 2800000, guid: 2075ec449504c164d8e44599ea5fb583, type: 3}
+    second: {fileID: 2800000, guid: 6c1eb14b38d8fd043b860391cf82e0a6, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: pants_Base_color_1001
-    second: {fileID: 2800000, guid: 6edd04089367d2643af7f7638e646cef, type: 3}
+    second: {fileID: 2800000, guid: 99911922133b92d4bba01585b052f3c3, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: pants_Metallic_1001
-    second: {fileID: 2800000, guid: 05b84da315fdc4744b43de2b7c3e5510, type: 3}
+    second: {fileID: 2800000, guid: 33e01515253dc58459af6d40f3762fe6, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: pants_Roughness_1001
-    second: {fileID: 2800000, guid: f16ef0d9ee3c53b4d901181866bca532, type: 3}
+    second: {fileID: 2800000, guid: edf9f09d241d50040b5ad62297271e8a, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: shirt_Base_color_1001
-    second: {fileID: 2800000, guid: f656661346019e7439a400a9a5c26c03, type: 3}
+    second: {fileID: 2800000, guid: 6c55889430e17e542975fb8386fbf721, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: shirt_Metallic_1001
-    second: {fileID: 2800000, guid: 9cd20543729787c499b04af82fb4a31d, type: 3}
+    second: {fileID: 2800000, guid: 7f65fdc01f14fec47866331dcb7f9a67, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: shirt_Roughness_1001
-    second: {fileID: 2800000, guid: b837cef786e1ae0439e2a3e20b5c284a, type: 3}
+    second: {fileID: 2800000, guid: 2c1216bc5f66dd2459981032b50413fe, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: shoes_Base_color_1001
-    second: {fileID: 2800000, guid: 4b6bec9a58e2a9f4d969a02d1b85a000, type: 3}
+    second: {fileID: 2800000, guid: eb7427ec556025241b704b6cf2ba4737, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: shoes_Metallic_1001
-    second: {fileID: 2800000, guid: 52bb0f5382d637847ab5c1aa35e4dcc7, type: 3}
+    second: {fileID: 2800000, guid: a7ac88bf1378ace42933833ff1dbeb1b, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: shoes_Roughness_1001
-    second: {fileID: 2800000, guid: 2da77edfad130f34aa5bdc9e6ceba15c, type: 3}
+    second: {fileID: 2800000, guid: 53540caeba4f3474fa9dd62ad752e9b1, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: skin_Base_color_1001
-    second: {fileID: 2800000, guid: cd4a4e1ebd7a6e74986d8f127f709eb6, type: 3}
+    second: {fileID: 2800000, guid: 8e61c3a27b0d17345ba922e77bbe5c2f, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: skin_Metallic_1001
-    second: {fileID: 2800000, guid: 9d284584769356048a5c5af6b6af0554, type: 3}
+    second: {fileID: 2800000, guid: 87aa419d411b4934ba9862ccce8d2e38, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: skin_Roughness_1001
-    second: {fileID: 2800000, guid: 909ab0d05af53dc4f961c5aa201a64ca, type: 3}
+    second: {fileID: 2800000, guid: 0701380f02020d041b6408a010cd3633, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: waterBottle_DefaultMaterial_BaseColor.1001
-    second: {fileID: 2800000, guid: b621f0acee8be044a8b54ba8e72941ab, type: 3}
+    second: {fileID: 2800000, guid: 3e33ea74fae98cf42af323cc201e94f9, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: waterBottle_DefaultMaterial_Metallic.1001
-    second: {fileID: 2800000, guid: a0103bc59caa963498c4caeb9c956bc8, type: 3}
+    second: {fileID: 2800000, guid: 41c4b398635c3bf4e920aea6a6550141, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: waterBottle_DefaultMaterial_Normal.1001
-    second: {fileID: 2800000, guid: 8c1811fe4d35f1749a711d88f4337745, type: 3}
+    second: {fileID: 2800000, guid: e723b98970922d6429ca2c33c3d17b19, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: waterBottle_DefaultMaterial_Roughness.1001
-    second: {fileID: 2800000, guid: c15351cae840cc84db9a27bc863195bf, type: 3}
+    second: {fileID: 2800000, guid: d67e797865b4fed41b318dce0b77a41b, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
