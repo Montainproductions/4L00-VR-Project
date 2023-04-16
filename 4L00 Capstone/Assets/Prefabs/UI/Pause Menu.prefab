@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2193874848261769558}
   - component: {fileID: 2193874848261769559}
   - component: {fileID: 2193874848261769556}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: MainMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 2193874848523576012}
   - component: {fileID: 2193874848523576013}
   - component: {fileID: 2193874848523576002}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Return
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -280,7 +280,7 @@ GameObject:
   - component: {fileID: 2193874848529504437}
   - component: {fileID: 2193874848529504439}
   - component: {fileID: 2193874848529504436}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Controls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -354,7 +354,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2193874848567619904}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: PauseToCopingRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -392,7 +392,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2193874848582941466}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: PauseToAtriumRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -430,7 +430,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2193874848727740240}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: MainPause
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -473,7 +473,7 @@ GameObject:
   - component: {fileID: 2193874848768329266}
   - component: {fileID: 2193874848768329276}
   - component: {fileID: 2193874848768329277}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -609,7 +609,7 @@ GameObject:
   - component: {fileID: 2193874848786489989}
   - component: {fileID: 2193874848786490010}
   - component: {fileID: 2193874848786490011}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Controls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -754,7 +754,7 @@ GameObject:
   - component: {fileID: 2193874848822467587}
   - component: {fileID: 2193874848822467597}
   - component: {fileID: 2193874848822467586}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -890,7 +890,7 @@ GameObject:
   - component: {fileID: 2193874849066908144}
   - component: {fileID: 2193874849066908145}
   - component: {fileID: 2193874849066908150}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Controls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1036,7 +1036,7 @@ GameObject:
   - component: {fileID: 2193874849111226112}
   - component: {fileID: 2193874849111226113}
   - component: {fileID: 2193874849111226118}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Return
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1170,7 +1170,7 @@ GameObject:
   - component: {fileID: 2193874849117765685}
   - component: {fileID: 2193874849117765642}
   - component: {fileID: 2193874849117765643}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: MainMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1304,7 +1304,7 @@ GameObject:
   - component: {fileID: 2193874849128979647}
   - component: {fileID: 2193874849128979641}
   - component: {fileID: 2193874849128979646}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1440,7 +1440,7 @@ GameObject:
   - component: {fileID: 2193874849203355446}
   - component: {fileID: 2193874849203355447}
   - component: {fileID: 2193874849203355444}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: CopingRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1586,7 +1586,7 @@ GameObject:
   - component: {fileID: 2193874849210479851}
   - component: {fileID: 2193874849210480405}
   - component: {fileID: 2193874849210479850}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1721,7 +1721,7 @@ GameObject:
   - component: {fileID: 2193874849236784483}
   - component: {fileID: 2193874849236784493}
   - component: {fileID: 2193874849236784482}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1797,7 +1797,7 @@ GameObject:
   - component: {fileID: 2193874849440149025}
   - component: {fileID: 2193874849440149027}
   - component: {fileID: 2193874849440149024}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1932,7 +1932,7 @@ GameObject:
   - component: {fileID: 2193874849487429575}
   - component: {fileID: 2193874849487429569}
   - component: {fileID: 2193874849487429574}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2065,7 +2065,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2193874849599994478}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: CopingRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2108,7 +2108,7 @@ GameObject:
   - component: {fileID: 2193874849626831121}
   - component: {fileID: 2193874849626831123}
   - component: {fileID: 2193874849626831120}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: PauseAtrium
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2185,7 +2185,7 @@ GameObject:
   - component: {fileID: 2193874849857058083}
   - component: {fileID: 2193874849857058080}
   - component: {fileID: 2193874849857058081}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Return
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2331,7 +2331,7 @@ GameObject:
   - component: {fileID: 2193874849866168356}
   - component: {fileID: 2193874849866168357}
   - component: {fileID: 2193874849866168378}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Atrium
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2463,7 +2463,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2193874849919610411}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Controls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2503,7 +2503,7 @@ GameObject:
   - component: {fileID: 2193874849960919374}
   - component: {fileID: 2193874849960919368}
   - component: {fileID: 2193874849960919369}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2638,7 +2638,7 @@ GameObject:
   - component: {fileID: 2193874849977048077}
   - component: {fileID: 2193874849977048079}
   - component: {fileID: 2193874849977048076}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Controls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2714,7 +2714,7 @@ GameObject:
   - component: {fileID: 2193874850011228800}
   - component: {fileID: 2193874850011228802}
   - component: {fileID: 2193874850011228803}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2849,7 +2849,7 @@ GameObject:
   - component: {fileID: 2193874850145061503}
   - component: {fileID: 2193874850145061497}
   - component: {fileID: 2193874850145061502}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2984,7 +2984,7 @@ GameObject:
   - component: {fileID: 2193874850152216627}
   - component: {fileID: 2193874850152216637}
   - component: {fileID: 2193874850152216626}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3117,7 +3117,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2193874850205660410}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Controls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3160,7 +3160,7 @@ GameObject:
   - component: {fileID: 2193874850238163811}
   - component: {fileID: 2193874850238163823}
   - component: {fileID: 271596566302718706}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Pause Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3295,7 +3295,7 @@ GameObject:
   - component: {fileID: 2193874850268662314}
   - component: {fileID: 2193874850268662315}
   - component: {fileID: 2193874850268662312}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Return
   m_TagString: Untagged
   m_Icon: {fileID: 0}

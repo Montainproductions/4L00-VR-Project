@@ -500,12 +500,6 @@ LineRenderer:
     type: 3}
   m_PrefabInstance: {fileID: 8862617611063275560}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1166983988975669576 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7696548424635294048, guid: 895f6f3c2d334633b5800312285058d2,
-    type: 3}
-  m_PrefabInstance: {fileID: 8862617611063275560}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2270102315252436623 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7313654230448209575, guid: 895f6f3c2d334633b5800312285058d2,
@@ -524,13 +518,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e18aabe8ed87b9a4895bfcdce50db028, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xrOriginObject: {fileID: 1166983988975669576}
   mainCamera: {fileID: 569304388911941652}
-  uiManager: {fileID: 0}
-  mainGameUI: {fileID: 0}
-  pauseMenuUI: {fileID: 0}
   eventCamera: {fileID: 1231715008}
-  UISpawnLocation: {fileID: 468191971}
   vrCanvas: {fileID: 8325689555220175148, guid: 4c55345954f89524e89687dcaac65604,
     type: 3}
   canPause: 1

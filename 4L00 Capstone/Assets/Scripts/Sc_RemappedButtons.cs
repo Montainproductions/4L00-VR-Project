@@ -9,21 +9,15 @@ public class Sc_RemappedButtons : MonoBehaviour
     private XRIDefaultInputActions playerInputActions;
 
     [SerializeField]
-    private GameObject xrOriginObject, mainCamera;
+    private GameObject mainCamera;
 
-    [SerializeField]
     private Sc_UIManager uiManager;
-
-    [SerializeField]
-    private GameObject mainGameUI, pauseMenuUI;
 
     [Header("UI")]
     [SerializeField]
     private Camera eventCamera;
     [SerializeField]
-    private Transform UISpawnLocation;
-    [SerializeField]
-    private GameObject vrCanvas;
+    private GameObject pauseMenu;
     [SerializeField]
     private bool canPause = false;
     [SerializeField]
@@ -71,13 +65,14 @@ public class Sc_RemappedButtons : MonoBehaviour
 
     public void UISpawning()
     {
-            Vector3 cameraPosition = mainCamera.transform.position;
-            Vector3 cameraDirection = mainCamera.transform.forward;
-            Vector3 canvasSpawnPosition = cameraPosition * 0.7f + cameraDirection * 5;
-            GameObject menu = Instantiate(vrCanvas, canvasSpawnPosition, mainCamera.transform.rotation);
-            menu.transform.rotation = Quaternion.Euler(0f, menu.transform.localEulerAngles.y, 0f);
+        Vector3 cameraPosition = mainCamera.transform.position;
+        Vector3 cameraDirection = mainCamera.transform.forward;
+        Vector3 canvasSpawnPosition = cameraPosition * 0.65f + cameraDirection * 5;
+        Debug.Log(canvasSpawnPosition);
+        GameObject menu = Instantiate(pauseMenu, canvasSpawnPosition, mainCamera.transform.rotation);
+        menu.transform.rotation = Quaternion.Euler(0f, menu.transform.localEulerAngles.y, 0f);
 
-            menuObject = menu;
+        menuObject = menu;
             Canvas menuCanvas = menu.GetComponent<Canvas>();
             menuCanvas.worldCamera = eventCamera;
             uiManager = menu.GetComponent<Sc_UIManager>();
