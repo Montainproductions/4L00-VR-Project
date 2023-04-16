@@ -33,6 +33,7 @@ public class Sc_ScizophreniaR2 : MonoBehaviour
     [Header("Shadow Objects")]
     [SerializeField] private Transform shadowsGroupTransform;
 
+    [SerializeField] private GameObject fireEffectObjectGroup;
     [SerializeField] private GameObject firePartciles;
     [SerializeField] private GameObject exitUI;
 
@@ -58,6 +59,7 @@ public class Sc_ScizophreniaR2 : MonoBehaviour
         //scizoRoomPhase1SudioSources[1].audioToBePlayed = ScizoRoomAudioData.AudioToBePlayed.BossLine1;
 
         //BeginPhaseOne();
+        StartCoroutine(Phase4());
         originalMugLocation = mug.gameObject.transform.position;
     }
 
@@ -243,7 +245,9 @@ public class Sc_ScizophreniaR2 : MonoBehaviour
         bool phase4IsPlaying = true;
 
         // Activate the Fire Effects
+        fireEffectObjectGroup.SetActive(true);
         firePartciles.SetActive(true);
+        StartCoroutine(IncreaseFireSize());
 
         while (phase4IsPlaying)
         {
@@ -274,6 +278,22 @@ public class Sc_ScizophreniaR2 : MonoBehaviour
         yield return null;
         Debug.Log("Phase4 has ended");
         // End of Schizo Room
+    }
+
+    IEnumerator IncreaseFireSize()
+    {
+        float duration = 1f;
+        float counter = 0f;
+
+        while (counter < duration)
+        {
+            counter += Time.deltaTime;
+
+            float newScaleY = Mathf.Lerp(0f, 1f, counter / duration);
+            fireEffectObjectGroup.transform.localScale = new Vector3(fireEffectObjectGroup.transform.localScale.x, newScaleY, fireEffectObjectGroup.transform.localScale.z);
+
+            yield return null;
+        }
     }
 
     // Called when the mug's collider hits the ground

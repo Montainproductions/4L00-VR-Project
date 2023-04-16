@@ -2263,6 +2263,7 @@ MonoBehaviour:
     audioClip: {fileID: 8300000, guid: 6243982360a03184f8349fade8c8dbb4, type: 3}
     audioToBePlayed: 8
   shadowsGroupTransform: {fileID: 1608331680}
+  fireEffectObjectGroup: {fileID: 2086820910}
   firePartciles: {fileID: 1744603240}
   exitUI: {fileID: 1851698976}
 --- !u!1001 &583390039
@@ -13471,8 +13472,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2086820910}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.52, y: 3.24, z: 5.35}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 1.52, y: 2.44, z: 5.35}
+  m_LocalScale: {x: 1, y: 0, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1242996081}
