@@ -337,7 +337,7 @@ GameObject:
   - component: {fileID: 10047051}
   - component: {fileID: 10047050}
   - component: {fileID: 10047049}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Canvas (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -437,7 +437,7 @@ GameObject:
   - component: {fileID: 26376051}
   - component: {fileID: 26376053}
   - component: {fileID: 26376052}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1749,7 +1749,7 @@ GameObject:
   - component: {fileID: 237033303}
   - component: {fileID: 237033305}
   - component: {fileID: 237033304}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1842,7 +1842,7 @@ GameObject:
   - component: {fileID: 259829109}
   - component: {fileID: 259829108}
   - component: {fileID: 259829107}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Canvas (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2302,7 +2302,7 @@ GameObject:
   - component: {fileID: 407272185}
   - component: {fileID: 407272184}
   - component: {fileID: 407272183}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Canvas (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2497,7 +2497,7 @@ GameObject:
   - component: {fileID: 410859916}
   - component: {fileID: 410859918}
   - component: {fileID: 410859917}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3199,7 +3199,7 @@ GameObject:
   - component: {fileID: 446944611}
   - component: {fileID: 446944610}
   - component: {fileID: 446944609}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Canvas (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3618,7 +3618,7 @@ GameObject:
   - component: {fileID: 454078189}
   - component: {fileID: 454078191}
   - component: {fileID: 454078190}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4210,7 +4210,7 @@ GameObject:
   - component: {fileID: 510017172}
   - component: {fileID: 510017171}
   - component: {fileID: 510017170}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5298,7 +5298,7 @@ GameObject:
   - component: {fileID: 698755925}
   - component: {fileID: 698755927}
   - component: {fileID: 698755926}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5374,7 +5374,7 @@ GameObject:
   - component: {fileID: 723716101}
   - component: {fileID: 723716103}
   - component: {fileID: 723716102}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5877,32 +5877,32 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 321efb8c91f330143afe66d37016b2b5,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.7590955
+      value: 1.2584561
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 321efb8c91f330143afe66d37016b2b5,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.7590955
+      value: 1.2584561
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 321efb8c91f330143afe66d37016b2b5,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.7590955
+      value: 1.2584561
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 321efb8c91f330143afe66d37016b2b5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -34.23
+      value: -34.409
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 321efb8c91f330143afe66d37016b2b5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.02
+      value: -4.93
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 321efb8c91f330143afe66d37016b2b5,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 20.01
+      value: 19.82
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 321efb8c91f330143afe66d37016b2b5,
         type: 3}
@@ -6802,7 +6802,7 @@ GameObject:
   - component: {fileID: 966316454}
   - component: {fileID: 966316453}
   - component: {fileID: 966316452}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Canvas (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6997,7 +6997,7 @@ GameObject:
   - component: {fileID: 988143196}
   - component: {fileID: 988143198}
   - component: {fileID: 988143197}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9773,7 +9773,7 @@ GameObject:
   - component: {fileID: 1413982506}
   - component: {fileID: 1413982508}
   - component: {fileID: 1413982507}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10235,7 +10235,7 @@ GameObject:
   - component: {fileID: 1503705316}
   - component: {fileID: 1503705315}
   - component: {fileID: 1503705314}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Canvas (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10419,7 +10419,7 @@ GameObject:
   - component: {fileID: 1522299789}
   - component: {fileID: 1522299788}
   - component: {fileID: 1522299787}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Canvas (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10902,7 +10902,7 @@ GameObject:
   - component: {fileID: 1563268920}
   - component: {fileID: 1563268922}
   - component: {fileID: 1563268921}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10942,7 +10942,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6132076, g: 0.5813902, b: 0.5813902, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -12116,7 +12116,7 @@ GameObject:
   - component: {fileID: 1729621739}
   - component: {fileID: 1729621738}
   - component: {fileID: 1729621737}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Canvas (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13190,7 +13190,7 @@ GameObject:
   - component: {fileID: 1856462330}
   - component: {fileID: 1856462329}
   - component: {fileID: 1856462328}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Canvas (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13290,7 +13290,7 @@ GameObject:
   - component: {fileID: 1885268225}
   - component: {fileID: 1885268227}
   - component: {fileID: 1885268226}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13366,7 +13366,7 @@ GameObject:
   - component: {fileID: 1897432732}
   - component: {fileID: 1897432734}
   - component: {fileID: 1897432733}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14406,7 +14406,7 @@ GameObject:
   - component: {fileID: 2093292151}
   - component: {fileID: 2093292150}
   - component: {fileID: 2093292149}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Canvas (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14728,32 +14728,32 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 321efb8c91f330143afe66d37016b2b5,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.7590955
+      value: 1.8389883
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 321efb8c91f330143afe66d37016b2b5,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.7590955
+      value: 1.1584793
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 321efb8c91f330143afe66d37016b2b5,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.7590955
+      value: 1.1584793
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 321efb8c91f330143afe66d37016b2b5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.11
+      value: 0.06
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 321efb8c91f330143afe66d37016b2b5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.02
+      value: -4.97
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 321efb8c91f330143afe66d37016b2b5,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 39.86
+      value: 39.66
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 321efb8c91f330143afe66d37016b2b5,
         type: 3}
