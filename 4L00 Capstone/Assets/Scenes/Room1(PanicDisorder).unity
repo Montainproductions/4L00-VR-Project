@@ -34636,14 +34636,14 @@ Transform:
   - {fileID: 712377245}
   - {fileID: 113593526}
   - {fileID: 235052144}
-  - {fileID: 1038958875}
   - {fileID: 1591625778}
+  - {fileID: 1038958875}
   - {fileID: 1438367365}
   - {fileID: 1617589967}
-  - {fileID: 1765888563}
   - {fileID: 2139001361}
-  - {fileID: 220665960}
+  - {fileID: 1765888563}
   - {fileID: 1320739664}
+  - {fileID: 220665960}
   - {fileID: 2002534060}
   - {fileID: 870856820}
   - {fileID: 384476882}
@@ -39995,7 +39995,7 @@ PrefabInstance:
     - target: {fileID: 5771120718715640743, guid: 907504f820f815647a454cd466319a81,
         type: 3}
       propertyPath: MaxDistance
-      value: 3.26
+      value: 5.53
       objectReference: {fileID: 0}
     - target: {fileID: 5771120718715640743, guid: 907504f820f815647a454cd466319a81,
         type: 3}
@@ -40008,6 +40008,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6703668721064582248, guid: 4e6601c9b19248a49b000932236edb63,
         type: 2}
+    - target: {fileID: 5771120718715640743, guid: 907504f820f815647a454cd466319a81,
+        type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[0].time
+      value: 0.8678076
+      objectReference: {fileID: 0}
+    - target: {fileID: 5771120718715640743, guid: 907504f820f815647a454cd466319a81,
+        type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 907504f820f815647a454cd466319a81, type: 3}
 --- !u!4 &1269479904 stripped
