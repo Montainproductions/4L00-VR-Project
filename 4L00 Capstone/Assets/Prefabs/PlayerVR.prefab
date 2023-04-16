@@ -520,7 +520,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 569304388911941652}
   eventCamera: {fileID: 1231715008}
-  vrCanvas: {fileID: 8325689555220175148, guid: 4c55345954f89524e89687dcaac65604,
+  pauseMenu: {fileID: 2193874850238163808, guid: 4cec7c5fde6f3454bb06357e9d18e33c,
     type: 3}
   canPause: 1
   pauseMenuCopingRoom: 0
