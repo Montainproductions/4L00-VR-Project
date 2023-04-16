@@ -59,7 +59,6 @@ public class Sc_ScizophreniaR2 : MonoBehaviour
         //scizoRoomPhase1SudioSources[1].audioToBePlayed = ScizoRoomAudioData.AudioToBePlayed.BossLine1;
 
         //BeginPhaseOne();
-        StartCoroutine(Phase4());
         originalMugLocation = mug.gameObject.transform.position;
     }
 
