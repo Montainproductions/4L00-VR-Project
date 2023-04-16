@@ -90,9 +90,9 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _EnvironmentReflections: 1
-    - _FireDetail: 11.4
-    - _FirePower: 0.25
-    - _FireThreshold: -0.3
+    - _FireDetail: 20
+    - _FirePower: 0.347
+    - _FireThreshold: -1
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
