@@ -41,18 +41,6 @@ public class Sc_RemappedButtons : MonoBehaviour
         playerInputActions.XRIRightHandInteraction.UIActivation.performed += UIActivation_Performed;
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-         
-    }
-
     private void CalmingRoom_Preformed(InputAction.CallbackContext context)
     {
         if (context.performed)
@@ -71,43 +59,55 @@ public class Sc_RemappedButtons : MonoBehaviour
     private void UIActivation_Performed(InputAction.CallbackContext context)
     {
         if (!context.performed || !canPause) return;
-
         if (!paused)
         {
+            UISpawning();
+        }
+        else
+        {
+            UIStopSpawning();
+        }
+    }
+
+    public void UISpawning()
+    {
             Vector3 cameraPosition = mainCamera.transform.position;
             Vector3 cameraDirection = mainCamera.transform.forward;
-            Vector3 canvasSpawnPosition = cameraPosition + cameraDirection * 5;
+            Vector3 canvasSpawnPosition = cameraPosition + cameraDirection * 7;
             GameObject menu = Instantiate(vrCanvas, canvasSpawnPosition, mainCamera.transform.rotation);
             menu.transform.rotation = Quaternion.Euler(0f, menu.transform.localEulerAngles.y, 0f);
-            
 
             menuObject = menu;
             Canvas menuCanvas = menu.GetComponent<Canvas>();
             menuCanvas.worldCamera = eventCamera;
-            Debug.Log("Grab UI Manager");
-            Sc_UIManager uiManager = menu.GetComponent<Sc_UIManager>();
-            Debug.Log(uiManager);
+            uiManager = menu.GetComponent<Sc_UIManager>();
             if (pauseMenuCopingRoom)
             {
-                Debug.Log("Coping Pause");
                 StartCoroutine(uiManager.PauseMenuCoping());
             }
             else
             {
-                Debug.Log("Atrium Pause");
                 StartCoroutine(uiManager.PauseMenuAtrium());
             }
 
             Time.timeScale = 0;
             AudioListener.pause = true;
             paused = true;
+    }
+
+    public void UIStopSpawning()
+    {
+        Time.timeScale = 1;
+        AudioListener.pause = false;
+        if (pauseMenuCopingRoom)
+        {
+            StartCoroutine(uiManager.PauseMenuCoping());
         }
         else
         {
-            Time.timeScale = 1;
-            AudioListener.pause = false;
-            DestroyMenu();
+            StartCoroutine(uiManager.PauseMenuAtrium());
         }
+        DestroyMenu();
     }
 
     public void DestroyMenu()

@@ -2524,7 +2524,7 @@ GameObject:
   - component: {fileID: 621781017}
   - component: {fileID: 621781016}
   - component: {fileID: 621781020}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Email Message
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2742,7 +2742,7 @@ GameObject:
   - component: {fileID: 648534984}
   - component: {fileID: 648534986}
   - component: {fileID: 648534985}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4413,7 +4413,7 @@ GameObject:
   - component: {fileID: 903721377}
   - component: {fileID: 903721376}
   - component: {fileID: 903721379}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5689,7 +5689,7 @@ GameObject:
   - component: {fileID: 1269958616}
   - component: {fileID: 1269958618}
   - component: {fileID: 1269958617}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
