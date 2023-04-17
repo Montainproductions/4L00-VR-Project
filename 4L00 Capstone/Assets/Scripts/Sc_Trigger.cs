@@ -9,6 +9,8 @@ public class Sc_Trigger : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
         Sc_AudioManager.Instance.PlayAudio(11, 2);
+        yield return new WaitForSeconds(1.5f);
+        Sc_AudioManager.Instance.PlayAudio(,)
         yield return null;
     }
 

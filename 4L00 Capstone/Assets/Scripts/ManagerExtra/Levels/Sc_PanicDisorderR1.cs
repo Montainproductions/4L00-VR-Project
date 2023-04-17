@@ -184,6 +184,8 @@ public class Sc_PanicDisorderR1 : MonoBehaviour
                 yield return null;
             }
         }
+        //Change To New Muffled Song
+        Sc_AudioManager.Instance.UpdateLowPass();
         //Plays the third audio clip using the third audio source
         Sc_AudioManager.Instance.PlayAudio(3, 3);
         //Increases the audio of the audio mixer
@@ -208,8 +210,6 @@ public class Sc_PanicDisorderR1 : MonoBehaviour
         effectBlur.ChangeBlur(newFocalLength, durationFOV);
         textUI[1].SetActive(false);
         textUI[2].SetActive(true);
-        //Change To New Muffled Song
-        Sc_AudioManager.Instance.UpdateLowPass();
         //Waits to play VA - Five Seconds
         yield return new WaitForSeconds(5);
         Sc_AudioManager.Instance.PlayAudio(5, 14);
