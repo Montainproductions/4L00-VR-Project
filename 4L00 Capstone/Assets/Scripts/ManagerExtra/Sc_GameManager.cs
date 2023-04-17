@@ -52,6 +52,10 @@ public class Sc_GameManager : MonoBehaviour{
         currentLevel = level; //Updates current Scene/level
         Debug.Log(level); //Confirms in debug.log what level it is going to
         SceneManager.LoadScene(level); //Changes the scene/level
+        if(Time.timeScale == 0)
+        {
+            Time.timeScale = 1;
+        }
     }
 
     public void QuitGame()
