@@ -49,6 +49,8 @@ public class Sc_GameManager : MonoBehaviour{
     public void StartGame()
     {
         playIntroOnce = false;
+        playIntroOnceCoping = false;
+        playIntroOnceBreathing = false;
         GoToLevel(1);
     }
 
