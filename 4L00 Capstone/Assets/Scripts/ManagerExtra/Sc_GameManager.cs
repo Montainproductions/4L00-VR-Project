@@ -43,6 +43,7 @@ public class Sc_GameManager : MonoBehaviour{
 
     public void StartGame()
     {
+        playIntroOnce = false;
         GoToLevel(1);
     }
 
