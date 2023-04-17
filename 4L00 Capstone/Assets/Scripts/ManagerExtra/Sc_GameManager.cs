@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -61,9 +62,11 @@ public class Sc_GameManager : MonoBehaviour{
             Time.timeScale = 1;
             AudioListener.pause = false;
         }
+        int temp = currentLevel;
         currentLevel = level; //Updates current Scene/level
         Debug.Log(level); //Confirms in debug.log what level it is going to
         SceneManager.LoadScene(level); //Changes the scene/level
+        SceneManager.UnloadSceneAsync(temp);
     }
 
     public void ResetIntroVariables()
