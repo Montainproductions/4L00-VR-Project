@@ -49,6 +49,9 @@ public class Sc_GameManager : MonoBehaviour{
 
     public void StartGame()
     {
+        Sc_GameManager.Instance.playIntroOnce = false;
+        Sc_GameManager.Instance.playIntroOnceCoping = false;
+        Sc_GameManager.Instance.playIntroOnceBreathing = false;
         playIntroOnce = false;
         playIntroOnceCoping = false;
         playIntroOnceBreathing = false;
@@ -71,6 +74,9 @@ public class Sc_GameManager : MonoBehaviour{
 
     public void ResetIntroVariables()
     {
+        Sc_GameManager.Instance.playIntroOnce = false;
+        Sc_GameManager.Instance.playIntroOnceCoping = false;
+        Sc_GameManager.Instance.playIntroOnceBreathing = false;
         playIntroOnce = false;
         playIntroOnceCoping = false;
         playIntroOnceBreathing = false;
