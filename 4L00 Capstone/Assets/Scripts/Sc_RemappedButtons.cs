@@ -101,11 +101,17 @@ public class Sc_RemappedButtons : MonoBehaviour
         AudioListener.pause = false;
         if (pauseMenuCopingRoom)
         {
-            StartCoroutine(uiManager.PauseMenuCoping());
+            if(uiManager != null)
+            {
+                StartCoroutine(uiManager.PauseMenuCoping());
+            }
         }
         else
         {
-            StartCoroutine(uiManager.PauseMenuAtrium());
+            if(uiManager != null)
+            {
+                StartCoroutine(uiManager.PauseMenuAtrium());
+            }
         }
         DestroyMenu();
     }

@@ -927,8 +927,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   artistStatments:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 2098318482}
+  - {fileID: 1366315026}
 --- !u!1001 &129976657
 PrefabInstance:
   m_ObjectHideFlags: 0
