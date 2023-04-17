@@ -23,6 +23,7 @@ public class Sc_RemappedButtons : MonoBehaviour
     [SerializeField]
     private bool pauseMenuCopingRoom;
 
+    [SerializeField]
     private bool paused = false;
     private GameObject menuObject = null;
 
