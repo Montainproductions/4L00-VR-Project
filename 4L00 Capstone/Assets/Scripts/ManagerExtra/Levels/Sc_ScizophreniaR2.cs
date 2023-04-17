@@ -122,6 +122,7 @@ public class Sc_ScizophreniaR2 : MonoBehaviour
         // Initialize variables
         float counter = 0f;
         float duration = 10f;
+        shadowsGroupTransform.gameObject.SetActive(true);
 
         while (phase2IsPlaying)
         {
@@ -144,6 +145,8 @@ public class Sc_ScizophreniaR2 : MonoBehaviour
             }
             yield return null;
         }
+
+        shadowsGroupTransform.gameObject.SetActive(false);
 
         // Start Phase 3
         StartCoroutine(Phase3());
