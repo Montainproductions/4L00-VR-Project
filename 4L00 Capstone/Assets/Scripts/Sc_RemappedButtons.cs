@@ -50,6 +50,7 @@ public class Sc_RemappedButtons : MonoBehaviour
         }
         if (Time.timeScale == 0)
         {
+            AudioListener.pause = false;
             Time.timeScale = 1;
         }
     }

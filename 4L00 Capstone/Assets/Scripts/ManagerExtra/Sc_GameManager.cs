@@ -39,6 +39,11 @@ public class Sc_GameManager : MonoBehaviour{
     public void CopingRoom()
     {
         GoToLevel(4);
+        if (Time.timeScale == 0)
+        {
+            Time.timeScale = 1;
+            AudioListener.pause = false;
+        }
     }
 
     public void StartGame()
@@ -55,6 +60,7 @@ public class Sc_GameManager : MonoBehaviour{
         if(Time.timeScale == 0)
         {
             Time.timeScale = 1;
+            AudioListener.pause = false;
         }
     }
 
