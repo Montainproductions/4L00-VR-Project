@@ -2527,15 +2527,6 @@ MonoBehaviour:
   - audioSource: {fileID: 688232670}
     audioClip: {fileID: 8300000, guid: add0c72743dd21b478c2feec72671085, type: 3}
     audioToBePlayed: 2
-  - audioSource: {fileID: 1104911427}
-    audioClip: {fileID: 8300000, guid: ab8079a10eebfec49bcfe522e0a45ba4, type: 3}
-    audioToBePlayed: 2
-  - audioSource: {fileID: 2135034164}
-    audioClip: {fileID: 8300000, guid: 19000744491a3fb45b45ec9c3711a95d, type: 3}
-    audioToBePlayed: 2
-  - audioSource: {fileID: 1558588307}
-    audioClip: {fileID: 8300000, guid: ad746d796e0921948a1e67912db2574e, type: 3}
-    audioToBePlayed: 2
   scizoRoomPhase2SudioSources: []
   scizoRoomPhase3SudioSources:
   - audioSource: {fileID: 1259717396}
@@ -5757,7 +5748,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: ab8079a10eebfec49bcfe522e0a45ba4, type: 3}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 0.1
   m_Pitch: 1
   Loop: 1
@@ -7794,7 +7785,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: ad746d796e0921948a1e67912db2574e, type: 3}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 0.1
   m_Pitch: 1
   Loop: 1
@@ -14112,7 +14103,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 19000744491a3fb45b45ec9c3711a95d, type: 3}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 0.1
   m_Pitch: 1
   Loop: 1
