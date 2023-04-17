@@ -38,6 +38,11 @@ public class Sc_RemappedButtons : MonoBehaviour
 
     private void CalmingRoom_Preformed(InputAction.CallbackContext context)
     {
+        if (Time.timeScale == 0)
+        {
+            AudioListener.pause = false;
+            Time.timeScale = 1;
+        }
         if (context.performed)
         {
             if (Sc_GameManager.Instance.currentLevel != 4)
@@ -48,11 +53,6 @@ public class Sc_RemappedButtons : MonoBehaviour
             {
                 Sc_GameManager.Instance.GoToLevel(1);
             }
-        }
-        if (Time.timeScale == 0)
-        {
-            AudioListener.pause = false;
-            Time.timeScale = 1;
         }
     }
 
@@ -71,6 +71,11 @@ public class Sc_RemappedButtons : MonoBehaviour
 
     public void UISpawning()
     {
+        if(mainCamera == null)
+        {
+            Camera temp = FindObjectOfType<Camera>();
+            mainCamera = temp.gameObject;
+        }
         Vector3 cameraPosition = mainCamera.transform.position;
         Vector3 cameraDirection = mainCamera.transform.forward;
         Vector3 canvasSpawnPosition = cameraPosition + cameraDirection * 5;

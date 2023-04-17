@@ -38,12 +38,12 @@ public class Sc_GameManager : MonoBehaviour{
 
     public void CopingRoom()
     {
-        GoToLevel(4);
         if (Time.timeScale == 0)
         {
             Time.timeScale = 1;
             AudioListener.pause = false;
         }
+        GoToLevel(4);
     }
 
     public void StartGame()
@@ -54,14 +54,14 @@ public class Sc_GameManager : MonoBehaviour{
 
     //Changes Scene/level to the one given usually by the door
     public void GoToLevel(int level){
-        currentLevel = level; //Updates current Scene/level
-        Debug.Log(level); //Confirms in debug.log what level it is going to
-        SceneManager.LoadScene(level); //Changes the scene/level
-        if(Time.timeScale == 0)
+        if (Time.timeScale == 0)
         {
             Time.timeScale = 1;
             AudioListener.pause = false;
         }
+        currentLevel = level; //Updates current Scene/level
+        Debug.Log(level); //Confirms in debug.log what level it is going to
+        SceneManager.LoadScene(level); //Changes the scene/level
     }
 
     public void QuitGame()
