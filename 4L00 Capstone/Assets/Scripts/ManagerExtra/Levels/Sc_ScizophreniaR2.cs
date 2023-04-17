@@ -203,7 +203,7 @@ public class Sc_ScizophreniaR2 : MonoBehaviour
                 mug.gameObject.transform.position = originalMugLocation;
                 mug.gameObject.transform.rotation = Quaternion.identity;*/
                 scizoRoomPhase1SudioSources[2].audioSource.Stop();
-                scizoRoomPhase3SudioSources[3].audioSource.Play();
+                //scizoRoomPhase3SudioSources[3].audioSource.Play();
                 for (int i = 0; i < scizoRoomPhase3SudioSources.Length; i++)
                 {
 
