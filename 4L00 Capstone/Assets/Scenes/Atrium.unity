@@ -8553,6 +8553,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7223428554763527367, guid: 4dd071a5c240067489ff492cfbeea49e,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -6947310500412109477, guid: 4dd071a5c240067489ff492cfbeea49e,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -8573,6 +8578,16 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -603767182685963691, guid: 4dd071a5c240067489ff492cfbeea49e,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -603767182685963691, guid: 4dd071a5c240067489ff492cfbeea49e,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4dd071a5c240067489ff492cfbeea49e,
         type: 3}
       propertyPath: m_Name
@@ -8583,6 +8598,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1112186713689628849, guid: 4dd071a5c240067489ff492cfbeea49e,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2152190296004446181, guid: 4dd071a5c240067489ff492cfbeea49e,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -8591,6 +8611,21 @@ PrefabInstance:
     - target: {fileID: 6139317220126215753, guid: 4dd071a5c240067489ff492cfbeea49e,
         type: 3}
       propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6420110767818095843, guid: 4dd071a5c240067489ff492cfbeea49e,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7682801238505101451, guid: 4dd071a5c240067489ff492cfbeea49e,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451301869096197029, guid: 4dd071a5c240067489ff492cfbeea49e,
+        type: 3}
+      propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
