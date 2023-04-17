@@ -73,10 +73,10 @@ public class Sc_ScizophreniaR2 : MonoBehaviour
     {
         Debug.Log("Phase1 has started");
 
-        // Make Coworker Typing Begin
+        /*// Make Coworker Typing Begin
         scizoRoomPhase1SudioSources[4].audioSource.Play();
         scizoRoomPhase1SudioSources[5].audioSource.Play();
-        scizoRoomPhase1SudioSources[6].audioSource.Play();
+        scizoRoomPhase1SudioSources[6].audioSource.Play();*/
 
         bool Phase1isPlaying = true;
 
