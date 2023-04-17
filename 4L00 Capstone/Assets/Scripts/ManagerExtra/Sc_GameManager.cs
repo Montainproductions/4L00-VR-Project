@@ -66,6 +66,13 @@ public class Sc_GameManager : MonoBehaviour{
         SceneManager.LoadScene(level); //Changes the scene/level
     }
 
+    public void ResetIntroVariables()
+    {
+        playIntroOnce = false;
+        playIntroOnceCoping = false;
+        playIntroOnceBreathing = false;
+    }
+
     public void QuitGame()
     {
         Application.Quit();

@@ -71,7 +71,7 @@ public class Sc_RemappedButtons : MonoBehaviour
 
     public void UISpawning()
     {
-        if(mainCamera == null)
+        if (mainCamera == null)
         {
             Camera temp = FindObjectOfType<Camera>();
             mainCamera = temp.gameObject;
@@ -84,27 +84,27 @@ public class Sc_RemappedButtons : MonoBehaviour
         menu.transform.rotation = Quaternion.Euler(0f, menu.transform.localEulerAngles.y, 0f);
 
         menuObject = menu;
-            Canvas menuCanvas = menu.GetComponent<Canvas>();
-            menuCanvas.worldCamera = eventCamera;
-            uiManager = menu.GetComponent<Sc_UIManager>();
-            if (pauseMenuCopingRoom)
+        Canvas menuCanvas = menu.GetComponent<Canvas>();
+        menuCanvas.worldCamera = eventCamera;
+        uiManager = menu.GetComponent<Sc_UIManager>();
+        if (pauseMenuCopingRoom)
+        {
+            if (uiManager != null)
             {
-                if (uiManager != null)
-                {
-                    StartCoroutine(uiManager.PauseMenuCoping());
-                }
+                StartCoroutine(uiManager.PauseMenuCoping());
             }
-            else
+        }
+        else
+        {
+            if (uiManager != null)
             {
-                if (uiManager != null)
-                {
-                    StartCoroutine(uiManager.PauseMenuAtrium());
-                } 
+                StartCoroutine(uiManager.PauseMenuAtrium());
             }
+        }
 
-            Time.timeScale = 0;
-            AudioListener.pause = true;
-            paused = true;
+        Time.timeScale = 0;
+        AudioListener.pause = true;
+        paused = true;
     }
 
     public void UIStopSpawning()
