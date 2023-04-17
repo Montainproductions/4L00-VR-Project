@@ -48,6 +48,10 @@ public class Sc_RemappedButtons : MonoBehaviour
                 Sc_GameManager.Instance.GoToLevel(1);
             }
         }
+        if (Time.timeScale == 0)
+        {
+            Time.timeScale = 1;
+        }
     }
 
     private void UIActivation_Performed(InputAction.CallbackContext context)
