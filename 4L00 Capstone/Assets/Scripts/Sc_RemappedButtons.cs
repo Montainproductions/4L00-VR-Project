@@ -89,11 +89,17 @@ public class Sc_RemappedButtons : MonoBehaviour
             uiManager = menu.GetComponent<Sc_UIManager>();
             if (pauseMenuCopingRoom)
             {
-                StartCoroutine(uiManager.PauseMenuCoping());
+                if (uiManager != null)
+                {
+                    StartCoroutine(uiManager.PauseMenuCoping());
+                }
             }
             else
             {
-                StartCoroutine(uiManager.PauseMenuAtrium());
+                if (uiManager != null)
+                {
+                    StartCoroutine(uiManager.PauseMenuAtrium());
+                } 
             }
 
             Time.timeScale = 0;
